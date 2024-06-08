@@ -149,16 +149,67 @@
     --color6: #2FEDD5;
     --color7: #00B49F;
     --color8: #007E6C; */
-
-    --color1: #39007A;    
+    
+    /* --color1: #39007A;    
     --color2: #292c95;
     --color3: #0049ac;
     --color4: #0075bc;
     --color5: #009bb6;
     --color6: #2FEDD5;
     --color7: #00B49F;
-    --color8: #37beac;
+    --color8: #37beac; */
 
+    /* --color1: #39007A;    
+    --color5: #852C01;
+    --color8: #808501;
+    --color3: #018579;
+    --color2: #954BDA;
+    --color4: #82FFF4;
+    --color7: ;
+    --color6: ; */
+    
+    /* ME POV */
+
+    /* --color1: #440d5e;    
+    --color2: #65197e;
+    --color3: #003e70;
+    --color4: #fcc329;
+    --color5: #ffff;
+    --color6: #ffff;
+    --color7: #d99dff;
+    --color8: #025159; */
+
+    /* --color1: #370d5e;    
+    --color2: #5d1994;
+    --color3: #b943e0;
+    --color4: #470cb6;
+    --color5: var(--color3);
+    --color6: var(--color4);
+    --color7: #d99dff;
+    --color8: #2c023f; */
+
+    /* --color1: #370d5e;    
+    --color2: #198c94;
+    --color3: #7243e0;
+    --color4: #470cb6;
+    --color5: var(--color3);
+    --color6: var(--color4);
+    --color7: #d99dff;
+    --color8: #2c023f; */
+
+    --color1: #370d5e;    
+    --color2: #007395;
+    --color3: #198c94;
+    --color4: #470cb6;
+    --color5: var(--color3);
+    --color6: var(--color4);
+    --color7: #d99dff;
+    --color8: #2c023f;
+
+
+
+
+    /* 370d5e  003880  005791  007395  198c94*/
     
     /* --color1: var(--color_test);
     --color2: var(--color_test);
@@ -172,7 +223,7 @@
 
 }
 
-body {
+.body_section {
     background-color: var(--background);
     margin: 0px;
     font-family: Poppins, sans-serif;
@@ -337,7 +388,7 @@ section article h1:hover {
     flex-direction: column;
     background-color: var(--color3);
     color: white;
-    max-width: 48rem;
+    /* max-width: 48rem; */
 }
 
 .article_promotion div {
@@ -358,13 +409,13 @@ section article h1:hover {
     scrollbar-width: none;
 }
 
-#slider_news img{
+#slider_news img{   
     /* height: 650px; */
-    width: 92.5%;
+    width: 40%;
     /* margin-inline: 10px; */
     border-radius: var(--border-item);
 
-    flex: 1 0 100%;
+    /* flex: 1 0 100%; */
     scroll-snap-align: start;
     object-fit: cover;
 }
@@ -419,7 +470,7 @@ section article h1:hover {
 }
 
 .article_for_sale>div img {
-    /* height: 350px; */
+    height: 350px;
     border-radius: var(--border-item);
     text-align: center;
 }
@@ -541,6 +592,39 @@ section article h1:hover {
 .article_brands {
     background-color: var(--color7);
     flex-direction: column;
+}
+
+.brand_content {
+    display: flex;
+    gap: 50px;
+    /* flex-direction: row; */
+    align-items: center;    
+    width: auto;
+}
+
+.brand_content div:not(.product) {
+    display: flex;
+}
+
+.brand_picture {
+    /* background-color: white; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand_picture img {
+    height: 150px;
+    width: 150px;
+    border-radius: var(--border-item);
+}
+
+.brand_new {
+    background-color: #000;
+}
+
+.brand_new img {
+    height: 400px;
+    width: 400px;
 }
 
 /* 2 O MAS ARTICLES */
