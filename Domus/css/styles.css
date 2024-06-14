@@ -152,7 +152,7 @@
     --font2: #fff;
     --font3: #7dd6ff; */
 
-    --background: #ead8ff;
+    /* --background: #ead8ff;
     --background: #fff;
     --color1: #4f0496;  
     --color2: #0ca0c5;
@@ -160,7 +160,6 @@
     --color4: #a862e9;
     --color5: var(--background);
     --color6: #99ddfd;
-    /* --color7: #4faaff; */
     --color7: var(--background);
     --color8: #370057;
     --color-title1: #2e0b5cda;
@@ -171,8 +170,45 @@
     --color-product: #fff;
     --font1: #000;
     --font2: #fff;
-    --font3: #67cfff;
+    --font3: #67cfff; */
 
+    /* --background: #bebebe;
+    --color2: #0f1746;  
+    --color1: #d62839;
+    --color3: var(--background);
+    --color4: #ba324f;
+    --color5: var(--background);
+    --color6: #4ba3c3;
+    --color7: var(--background);
+    --color8: #2f7aa3;
+    --color-title1: #0f1746;
+    --color-title2: #090e2b;
+    --color-button-product: #ba324f;
+    --color-button-product2: #d62839;
+    --color-background-product: #bebebe;
+    --color-product: #fff;
+    --font1: #000;
+    --font2: #fff;
+    --font3: #d9f2ff; */
+
+    --background: #ffffff;
+    --color1: #7a03c9;
+    --color2: #2c0f5c;  
+    --color3: var(--background);
+    --color4: #8432ba;
+    --color5: var(--background);
+    --color6: #c9aaf1;
+    --color7: var(--background);
+    --color8: #060528;
+    --color-title1: #320f46;
+    --color-title2: #1c092b;
+    --color-button-product: #51158a;
+    --color-button-product2: #8c45df;
+    --color-background-product: #bebebe;
+    --color-product: #fff;
+    --font1: #000;
+    --font2: #fff;
+    --font3: #fff;
 
     /* --color1: var(--color_test);
     --color2: var(--color_test);
@@ -348,7 +384,7 @@ section article h1 {
 }
 
 section article h1:hover {
-    scale: 1.1;
+    scale: 1.075;
     transition: 0.1s;
 }
 
