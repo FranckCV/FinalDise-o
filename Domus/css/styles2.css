@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@100&display=swap');
 
 :root {    
-    --header-height: 12.5vh;
-    --nav-height: 8vh;
+    --height-main-header: 22vh;
 
     --border-article: 50px;
     --border-title: 7px;
@@ -30,8 +29,7 @@
     --color-product: #fff;
     --font1: #000;
     --font2: #fff;
-    --font3: #fff;   
-
+    --font3: #fff;
 }
 
 .body_section {
@@ -43,7 +41,6 @@
     color: #000;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: var(--header-height) var(--nav-height) auto auto;    
 }
 
 a {
@@ -64,21 +61,16 @@ input[type="text" i] {
     outline: none;
 }
 
-header,
-nav,
-article {
-    padding: 5px
-}
-
 header {
     background-color: var(--color1);
     display: grid;
     grid-template-columns: 15% auto 15% 15%;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     align-items: center;
-    /* width: 100%;
+    width: 100%;
     position: fixed; 
-    height: var(--header-height); */
+    /* height: auto; */
+    z-index: 1000;
 }
 
 header input {
@@ -88,19 +80,19 @@ header input {
     height: 30px;
 }
 
-header a,
-header div 
-{
+header>a,
+header>div {
     height: 25px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;    
     color: var(--font2);
+    gap: 10px;
+    margin-block: 35px;
 }
 
 header i {
-    margin-inline: 10px;
     font-size: 150%;
 }
 
@@ -113,23 +105,25 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-inline: 40px; */
     gap: 90px;
-    /* border-bottom-left-radius: var(--border-tag);
-    border-bottom-right-radius: var(--border-tag);         */
+    z-index: 999;
+    grid-column: 1 / -1;
+    font-size: 95%;
+    padding: 5px
 }
 
 nav a {
     align-self: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 5px;
-    padding-inline: 25px;
+    align-items: center;
+    padding-block: 5px;
+    padding-inline: 20px;
     border-radius: var(--border-item);    
     border: 1px solid var(--font2);
     background-color: var(--color2);
     color: var(--font2);
+    margin-block: 5px;
 }
 
 nav a:hover {    
@@ -150,10 +144,10 @@ footer {
     background-color: var(--color8);
     color: var(--font3);
     display: grid;
+    justify-content: center;
+    gap: 6.5%;
     text-align: center;
     grid-template-columns: repeat(4,auto);    
-    /* border-top-left-radius: var(--border-tag);
-    border-top-right-radius: var(--border-tag); */
 }
 
 footer h2 {
@@ -162,10 +156,11 @@ footer h2 {
     text-align: center;
     border-radius: var(--border-tag);
     padding-inline: 20px;
+    font-size: 120%;
 }
 
 #logo_footer {
-    height: 125px;
+    height: 105px;
     border-bottom: 1px solid var(--background);
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -179,7 +174,7 @@ footer h2 {
 }
 
 #social i {
-    font-size: 35px;
+    font-size: 205%;
 }
 
 .footer_column {
@@ -199,8 +194,8 @@ footer h2 {
 section {
     display: grid;
     grid-template-columns: 100%;
-    /* gap: 15px; */
     gap: 10px;
+    margin-top: var(--height-main-header);
 }
 
 section article {
@@ -235,7 +230,6 @@ section article h1:hover {
     flex-direction: column;
     background-color: var(--color3);
     color: white;
-    /* max-width: 48rem; */
 }
 
 .article_promotion div {
@@ -247,21 +241,16 @@ section article h1:hover {
 #slider_news {
     display: flex;
     margin-bottom: 15px;
-
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    /* -ms-overflow-style: none; */
     scrollbar-width: none;
 }
 
 #slider_news img{   
-    /* height: 650px; */
     width: 100%;
-    /* margin-inline: 10px; */
     border-radius: var(--border-item);
-    /* flex: 1 0 100%; */
     scroll-snap-align: start;
     object-fit: cover;
 }
@@ -269,9 +258,6 @@ section article h1:hover {
 #slider-nav_news {
     margin-bottom: 0;
     column-gap: 1rem;
-
-    /* position: absolute; */
-    /* bottom: 1.25rem; */
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -287,6 +273,12 @@ section article h1:hover {
 
 #slider-nav_news a:hover {
     opacity: 1;
+}
+
+/* EXCLUSIVIDAD DOMUS */
+
+.article_banner_domus img {
+    width: 100%;
 }
 
 /* OFERTAS */
