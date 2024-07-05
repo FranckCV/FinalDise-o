@@ -70,7 +70,7 @@ header {
     align-items: center;
     width: 100%;
     position: fixed; 
-    z-index: 1000;
+    z-index: 1010; 
 }
 
 #buscar {
@@ -171,7 +171,7 @@ nav i {
     padding: 15px;
     margin-top: var(--height-main-header);
     transition: 0.5s;
-    z-index: 999;
+    z-index: 1000;
     color: var(--background);
     gap: 10px;
 }
@@ -289,6 +289,13 @@ footer h2 {
 .footer_column a,
 .footer_column p {
     margin-bottom: 10px;
+}
+
+.footer_end {
+    color: var(--font2);
+    text-align: center;
+    background-color: #000;
+    grid-column: 1/-1;
 }
 
 /* CONTENIDO */
@@ -608,7 +615,7 @@ section article {
     text-align: center;
     font-size: 120%;
     color: white;
-    background-color: var(--color5);
+    background-color: var(--color9);
     border-radius: var(--border-item);
 }
 
@@ -656,6 +663,212 @@ section article {
 
 /* ------------------- PRODUCTO --------------- */
 
+.product_information {
+    display: block;
+    padding: 20px;
+}
+
+.breadcrumb {
+    margin: 20px 0;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+/* Product main section */
+.product-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-gallery {
+    flex: 1;
+    max-width: 50%;
+}
+
+.product-gallery .main-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnail-images img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.product-info {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+}
+
+.product-info h1 {
+    font-size: 24px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating span {
+    color: gold;
+    font-size: 20px;
+}
+
+.rating p {
+    margin-left: 10px;
+}
+
+.brand-logo img {
+    width: 100px;
+    margin: 20px 0;
+}
+
+.features {
+    background: #118adb;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.features h3 {
+    margin: 0 0 10px;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features ul li {
+    margin: 5px 0;
+}
+
+.price {
+    background: #E6F5FF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.price h3 {
+    margin: 0 0 10px;
+}
+
+.price p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price .stock {
+    margin: 10px 0;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.quantity button {
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    background: #007BFF;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Product details */
+.product-details {
+    background: #CCF2FF;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.product-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.specifications, .additional-info {
+    flex: 1;
+    max-width: 45%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.specifications h3, .additional-info h3 {
+    margin-top: 0;
+}
+
+.specifications ul, .additional-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.specifications ul li, .additional-info ul li {
+    margin: 5px 0;
+}
+
+.additional-info p {
+    margin-top: 0;
+}
+
+.view-more {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 /* PRODUCTOS SIMILARES */
 
 #product_similar {
@@ -682,7 +895,7 @@ section article {
 
 .brands_filters {
     display: flex;
-    background-color: var(--color4);
+    background-color: var(--color9);
     width: 100%;
     text-align: center;
     color: var(--background);
@@ -719,20 +932,23 @@ section article {
     align-items: center;
     justify-content: center;
     color: var(--background);
-    background-color: var(--color4);
+    background-color: var(--color9);
     padding: 10px;
+    border-radius: var(--border-tag);
+    font-size: 20px;
 }
 
 .pagination_brands i ,
 .pagination_brands p {
-    background-color: var(--background);
-    color: var(--font1);
-    padding: 10px;
+    background-color: var(--color4);
+    color: var(--font2);
+    padding: 0;
     margin: 0;
     border-radius: 100%;
     width: 40px;
     height: 40px;
     text-align: center;
+    align-content: center;
 }
 
 /* ------------------- MARCA SAMSUNG --------------- */
@@ -749,10 +965,26 @@ section article {
 }
 
 .brand_page {    
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     color: white;
     text-align: center;
 }
+
+/* ------- CATEGORIA TECNOLOGIA ------- */
+
+.article_category {
+    flex-direction: column;
+}
+
+.subcategory_picture .subcategory-icon {
+    font-size: 200px;
+    padding: 20px;
+    color: var(--color-title2);
+}
+
 
 /* ------------------- CARRITO --------------- */
 
@@ -1080,16 +1312,16 @@ section article {
 /* MENU DE BUSQUEDA */
 
 .search-container {
-    position: relative !important;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-    z-index: 1001 !important;
-    color: #000 !important;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 1001;
+    color: #000;
 }
 
 #search {
     width: 100%;
-    padding: 10px !important;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -1101,8 +1333,7 @@ section article {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #fff;
-    border: 1px solid #303134;
+    background-color: gray;
     border-radius: 5px;
     max-height: 200px;
     overflow-y: auto;
@@ -1120,4 +1351,660 @@ section article {
     background-color: #3b3b6b;
     color: white;
     z-index: 1001;
+}
+
+/*---------------PARA CATALOGO----------------*/
+.product {
+    border-radius: var(--border-product);
+    padding: 0px;
+    font-size: 85%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "info info" "fav plus";
+    box-shadow: 0px 3px 10px #0000008c;
+    color: var(--font1);
+    gap: 1px;
+    background-color: var(--color-background-product);
+}
+
+.product:hover {
+    scale: 1.05;
+    transition: 0.1s;
+}
+
+.product a>p {
+    font-size: 115%;
+}
+
+.product a {
+    padding-inline: 15px;
+    padding-block: 10px;
+}
+
+.product a img {
+    height: 150px;
+    width: 150px;
+}
+
+.product_info {
+    border-top-left-radius: var(--border-product);
+    border-top-right-radius: var(--border-product);
+    grid-area: info;
+    color: #000;
+    background-color: var(--color-product);
+}
+
+.product_price {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.product_price p {
+    margin-block: 5px;
+}
+
+.product_price_title {
+    text-align: left;
+    padding-right: 25px;
+    font-weight: bold;
+}
+
+.price_regular {
+    color: grey;
+    font-size: 95%;
+}
+
+.price_online {
+    color: black;
+    font-size: 120%;
+}
+
+.price_for_sale {
+    color: red;
+    font-size: 150%;
+}
+
+.product_price_number {
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    font-size: 0.93rem;
+    font-weight: bold;
+}
+
+.product_price_number sup {
+    font-size: 75%;
+}
+
+.product_option_fav {
+    border-bottom-left-radius: var(--border-product);
+    grid-area: fav;
+}
+
+.product_option_add {
+    border-bottom-right-radius: var(--border-product);
+    grid-area: plus;
+}
+
+.product_option_fav, 
+.product_option_add {
+    font-size: 150%;
+    background-color: var(--color-button-product);
+    color: white;
+}
+
+.product_option_fav:hover, 
+.product_option_add:hover {
+    background-color: var(--color-button-product2);
+}
+
+/* Estilos adicionales para el contenedor de los productos */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: space-between;
+}
+
+/* Estilos adicionales para cada tarjeta de producto */
+.product {
+    flex: 1 0 10%; /* Ajusta el tamaño de cada tarjeta según sea necesario */
+    margin: 10px; /* Espacio adicional alrededor de cada tarjeta */
+}
+
+.pagination .page-item {
+    margin: 0 10px; /* Ajusta el valor según el espacio que desees */
+}
+
+.pagination .page-link {
+    padding: 10px 15px; /* Ajusta el valor según el tamaño del botón que desees */
+}
+
+/* Estilos para el campo de formulario */
+fieldset {
+    width: 100%;
+    max-width: 700px;
+    margin: 60px auto 20px auto;
+    border: 1px solid #221f1f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+legend {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contactarnos .contacto {
+    margin-bottom: 15px;
+}
+
+.contactarnos .contacto label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contactarnos .contacto input, 
+#textarea textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+#textarea {
+    margin-bottom: 15px;
+}
+
+#textarea label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#mensaje {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    resize: vertical;
+}
+
+#terminos {
+    margin-right: 5px;
+}
+
+#enviar_contacto {
+    color: #fff;
+    background-color: #060546;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+}
+
+#enviar_contacto:hover {
+    background-color: #040433;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    fieldset {
+        padding: 15px;
+    }
+
+    .contactarnos .contacto input, 
+    #textarea textarea, 
+    #mensaje {
+        width: 100%;
+    }
+
+    #enviar_contacto {
+        padding: 10px 20px;
+    }
+}
+
+/* DETALLES DE PEDIDO */
+
+.order-details {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .order-details p {
+    font-size: 1.2em;
+  }
+  
+  .order-summary {
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .table img {
+    width: 100px;
+  }
+  
+  /* SEGUIMIENTO */
+  
+  .order-tracking {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .order-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color7);
+    padding: 20px;
+    border-radius: var(--border-article);
+  }
+  
+  .order-detail {
+    text-align: center;
+    flex: 1; /* Make all details the same width */
+  }
+  
+  .tracking-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .status-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color1);
+  }
+  
+  .status-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .status-item.active i {
+    color: var(--color4);
+  }
+  
+  .order-shipping {
+    background-color: var(--color7);
+    padding: 20px;
+    border-radius: var(--border-article);
+    margin-top: 20px;
+  }
+  
+  .shipping-detail {
+    display: flex;
+    align-items: center;
+  }
+  
+  .shipping-detail img {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  /* Barra de progreso */
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 33%; /* Adjust the width according to the progress */
+    background-color: var(--color4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+
+/* CENTRO DE AYUDA */
+
+.help-center {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .help-item {
+    background-color: var(--color6);
+    border: 1px solid var(--color7);
+    border-radius: var(--border-article);
+    padding: 20px;
+    text-align: center;
+    height: 100%; /* Ensure all items are the same height */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .help-item i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--color4);
+  }
+  
+  .help-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: var(--color1);
+  }
+  
+  .help-item p {
+    font-size: 1em;
+    color: var(--color-title1);
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .help-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .help-item:hover {
+    background-color: var(--color7);
+    transform: scale(1.05);
+  }
+  
+  .help-item-link:hover .help-item p {
+    text-decoration: none;
+  }
+  
+  .help-item-link:hover .help-item h3 {
+    text-decoration: none;
+  }
+  
+  .help-item-link:hover .help-item i {
+    text-decoration: none;
+  }
+
+/* para contactanos */
+  header {
+    background-color: var(--color1);
+    display: grid;
+    grid-template-columns: 15% auto 15% 15%;
+    grid-template-rows: auto auto;
+    align-items: center;
+    width: 100%;
+    position: fixed; 
+    z-index: 1000;
+    top: 0; /* Asegura que el encabezado esté en la parte superior */
+}
+
+.container {
+    margin-top: var(--height-main-header); /* Ajusta esta variable según la altura del encabezado */
+    padding-top: 75px; /* Ajusta según sea necesario para evitar la superposición */
+}
+
+/* Otros estilos relevantes */
+
+
+
+/* *********************************************PÁGINA DE REGISTRO********************************* */
+#logoRegistro{
+    background-color: #060546;
+    border-radius: 10px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    border-radius: 50%;
+
+}
+#logoRegistro img{
+    height: 60px;
+}
+form{
+    padding-top: 30px;
+    margin: 20px 20px;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color: rgba(169, 167, 167, 0.5); */
+    background-color: rgb(15, 37, 101);
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    min-height: auto;
+}
+
+form .grupo {
+    position: relative; /* Posición relativa.Significa que el elemento se posicionará en relación con su posición original en el flujo normal del documento, pero aún puede ser desplazado utilizando las propiedades top, right, bottom y left.*/
+}
+
+input:not(#terminos,#enviar,#buscar) {
+    color: #c6c6c6; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 10px 10px 10px 5px; /* Relleno */
+    display: block; /* Mostrar como bloque */
+    border: none; /* Sin borde */
+    border-bottom: 1px solid #c6c6c6; /* Borde inferior */
+    border-radius: 10px;
+    width: 400px;
+}
+form h1{
+    color:#fff;
+}
+#enviar{
+    height: 42px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border:none;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    background-color: #060546;
+}
+
+#otroLabel{
+    font-size:16px;
+    color:#fff;
+}
+
+/* Estilos de los campos de entrada cuando están enfocados */
+input:focus {
+    outline: none; /* Sin contorno */
+    color: rgb(94,93,93); /* Cambiar el color del texto */
+}
+
+/* Estilos de las etiquetas */
+.label:not(#otroLabel) {
+    color: #49454567; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    position: absolute; /* Posición absoluta */
+    left: 5px; /* Posición a la izquierda */
+    top: 10px; /* Posición arriba */
+    transition: 0.5s ease-in-out all; /* Transición */
+    pointer-events: none; /* No permitir eventos de puntero */
+}
+
+input:focus ~ .label,
+input:valid ~ .label {
+    top: -14px; /* Posición arriba */
+    font-size: 12px; /* Tamaño de la fuente */
+}
+/* *********************************************NOSOTROS************************************************ */
+#identidad{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+div {
+    text-align: center; /* Centra el contenido horizontalmente */
+    place-self: center;
+}
+
+/* Estilos para el contenedor del pergamino */
+.pergamino {
+    position: relative; /* Posición relativa para facilitar el posicionamiento */
+    display: inline-block; /* Hace que el contenedor se ajuste al contenido */
+}
+
+/* Estilos para la imagen de pergamino */
+.pergamino img {
+    display: block; /* Hace que la imagen se muestre como bloque */
+    width: 450px;
+    margin: 0px;
+}
+#valores{
+    height:300px;
+}
+.title_pergamino h2{
+    margin:0px;
+    padding: 0px;
+}
+/* Estilos para el párrafo dentro del pergamino */
+.pergamino p, ul {
+    position: absolute; /* Posición absoluta para poder colocar encima */
+    top: 50%; /* Coloca el borde superior del elemento en el 50% del contenedor padre */
+    left: 50%; /* Coloca el borde izquierdo del elemento en el 50% del contenedor padre */
+    transform: translate(-50%, -60%); /* Centra el elemento en ambos ejes */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+.imagenHistoria{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.historia{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#section_nosotros h2,p{
+    text-align: center;
+}
+#nosotros{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* *********************************************PARA EL PERFIL************************************************ */
+
+.contenedor_perfil {
+    margin:10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap:10px;
+    color: white;
+}
+
+.aside_perfil{
+    background-color: #242281;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.main_perfil{
+    background-color: #060528;
+    border-radius: 5px;
+}
+.img_perfil, .flecha{
+    width: 30%;
+}
+.img_perfil{
+    place-self: center;
+}
+.opcion_perfil{
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+}
+.opcion_perfil p{
+    text-align: start;
+    color: white;
+}
+.main_perfil h1{
+    text-align: start;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 80%;
+}
+.detalle{
+    background-color: white;
+    width: 90%;
+    height: 100%;
+    color:#000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.boletin{
+    background-color: white;
+    place-self: start;
+    width: 95%;
+    height: 50%;
+    color: #000;
+}
+
+.detalle > :nth-child(3) {
+    grid-column: 1 / 3; 
+}
+
+.datos_perfil{
+    text-align: start;
+    place-self: start;
+    padding: 30px 50px 0px 50px;
+}
+.datos_perfil strong, p{
+    text-align: start;
+}
+
+#informativo{
+    color:grey;
+}
+/* #confirmar_boletin {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+} */
+
+#confirmar_boletin input[type="checkbox"] {
+    margin: 0px; 
+    width: 5%;
+}
+#confirmar_boletin{
+    display: flex;
+    flex-direction: inline;
+}
+#confirmar_boletin p{
+    margin-left: 5px;
+    font-size: 15px;
+}
+.boletin div{
+    margin-left: 15px;
 }
