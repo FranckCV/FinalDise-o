@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/elementos/iconDomus.png">
+    <title> | Domus Market</title>
+</head>
+<body class="body_section">
+
+    <header>
+        <a id="inicio" href="index.html">            
+            <img id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
+        </a>        
+        <div id="buscar">
+            <input type="text" >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <a id="carrito" href="carrito.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Mi Carrito</p>            
+        </a>
+        <a id="perfil" href="perfil.html">
+            <i class="fa-solid fa-user"></i>
+            <p>Mi Perfil</p>            
+        </a>
+        <nav>
+            <div id="menu_button" class="active_menu">
+                <i class="fa-solid fa-bars"></i>
+                Menú
+            </div>
+            <a href="catalogo.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                Catálogo
+            </a>
+            <a href="servicioCliente.html">
+                <i class="fa-regular fa-circle-question"></i>
+                Servicio al Cliente
+            </a>
+            <a href="contactanos.html">
+                <i class="fa-solid fa-message"></i>
+                Contáctanos
+            </a>
+            <a href="exclusividad.html">
+                <i class="fa-solid fa-circle-info"></i>
+                Exclusividad Domus
+            </a>   
+        </nav>
+    </header>
+    <aside id="menu_content" class="menu_items desplegar">
+        <div class="menu_element">
+            <i class="fa-solid fa-list"></i>
+            <span>Categorias</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="submenu_content">
+            <a href="#">Alimentos</a>
+            <a href="#">Hogar</a>
+            <a href="#">Ropa y Calzado</a>
+            <a href="#">Libreria y Oficina</a>
+            <a href="#">Deporte</a>
+            <a href="#">Mascotas</a>
+            <a href="categoriaTecnologia.html">Tecnología</a>
+        </div>        
+        <div class="menu_element">
+            <i class="fa-solid fa-tag"></i>
+            <span>Marcas Asociadas</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="submenu_content">
+            <a href="marcaSamsung.html">Samsung</a>
+            <a href="#">Oster</a>
+            <a href="#">Gloria</a>
+            <a href="#">Tabernero</a>
+            <a href="#">LG</a>
+            <a href="#">Inka Cola</a>
+            <a href="#">Johnnie Walker</a>
+            <a href="#">Nestle</a>
+            <a href="#">Huawei</a>
+            <a href="#">Lenovo</a>
+            <a href="#">Apple</a>
+            <a href="marcas.html">Ver más...</a>
+        </div>    
+        <div class="menu_element">
+            <a href="exclusividad.html">
+                <i class="fa-solid fa-star"></i>
+                <span>Exclusividad Domus</span>
+            </a>
+        </div>        
+    </aside> 
+    
+    <div class="container mt-5 pt-5">
+        <fieldset class="shadow-drop-center p-4 rounded" id="fields">
+            <legend class="legend_contacto">Contáctanos</legend>
+            <p>Si tienes alguna duda, comentario o sugerencia puedes contactarnos y nos comunicaremos contigo lo antes posible.</p>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre" class="form-label">Nombres:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="apellido" class="form-label">Apellidos:</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="telefono" class="form-label">Número de celular:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Comentarios:</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos">
+                    <label class="form-check-label" for="terminos">He leído y acepto la política de privacidad</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" id="enviar_contacto">Enviar</button>
+            </form>
+        </fieldset>
+    </div>
+
+    <footer>
+        <div id="footer_pictures">
+            <img id="logo_footer" src="img/elementos/logoDomus.png" alt="">
+            <div id="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-youtube"></i>            
+            </div>
+        </div>              
+        <div class="footer_column">
+            <h2>Contáctanos</h2>
+            <p>servicioalcliente@domus.pe</p>            
+            <a href="">
+                <i class="fa-solid fa-phone-volume"></i>
+                074 606240
+            </a>
+            <a href="">
+                <i class="fa-solid fa-phone-volume"></i>
+                Lun-Vie: <br> 8:00am - 05:00pm
+            </a>
+            <p>Dejanos tu contacto <br> Ir a Formulario</p>
+        </div>
+        <div class="footer_column">
+            <h2>Servicio al Cliente</h2>
+            <p>Tutorial de compra</p>
+            <p>Terminos y Condiciones</p>
+            <p>Preguntas Frecuentes</p>
+            <p>Devoluciones y Cambios</p>
+            <p>Reclamos</p>
+            <p>Clientes</p>
+        </div>
+        <div class="footer_column">
+            <h2>Sobre nosotros</h2>
+            <p>Conocenos</p>
+            <p>Puntos de Venta</p>
+            <p>Encuentranos en SUNAT</p> 
+        </div>        
+    </footer>    
+    <div class="footer_end">
+        &copy; 2024 Copyright: Grupo 02 <br>
+        Cortez Villaseca | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/script_barra_búsqueda.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- <script src="js/scriptListProduct.js"></script> -->
+    <script src="js/script_principal.js"></script>
+</body>
+</html>

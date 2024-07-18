@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/common_styles/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common_styles/all.min.css">
+    <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
+    <link rel="stylesheet" href="css/common_styles/fonts.css">
+    <link rel="stylesheet" href="css/common_styles/domus_styles.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="img/elementos/iconDomus.png">
     <title> | Domus Market</title>
 </head>
 <body class="body_section">
     <header>
-        <a id="inicio" href="index.html">            
-            <img id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
+        <a class="header_item" id="index_logo" href="index.html">            
+            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
         </a>        
-        <div id="buscar">
-            <input type="text" >
+        <div class="header_item" id="search">
+            <input type="text">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <a id="carrito" href="carrito.html">
+        <a class="header_item header_option" id="carrito" href="carrito.html">
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Mi Carrito</p>            
         </a>
-        <a id="perfil" href="perfil.html">
+        <a class="header_item header_option" id="perfil" href="perfil.html">
             <i class="fa-solid fa-user"></i>
             <p>Mi Perfil</p>            
         </a>
@@ -33,19 +34,19 @@
                 <i class="fa-solid fa-bars"></i>
                 Menú
             </div>
-            <a href="">
+            <a href="catalogo.html">
                 <i class="fa-solid fa-clipboard-list"></i>
                 Catálogo
             </a>
-            <a href="">
+            <a href="servicioCliente.html">
                 <i class="fa-regular fa-circle-question"></i>
                 Servicio al Cliente
             </a>
-            <a href="">
+            <a href="contactanos.html">
                 <i class="fa-solid fa-message"></i>
                 Contáctanos
             </a>
-            <a href="">
+            <a href="exclusividad.html" class="menu_exclusividad">
                 <i class="fa-solid fa-circle-info"></i>
                 Exclusividad Domus
             </a>   
@@ -57,53 +58,85 @@
             <span>Categorias</span>
             <i class="fa-solid fa-chevron-down"></i>
         </div>
-        <div class="submenu_content">
-            <a href="#">Alimentos</a>
-            <a href="#">Hogar</a>
-            <a href="#">Ropa y Calzado</a>
-            <a href="#">Libreria y Oficina</a>
-            <a href="#">Deporte</a>
-            <a href="#">Mascotas</a>
-            <a href="categoriaTecnologia.html">Tecnología</a>
-        </div>
-        
+        <div class="submenu_content" id="menu_categories">
+            <a href="#">
+                <i class="fa-solid fa-drumstick-bite"></i>
+                Alimentos
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-house-chimney"></i>
+                Hogar
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-shirt"></i>
+                Ropa y Calzado
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-book"></i>
+                Libreria y Oficina
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-person-running"></i>
+                Deporte
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-paw"></i>
+                Mascotas
+            </a>
+            <a href="categoriaTecnologia.html">
+                <i class="fa-solid fa-microchip"></i>
+                Tecnología
+            </a>
+        </div>        
         <div class="menu_element">
             <i class="fa-solid fa-tag"></i>
             <span>Marcas Asociadas</span>
             <i class="fa-solid fa-chevron-down"></i>
         </div>
-        <div class="submenu_content">
-            <a href="marcaSamsung.html">Samsung</a>
-            <a href="#">Oster</a>
-            <a href="#">Gloria</a>
-            <a href="#">Tabernero</a>
-            <a href="#">LG</a>
-            <a href="#">Inka Cola</a>
-            <a href="#">Johnnie Walker</a>
-            <a href="#">Nestle</a>
-            <a href="#">Huawei</a>
-            <a href="#">Lenovo</a>
-            <a href="#">Apple</a>
-        </div>
-    
-        <div class="menu_element">
-            <i class="fa-solid fa-star"></i>
-            <span>Exclusividad Domus</span>
-            <!-- <i class="fa-solid fa-chevron-down"></i> -->
-        </div>
-        <!-- <div class="submenu_content">
-            <a href="#">Otro 1</a>
-            <a href="#">Otro 2</a>
-            <a href="#">Otro 3</a>
-        </div> -->
-    </aside>  
-    <section>
-        <article class="article_category">
-            <a href="">
-                <h1 class="article_title_1">
-                    CATEGORIA TECNOLOGIA
-                </h1>
+        <div class="submenu_content" id="menu_brands">
+            <a href="marcaSamsung.html">
+                <img src="img/marcas/samsung_logo.png" alt="">
+                Samsung
             </a>
+            <a href="#">
+                <img src="img/marcas/oster_logo.png" alt="">
+                Oster
+            </a>
+            <a href="#">
+                <img src="img/marcas/logo_gloria.png" alt="">
+                Gloria
+            </a>
+            <a href="#">
+                <img src="img/marcas/Logo_of_the_LG_Corporation_(1995-2014).png" alt="">
+                LG
+            </a>
+            <a href="#">
+                <img src="img/marcas/logo_inca_kola.png" alt="">
+                Inka Cola
+            </a>
+            <a href="#">
+                <img src="img/marcas/LOGO-NESTLE.png" alt="">
+                Nestle
+            </a>
+            <a href="#">
+                <img src="img/marcas/logo_lenovo.png" alt="">
+                Lenovo
+            </a>
+            <a href="marcas.html">
+                <i class="fa-solid fa-plus"></i> 
+                Ver más... 
+            </a>
+        </div>  
+        <a href="exclusividad.html" class="menu_element menu_exclusividad">                
+            <i class="fa-solid fa-star"></i>
+            <span>Exclusividad Domus</span>                
+        </a>     
+    </aside>   
+    <section class="body_page">
+        <article class="article_category">
+            <h1 class="article_title_1">
+                CATEGORIA TECNOLOGIA
+            </h1>
             <div class="subcategory_picture">
                 <i class="subcategory-icon fa-solid fa-microchip"></i>                
             </div>            
@@ -127,521 +160,70 @@
             </div>                                  
         </article>
         <article class="article_catalogue">
-            <main class="container-fluid mt-5 pt-5">
-                <div class="row">
-                    <div class="col-2">
-                        <!-- Sidebar de filtros -->
-                        <div class="p-3 bg-light rounded">
-                            <h4>Filtros</h4>
-                            <hr>
-                            <div>
-                                <p>Categorias</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Subcategorias</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Gama de Precios</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Calificación</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Descuentos</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <button class="btn btn-primary w-100 mt-3">Limpiar Filtros</button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-10">
-                        
-                        <!-- Resultados de búsqueda -->
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h2 class="mb-0">Resultados para: <span class="text-primary">Búsqueda</span></h2>
-                            <div>
-                                <label for="sort" class="me-2">Ordenar por:</label>
-                                <select id="sort" class="form-select d-inline-block w-auto">
-                                    <option value="popular">Más populares</option>
-                                    <option value="price-asc">Precio: Bajo a Alto</option>
-                                    <option value="price-desc">Precio: Alto a Bajo</option>
-                                </select>
-                            </div>
-                        </div>
-        
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center mt-3">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Siguiente</a>
-                                </li>
-                            </ul>
-                        </nav>
-        
-                        <div class="row d-flex justify-content-between">
-                            <!-- Cada card de producto -->
-                            <div class="products-container row">
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- Más tarjetas de producto aquí -->
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-        
-                            <div class="products-container row">
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- Más tarjetas de producto aquí -->
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-        
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- Más tarjetas de producto aquí -->
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-        
-                        </div>
-                        <!-- Repite este bloque por cada producto -->
-                    </div>
-                    <!-- Paginación -->
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center mt-3">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Siguiente</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                </div>
-            </main>
+            
         </article>     
     </section>    
     <footer>
         <div id="footer_pictures">
-            <img id="logo_footer" src="img/elementos/logoDomus.png" alt="">
+            <a href="index.html">
+                <img id="logo_footer" src="img/elementos/logoDomus.png" alt="">
+            </a>
+            <hr>
             <div id="social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-tiktok"></i>
-                <i class="fa-brands fa-youtube"></i>            
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>           
             </div>
         </div>              
         <div class="footer_column">
             <h2>Contáctanos</h2>
-            <p>servicioalcliente@domus.pe</p>            
-            <a href="">
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                servicioalcliente@domus.pe
+            </p>            
+            <p href="">
                 <i class="fa-solid fa-phone-volume"></i>
                 074 606240
-            </a>
-            <a href="">
-                <i class="fa-solid fa-phone-volume"></i>
-                Lun-Vie: <br> 8:00am - 05:00pm
-            </a>
-            <p>Dejanos tu contacto <br> Ir a Formulario</p>
+            </p>
+            <p href="">
+                <i class="fa-solid fa-clock"></i>
+                Lun-Vie: <br> 
+                    8:00 am - 05:00 pm
+            </p>
+            <p>
+                <i class="fa-solid fa-message"></i>
+                Dejanos tu contacto: <br>
+                <a href="contactanos.html">
+                    Ir a Formulario
+                </a>
+            </p>
         </div>
         <div class="footer_column">
             <h2>Servicio al Cliente</h2>
-            <p>Tutorial de compra</p>
-            <p>Terminos y Condiciones</p>
-            <p>Preguntas Frecuentes</p>
-            <p>Devoluciones y Cambios</p>
-            <p>Reclamos</p>
-            <p>Clientes</p>
+            <a href="terminos.html">Tutorial de compra</a>
+            <a href="terminos.html">Terminos y Condiciones</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="devoluciones.html">Devoluciones y Cambios</a>
+            <a href="reclamos.html">Reclamos</a>
         </div>
         <div class="footer_column">
             <h2>Sobre nosotros</h2>
-            <p>Conocenos</p>
-            <p>Puntos de Venta</p>
+            <a href="nosotros.html">Conócenos</a>
+            <a href="puntosVenta.html">Puntos de Venta</a>
             <p>Encuentranos en SUNAT</p> 
-        </div>
-        
-        
-    </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/script_principal.js"></script>
+        </div>        
+    </footer>    
+    <div class="footer_end">
+        &copy; 2024 Copyright: Grupo 02 <br>
+        Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
+    </div>
+    <script src="js/common_script/bootstrap.bundle.min.js"></script>
+    <script src="js/common_script/gsap.min.js"></script>
+    <script src="js/common_script/ScrollTrigger.min.js"></script>
+    <script src="js/common_script/jquery-3.7.1.min.js"></script>
+    <script src="js/common_script/domus_script.js"></script>
 </body>
 </html>
