@@ -1,5 +1,5 @@
 :root {    
-    --height-header: 15vh;
+    --height-header: 10vh;
     --height-nav: 10vh;
     --height-main-header: calc( var(--height-header) + var(--height-nav));
 
@@ -67,13 +67,18 @@ input[type="text" i] {
 header {
     background-color: var(--color1);
     display: grid;
-    grid-template-columns: 1.2fr 3fr 1fr 1fr;
-    grid-template-rows: var(--height-header) var(--height-nav);
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: var(--height-header)/2 var(--height-header)/2 var(--height-nav);
+    grid-template-areas: "domus carrito perfil"
+                         "buscar buscar buscar"
+                         "nav nav nav";
     align-items: center;
     width: 100%;
     position: fixed; 
     z-index: 1501;
     column-gap: 40px;
+    padding-top: 10px;
+    /* padding-inline: 20px; */
 }
 
 .header_item {
@@ -114,7 +119,8 @@ header p {
 }
 
 #index_logo {
-    margin-inline: 10%;
+    margin-inline: 15%;
+    grid-area: domus;
 }
 
 #index_logo img {
@@ -125,12 +131,21 @@ header p {
     scale: 1.15;
 }
 
+#header_carrito {
+    grid-area: carrito;
+}
+
+#header_perfil {
+    grid-area: perfil;
+}
+
 #search {
     position: relative;
+    grid-area: buscar;
 }
 
 #search input {
-    width: 100%;
+    width: 90%;
     border-radius: 100px;
     border: 0px;
     padding-block: 5px;
@@ -141,7 +156,7 @@ header p {
     /* top: 50%; */
     /* transform: translateY(0%); */
     position: absolute;
-    right: 1%;
+    right: 6%;
     color: #888;
     padding: 7px;
     border-radius: var(--border-item);
@@ -161,7 +176,7 @@ nav {
     align-items: center;
     gap: 5%;
     /* z-index: 1200; */
-    grid-column: 1 / -1;
+    grid-area: nav;
     font-size: 95%;
     padding: 20px
 }
