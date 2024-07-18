@@ -1,7 +1,7 @@
 :root {    
     --height-header1: 8vh;
-    --height-header2: 7.5vh;
-    --height-nav: 25vh;
+    --height-header2: 10vh;
+    --height-nav: 10vh;
     --height-main-header: calc( var(--height-header1) + var(--height-header2) + var(--height-nav));
     /* --height-footer: 150vh; */
     
@@ -47,6 +47,10 @@
     position: relative;
 }
 
+/* .body_section::-webkit-scrollbar {
+    display: none;
+} */
+
 a {
     color: var(--font2);
     text-decoration: none;
@@ -70,29 +74,31 @@ header {
     background-color: var(--color1);
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: var(--height-header1) var(--height-header2) auto;
-    grid-template-areas: "domus carrito perfil"
-                         "buscar buscar buscar"
+    /* grid-template-rows: var(--height-header1) var(--height-header2) var(--height-nav); */
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: "h_domus h_carrito h_perfil"
+                         "h_buscar h_buscar h_buscar"
                          "nav nav nav";
     align-items: center;
     width: 100%;
-    position: fixed; 
+    position: sticky; 
     z-index: 1501;
-    column-gap: 20px;
+    top: 0;
     padding-top: 10px;
-    /* padding-inline: 20px; */
-    font-size: 70%;
+    font-size: 80%;
 }
 
 .header_item {
     height: 25px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    flex-direction: column;
     align-items: center;    
     color: var(--font2);
     gap: 5%;
-    margin-block: 25px;
-    padding-inline: 5px;
+    margin-block: 15px;
+    padding-inline: 10px;
     font-size: 120%;
     cursor: pointer;
 }
@@ -122,9 +128,9 @@ header p {
 }
 
 #index_logo {
-    margin-inline: 15%;
-    margin-block: 5%;
-    grid-area: domus;
+    /* margin-inline: 2vw; */
+    padding-block: 30px;
+    grid-area: h_domus;
 }
 
 #index_logo img {
@@ -136,16 +142,16 @@ header p {
 }
 
 #header_carrito {
-    grid-area: carrito;
+    grid-area: h_carrito;
 }
 
 #header_perfil {
-    grid-area: perfil;
+    grid-area: h_perfil;
 }
 
 #search {
     position: relative;
-    grid-area: buscar;
+    grid-area: h_buscar;
 }
 
 #search input {
@@ -159,7 +165,7 @@ header p {
 #search i {
     /* transform: translateY(0%); */
     position: absolute;
-    right: 6%;
+    right: 30px;
     color: #888;
     padding: 7px;
     border-radius: var(--border-item);
@@ -178,7 +184,6 @@ nav {
     height: 100%;
     align-items: center;
     gap: 5%;
-    /* z-index: 1200; */
     grid-area: nav;
     font-size: 95%;
     padding: 20px
@@ -219,19 +224,19 @@ nav i {
     display: flex;
     flex-direction: column;
     background-color: var(--color9);
-    /* align-items: center; */
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     bottom:0;
     overflow-y: scroll;
-    padding: 15px;
-    padding-top: calc(15px + var(--height-main-header));
+    padding: 15px;    
     transition: 0.5s;
-    z-index: 999;
+    z-index: 1000;
     color: var(--background);
     gap: 10px;
+    /* padding-top: calc(15px + var(--height-main-header)); */
+    /* padding-top: 85vw; */
 }
 
 #menu_content::-webkit-scrollbar {
@@ -241,6 +246,10 @@ nav i {
 
 .desplegar {
     transform: translateX(-100%);
+}
+
+.hidden {
+    display: none;
 }
 
 .menu_element {    
@@ -416,7 +425,7 @@ footer h2 {
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .footer_column a,
@@ -465,7 +474,7 @@ footer h2 {
 .body_page {
     display: grid;
     grid-template-columns: 100%;
-    padding-top: var(--height-main-header);
+    /* padding-top: var(--height-main-header); */
 }
 
 article {

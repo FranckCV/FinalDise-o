@@ -24,6 +24,16 @@ gsap.from(header_items.children,{
 
 // ANIMACION MENU DESPLEGLABE
 
+const menu = document.querySelector('#menu_content');
+const toggleButton = document.querySelector('#menu_button');
+const headerHeight = document.querySelector('header').offsetHeight; // Ajusta el selector según corresponda
+
+menu.style.paddingTop = `calc(15px + ${headerHeight}px)`;
+
+// toggleButton.addEventListener('click', () => {
+//     menu.classList.toggle('hidden');
+// });
+
 const $openClose = document.querySelector("#menu_button"),
     $aside = document.querySelector("#menu_content"),
     $menuElements = document.querySelectorAll(".menu_element"),
