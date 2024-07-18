@@ -1,8 +1,10 @@
 :root {    
-    --height-header: 10vh;
-    --height-nav: 10vh;
-    --height-main-header: calc( var(--height-header) + var(--height-nav));
-
+    --height-header1: 8vh;
+    --height-header2: 7.5vh;
+    --height-nav: 25vh;
+    --height-main-header: calc( var(--height-header1) + var(--height-header2) + var(--height-nav));
+    /* --height-footer: 150vh; */
+    
     --border-article: 50px;
     --border-title: 7px;
     --border-item: 25px;
@@ -40,7 +42,7 @@
     min-height: 100vh;
     color: #000;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     overflow-x: hidden;
     position: relative;
 }
@@ -67,8 +69,8 @@ input[type="text" i] {
 header {
     background-color: var(--color1);
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    grid-template-rows: var(--height-header)/2 var(--height-header)/2 var(--height-nav);
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: var(--height-header1) var(--height-header2) auto;
     grid-template-areas: "domus carrito perfil"
                          "buscar buscar buscar"
                          "nav nav nav";
@@ -76,9 +78,10 @@ header {
     width: 100%;
     position: fixed; 
     z-index: 1501;
-    column-gap: 40px;
+    column-gap: 20px;
     padding-top: 10px;
     /* padding-inline: 20px; */
+    font-size: 70%;
 }
 
 .header_item {
@@ -88,9 +91,9 @@ header {
     align-items: center;    
     color: var(--font2);
     gap: 5%;
-    margin-block: 35px;
-    padding-inline: 0px;
-    font-size: 155%;
+    margin-block: 25px;
+    padding-inline: 5px;
+    font-size: 120%;
     cursor: pointer;
 }
 
@@ -120,6 +123,7 @@ header p {
 
 #index_logo {
     margin-inline: 15%;
+    margin-block: 5%;
     grid-area: domus;
 }
 
@@ -128,7 +132,7 @@ header p {
 }
 
 #index_logo img:hover {
-    scale: 1.15;
+    scale: 1.10;
 }
 
 #header_carrito {
@@ -216,7 +220,8 @@ nav i {
     display: flex;
     flex-direction: column;
     background-color: var(--color9);
-    width: 25vw;
+    /* align-items: center; */
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -356,9 +361,12 @@ footer {
     color: var(--font3);
     display: grid;
     justify-content: center;
-    gap: 6.5%;
+    row-gap: 50px;
     text-align: center;
-    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(4,auto);
+    /* height: var(--height-footer); */
+    /* width: 100%; */
+    /* grid-template-areas: "f_domus"; */
     /* z-index: 1500; */
 }
 
@@ -430,10 +438,28 @@ footer h2 {
     color: var(--font2);
     text-align: center;
     background-color: #000;
-    grid-column: 1/-1;
+    /* grid-column: 1/-1; */
     padding: 20px;
     /* z-index: 1500; */
 }
+
+/* #footer_pictures {
+    grid-area: f_domus;
+}
+
+#footer_contactanos {
+    grid-area: f_cont;
+}
+
+#footer_servicio {
+    grid-area: f_serv;
+}
+
+#footer_nosotros {
+    grid-area: f_nos;
+} */
+
+
 
 /* CONTENIDO */
 
