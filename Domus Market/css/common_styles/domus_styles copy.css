@@ -452,16 +452,3 @@ article {
     transition: 0.1s;
 }
 
-/* RESPONSIVIDAD */
-
-@media (min-width:600px) and (max-width:1000px){
-    /* A */
-}
-
-@media (min-width:1001px){ 
-    /* A */
-}
-
-
-
-

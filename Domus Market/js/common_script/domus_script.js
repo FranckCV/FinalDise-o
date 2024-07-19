@@ -22,17 +22,23 @@ gsap.from(header_items.children,{
     }
 });
 
-// ANIMACION MENU DESPLEGLABE
+// ESPACIADO MENU DESPLEGLABE
 
-const menu = document.querySelector('#menu_content');
-const toggleButton = document.querySelector('#menu_button');
-const headerHeight = document.querySelector('header').offsetHeight; // Ajusta el selector según corresponda
+function adjustPadding() {
+    const menu = document.querySelector('#menu_content');
+    const headerHeight = document.querySelector('header').offsetHeight; 
 
-menu.style.paddingTop = `calc(15px + ${headerHeight}px)`;
+    menu.style.paddingTop = `calc(15px + ${headerHeight}px)`;
+}
 
-// toggleButton.addEventListener('click', () => {
-//     menu.classList.toggle('hidden');
-// });
+window.addEventListener("load", () => {
+    adjustPadding()
+});
+window.addEventListener("resize", () => {
+    adjustPadding()
+});
+
+// FUNCIONALIDAD Y ANIMACIÓN MENU DESPLEGLABE
 
 const $openClose = document.querySelector("#menu_button"),
     $aside = document.querySelector("#menu_content"),
@@ -44,7 +50,7 @@ $openClose.addEventListener("click", () => {
 });
 
 $menuElements.forEach((menuElement, index) => {
-    menuElement.addEventListener("click", () => {
+    menuElement.addEventListener("click", () => {        
         const submenuContent = menuElement.nextElementSibling;
         if (submenuContent && submenuContent.classList.contains("submenu_content")) {
             if (submenuContent.style.display === "flex") {
