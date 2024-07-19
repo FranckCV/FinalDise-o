@@ -29,24 +29,24 @@
             <i class="fa-solid fa-user"></i>
             <p>Mi Perfil</p>            
         </a>
-        <nav class="navbar navbar-expand-lg justify-content-center">
-            <div id="menu_button" class="active_menu">
+        <nav class="navbar navbar-expand-lg justify-content-center px-5">           
+            <div id="menu_button" class="nav_element active_menu">
                 <i class="fa-solid fa-bars"></i>
                 Menú
             </div>
-            <a href="catalogo.html">
+            <a class="nav_element" href="catalogo.html">
                 <i class="fa-solid fa-clipboard-list"></i>
                 Catálogo
             </a>
-            <a href="servicioCliente.html">
+            <a class="nav_element" href="servicioCliente.html">
                 <i class="fa-regular fa-circle-question"></i>
                 Servicio al Cliente
             </a>
-            <a href="contactanos.html">
+            <a class="nav_element" href="contactanos.html">
                 <i class="fa-solid fa-message"></i>
                 Contáctanos
             </a>
-            <a href="exclusividad.html" class="menu_exclusividad">
+            <a href="exclusividad.html" class="nav_element menu_exclusividad">
                 <i class="fa-solid fa-circle-info"></i>
                 Exclusividad Domus
             </a>   
@@ -139,20 +139,26 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img class="img-fluid" src="img/promociones/samsungProm1.png" class="d-flex w-100" alt="...">
+                    <img src="img/promociones/bannerTest2.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img  src="img/promociones/xiaomiProm.png" class="d-flex w-100" alt="...">
+                    <img class="img-fluid" src="img/promociones/samsungProm1.png" class="d-flex w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img class="img-fluid" src="img/promociones/alimentoProm.png" class="d-block w-100" alt="...">
+                    <img  src="img/promociones/xiaomiProm.png" class="d-flex w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="img/anuncios/sorteoAnun.png" class="d-block w-100" alt="...">
+                    <img class="img-fluid" src="img/promociones/alimentoProm.png" class="d-block w-100" alt="...">
                 </div>
+                <div class="carousel-item">
+                    <img src="img/anuncios/sorteoAnun.png" class="d-block w-100" alt="...">
+                </div>
+                
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -1018,7 +1024,7 @@
                 </div>
             </div>            
         </article>        
-    </section>    
+    </section>
     <footer>
         <div id="footer_pictures">
             <a href="index.html">
@@ -1034,7 +1040,7 @@
                 <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>           
             </div>
         </div>              
-        <div class="footer_column">
+        <div id="footer_contactanos" class="footer_column">
             <h2>Contáctanos</h2>
             <p>
                 <i class="fa-solid fa-envelope"></i>
@@ -1057,7 +1063,7 @@
                 </a>
             </p>
         </div>
-        <div class="footer_column">
+        <div id="footer_servicio" class="footer_column">
             <h2>Servicio al Cliente</h2>
             <a href="terminos.html">Tutorial de compra</a>
             <a href="terminos.html">Terminos y Condiciones</a>
@@ -1065,7 +1071,7 @@
             <a href="devoluciones.html">Devoluciones y Cambios</a>
             <a href="reclamos.html">Reclamos</a>
         </div>
-        <div class="footer_column">
+        <div id="footer_nosotros" class="footer_column">
             <h2>Sobre nosotros</h2>
             <a href="nosotros.html">Conócenos</a>
             <a href="puntosVenta.html">Puntos de Venta</a>

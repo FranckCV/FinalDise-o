@@ -78,12 +78,12 @@ header {
     position: sticky; 
     z-index: 1501;
     top: 0;
-    padding-top: 10px;
     font-size: 80%;
+    /* font-size: 0.75vw; */
 }
 
 .header_item {
-    height: 25px;
+    /* height: 25px; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -91,14 +91,18 @@ header {
     align-items: center;    
     color: var(--font2);
     gap: 5%;
-    margin-block: 15px;
-    padding-inline: 10px;
-    font-size: 120%;
+    margin-block: 10px;
+    padding-inline: 15px;
+    font-size: 90%;
     cursor: pointer;
 }
 
 .header_option {
     transition: color 0.1s ease;
+}
+
+.header_option i {
+    font-size: 150%;
 }
 
 .header_option:hover {
@@ -122,7 +126,6 @@ header p {
 }
 
 #index_logo {
-    padding-block: 30px;
     grid-area: h_domus;
 }
 
@@ -153,12 +156,13 @@ header p {
     border: 0px;
     padding-block: 5px;
     font-size: 90%;
+    height: 3.5vh;
+    margin-block: 10px;
 }
 
 #search i {
-    /* transform: translateY(0%); */
     position: absolute;
-    right: 30px;
+    right: 50px;
     color: #888;
     padding: 7px;
     border-radius: var(--border-item);
@@ -176,32 +180,28 @@ nav {
     justify-content: center;
     height: 100%;
     align-items: center;
-    gap: 5%;
+    column-gap: 5%;
     grid-area: nav;
-    font-size: 95%;
-    padding: 20px
 }
 
-nav a,
-nav div {
+.nav_element {
     align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-block: 5px;
-    padding-inline: 20px;
+    padding-inline: 30px;
     border-radius: var(--border-item);    
     border: 1px solid var(--font2);
     background-color: var(--color2);
     color: var(--font2);
-    margin-block: 5px;
-    font-size: 120%;
+    margin-block: 10px;
+    font-size: 105%;
     transition: 0.1s ease;
     cursor: pointer;
 }
 
-nav a:hover,
-nav div:hover {    
+.nav_element:hover {    
     background-color: var(--font2);
     color: var(--color2);
 }
@@ -465,17 +465,101 @@ article {
 
 /* RESPONSIVIDAD */
 
-/* @media (min-width:600px) and (max-width:1000px){
-    a
-} */
-
-@media (min-width:1001px){
-    /* HEADER */
-    
+@media (min-width:600px) and (max-width:1000px){
     header {
         background-color: var(--color1);
         display: grid;
-        grid-template-columns: 1.2fr 3fr 1fr 1fr;
+        grid-template-columns: 1.5fr 3fr 1fr 1fr;
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: "h_domus h_buscar h_carrito h_perfil"
+                             "nav nav nav nav";
+        align-items: center;
+        width: 100%;
+        position: sticky; 
+        z-index: 1501;
+        top: 0;
+    }
+
+    .header_item {
+        gap: 5%;
+        font-size: 125%;
+    }
+
+    .header_option {
+        transition: color 0.1s ease;
+    }
+    
+    .header_option:hover {
+        color: var(--color5);
+        animation-name: header_item_floating;
+        animation-duration: 0.3s;
+        animation-iteration-count: infinite;
+    }
+     
+    #search input {
+        width: 100%;
+        border-radius: 100px;
+        border: 0px;
+        padding-block: 5px;
+        font-size: 90%;
+    }
+    
+    #search i {
+        position: absolute;
+        right: 30px;
+        color: #888;
+        padding: 7px;
+        border-radius: var(--border-item);
+        transition: 0.25s ease;
+    }
+        
+    nav {
+        gap: 3%;
+    }
+
+    nav a,
+    nav div {
+        font-size: 135%;
+    }
+
+    #menu_content {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color9);
+        width: 40vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom:0;
+        overflow-y: scroll;
+        padding: 15px;
+        transition: 0.5s;
+        z-index: 1000;
+        color: var(--background);
+        gap: 10px;
+    }
+
+    /* PIE DE PAGINA */
+    
+    footer {
+        padding: 25px;
+        background-color: var(--color8);
+        color: var(--font3);
+        display: grid;
+        justify-content: center;
+        gap: 60px;
+        text-align: center;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+    }
+}
+
+@media (min-width:1001px){
+    /* HEADER */
+    header {
+        background-color: var(--color1);
+        display: grid;
+        grid-template-columns: 1.5fr 3fr 1fr 1fr;
         grid-template-rows: repeat(2,auto);
         grid-template-areas: "h_domus h_buscar h_carrito h_perfil"
                              "nav nav nav nav";
@@ -485,17 +569,14 @@ article {
         z-index: 1501;
         top: 0;
         font-size: 0.75vw;
-    }
+    }    
     
     .header_item {
-        height: 25px;
         display: flex;
         justify-content: center;
         align-items: center;    
         color: var(--font2);
         gap: 5%;
-        margin-block: 35px;
-        padding-inline: 0px;
         font-size: 155%;
         cursor: pointer;
     }
@@ -510,46 +591,38 @@ article {
         animation-duration: 0.3s;
         animation-iteration-count: infinite;
     }
-            
+    
     #index_logo {
-        margin-inline: 10%;
+        grid-area: h_domus;
+        padding-inline: 15%;
     }
-        
-    #index_logo img:hover {
-        scale: 1.15;
+
+    #search {
+        margin: 0;
     }
 
     #search input {
         width: 100%;
         border-radius: 100px;
         border: 0px;
-        padding-block: 5px;
+        padding-block: 10px;
         font-size: 90%;
+        height: 200%;
     }
     
     #search i {
-        /* top: 50%; */
-        /* transform: translateY(0%); */
         position: absolute;
-        right: 1%;
+        right: 40px;
         color: #888;
         padding: 7px;
         border-radius: var(--border-item);
         transition: 0.25s ease;
     }
         
-    nav {
-        background-color: var(--color2);
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        align-items: center;
-        gap: 5%;
-        grid-column: 1 / -1;
-        font-size: 95%;
-        padding: 20px
+    nav a,
+    nav div {
+        font-size: 150%;
     }
-       
     
     /* MENU */
     
@@ -582,8 +655,7 @@ article {
         text-align: center;
         grid-template-columns: repeat(4,auto);
         grid-template-rows: auto;
-    }   
-        
+    }       
     
 }
 

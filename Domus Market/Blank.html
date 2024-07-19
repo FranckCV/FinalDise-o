@@ -8,28 +8,53 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="shortcut icon" href="img/elementos/iconDomus.png">
     <title> | Domus Market</title>
 </head>
+<!-- <style>
+    .rotate-container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .rotate-checkbox {
+        display: none;
+    }
+
+    .rotate-element {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: transform 0.5s;
+    }
+
+    .rotate-checkbox:checked + .rotate-element {
+        transform: rotate(90deg);
+    }
+
+</style> -->
+
 <body class="body_section">
     <header>
-        <a class="header_item" id="index_logo" href="index.html">
+        <a class="header_item" id="index_logo" href="index.html">            
             <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
-        </a>
+        </a>        
         <div class="header_item" id="search">
             <input type="text">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <a class="header_item header_option" id="carrito" href="carrito.html">
+        <a class="header_item header_option" id="header_carrito" href="carrito.html">
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Mi Carrito</p>            
         </a>
-        <a class="header_item header_option" id="perfil" href="perfil.html">
+        <a class="header_item header_option" id="header_perfil" href="perfil.html">
             <i class="fa-solid fa-user"></i>
             <p>Mi Perfil</p>            
         </a>
-        <nav class="navbar navbar-expand-lg justify-content-center">
+        <nav class="navbar navbar-expand-lg justify-content-center px-5">
             <div id="menu_button" class="active_menu">
                 <i class="fa-solid fa-bars"></i>
                 Menú
@@ -64,24 +89,24 @@
                 Alimentos
             </a>
             <a href="#">
-                <i class="fa-solid fa-house-chimney"></i>
-                Hogar
+                <i class="fa-solid fa-person-running"></i>
+                Deporte
             </a>
             <a href="#">
-                <i class="fa-solid fa-shirt"></i>
-                Ropa y Calzado
+                <i class="fa-solid fa-house-chimney"></i>
+                Hogar
             </a>
             <a href="#">
                 <i class="fa-solid fa-book"></i>
                 Libreria y Oficina
             </a>
             <a href="#">
-                <i class="fa-solid fa-person-running"></i>
-                Deporte
-            </a>
-            <a href="#">
                 <i class="fa-solid fa-paw"></i>
                 Mascotas
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-shirt"></i>
+                Ropa y Calzado
             </a>
             <a href="categoriaTecnologia.html">
                 <i class="fa-solid fa-microchip"></i>
@@ -131,9 +156,14 @@
             <i class="fa-solid fa-star"></i>
             <span>Exclusividad Domus</span>                
         </a>     
-    </aside>  
+    </aside>
     <section class="body_page">
-        
+        <!-- <article style="height: 500px; background-color: #236106;">
+            <label class="rotate-container">                
+                <input type="checkbox" class="rotate-checkbox">
+                <div class="rotate-element">Click me to rotate</div>
+            </label>
+        </article> -->
     </section>    
     <footer>
         <div id="footer_pictures">
@@ -180,14 +210,14 @@
             <a href="faq.html">Preguntas Frecuentes</a>
             <a href="devoluciones.html">Devoluciones y Cambios</a>
             <a href="reclamos.html">Reclamos</a>
-        </div>        
+        </div>
         <div id="footer_nosotros" class="footer_column">
             <h2>Sobre nosotros</h2>
             <a href="nosotros.html">Conócenos</a>
             <a href="puntosVenta.html">Puntos de Venta</a>
             <p>Encuentranos en SUNAT</p> 
         </div>        
-    </footer>     
+    </footer>    
     <div class="footer_end">
         &copy; 2024 Copyright: Grupo 02 <br>
         Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
@@ -197,5 +227,6 @@
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
+    <script src="js/scriptIndexAnimExclusividad.js"></script>
 </body>
 </html>
