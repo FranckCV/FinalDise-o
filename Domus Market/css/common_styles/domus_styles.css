@@ -68,8 +68,8 @@ input[type="text" i] {
 header {
     background-color: var(--color1);
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(2,auto);
+    grid-template-columns: 1.75fr 1fr 1fr;
+    grid-template-rows: repeat(3,auto);
     grid-template-areas: "h_domus h_carrito h_perfil"
                          "h_buscar h_buscar h_buscar"
                          "nav nav nav";
@@ -78,7 +78,6 @@ header {
     position: sticky; 
     z-index: 1501;
     top: 0;
-    font-size: 80%;
 }
 
 .header_item {
@@ -88,19 +87,19 @@ header {
     flex-direction: column;
     align-items: center;    
     color: var(--font2);
-    gap: 5%;
     margin-block: 10px;
     padding-inline: 15px;
-    font-size: 90%;
     cursor: pointer;
 }
 
 .header_option {
     transition: color 0.1s ease;
+    font-size: 3.5vw;
+    gap: 10px;
 }
 
 .header_option i {
-    font-size: 150%;
+    font-size: 120%;
 }
 
 .header_option:hover {
@@ -175,15 +174,15 @@ header p {
 nav {
     background-color: var(--color2);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    height: 100%;
     align-items: center;
-    column-gap: 5%;
+    gap: 5%;
     grid-area: nav;
+    padding: 10px;
 }
 
 .nav_element {
-    align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,10 +191,15 @@ nav {
     border: 1px solid var(--font2);
     background-color: var(--color2);
     color: var(--font2);
-    font-size: 105%;
     transition: 0.1s ease;
     cursor: pointer;
     gap: 15px;
+}
+
+.nav_element i {
+    font-size: 125%;
+    margin: 0;
+    padding: 0;
 }
 
 .nav_element p {
@@ -205,10 +209,6 @@ nav {
 .nav_element:hover {    
     background-color: var(--font2);
     color: var(--color2);
-}
-
-.nav_element i {
-    font-size: 125%;
 }
 
 /* MENU */
@@ -223,7 +223,7 @@ nav {
     left: 0;
     bottom:0;
     overflow-y: scroll;
-    padding: 15px;    
+    padding: 25px;    
     transition: 0.5s;
     z-index: 1000;
     color: var(--background);
@@ -341,7 +341,7 @@ nav {
 
 @keyframes menu_exclusividad_scale {
     0%,100% {
-        scale: 1.03;
+        scale: 1.05;
     }
     50% {
         scale: 1;
@@ -467,35 +467,22 @@ article {
 
 @media (min-width:600px) and (max-width:1000px){
     header {
-        background-color: var(--color1);
-        display: grid;
-        grid-template-columns: 1.5fr 3fr 1fr 1fr;
+        grid-template-columns: 1.5fr 2fr 1fr 1fr;
         grid-template-rows: repeat(2,auto);
         grid-template-areas: "h_domus h_buscar h_carrito h_perfil"
                              "nav nav nav nav";
-        align-items: center;
-        width: 100%;
-        position: sticky; 
-        z-index: 1501;
-        top: 0;
     }
 
     .header_item {
-        gap: 5%;
-        font-size: 125%;
+        margin-block: 20px;
     }
 
     .header_option {
         transition: color 0.1s ease;
+        font-size: 2.5vw;
+        gap: 10px;
     }
-    
-    .header_option:hover {
-        color: var(--color5);
-        animation-name: header_item_floating;
-        animation-duration: 0.3s;
-        animation-iteration-count: infinite;
-    }
-     
+
     #search input {
         width: 100%;
         border-radius: 100px;
@@ -514,28 +501,26 @@ article {
     }
         
     nav {
-        gap: 3%;
+        gap: 2vw;
     }
 
     .nav_element {
-        font-size: 135%;
+        padding-inline: 1.5vw;
+        font-size: 1.5vw;
+        gap: 10px;
+    }
+    
+    .nav_element p {
+        display: inline;
+    }
+
+    #menu_button p {
+        display: none;
     }
 
     #menu_content {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--color9);
-        width: 40vw;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom:0;
-        overflow-y: scroll;
-        padding: 15px;
-        transition: 0.5s;
-        z-index: 1000;
-        color: var(--background);
-        gap: 10px;
+        width: 45%;
+        padding: 25px;
     }
 
     /* PIE DE PAGINA */
