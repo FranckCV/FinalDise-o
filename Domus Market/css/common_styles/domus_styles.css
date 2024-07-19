@@ -198,8 +198,6 @@ nav {
 
 .nav_element i {
     font-size: 125%;
-    margin: 0;
-    padding: 0;
 }
 
 .nav_element p {
@@ -506,10 +504,14 @@ article {
 
     .nav_element {
         padding-inline: 1.5vw;
-        font-size: 1.5vw;
-        gap: 10px;
+        font-size: 1.75vw;
+        gap: 0.75vw;
     }
-    
+
+    .nav_element i {
+        font-size: 125%;
+    }
+
     .nav_element p {
         display: inline;
     }
