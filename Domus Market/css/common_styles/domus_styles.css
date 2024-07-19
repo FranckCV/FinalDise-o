@@ -69,7 +69,7 @@ header {
     background-color: var(--color1);
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
     grid-template-areas: "h_domus h_carrito h_perfil"
                          "h_buscar h_buscar h_buscar"
                          "nav nav nav";
@@ -79,11 +79,9 @@ header {
     z-index: 1501;
     top: 0;
     font-size: 80%;
-    /* font-size: 0.75vw; */
 }
 
 .header_item {
-    /* height: 25px; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -189,16 +187,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-block: 5px;
-    padding-inline: 30px;
+    padding: 10px;
     border-radius: var(--border-item);    
     border: 1px solid var(--font2);
     background-color: var(--color2);
     color: var(--font2);
-    margin-block: 10px;
     font-size: 105%;
     transition: 0.1s ease;
     cursor: pointer;
+    gap: 15px;
+}
+
+.nav_element p {
+    display: none;
 }
 
 .nav_element:hover {    
@@ -206,8 +207,7 @@ nav {
     color: var(--color2);
 }
 
-nav i {
-    margin-right: 10px;
+.nav_element i {
     font-size: 125%;
 }
 
@@ -517,8 +517,7 @@ article {
         gap: 3%;
     }
 
-    nav a,
-    nav div {
+    .nav_element {
         font-size: 135%;
     }
 
@@ -619,11 +618,17 @@ article {
         transition: 0.25s ease;
     }
         
-    nav a,
-    nav div {
-        font-size: 150%;
+    .nav_element {
+        font-size: 150%;    
+        padding-inline: 30px;
+        border-radius: var(--border-item);        
+        margin-block: 10px;    
     }
     
+    .nav_element p {
+        display: inline;
+    }
+
     /* MENU */
     
     #menu_content {

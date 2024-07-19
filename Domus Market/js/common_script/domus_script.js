@@ -32,10 +32,10 @@ function adjustPadding() {
 }
 
 window.addEventListener("load", () => {
-    adjustPadding()
+    adjustPadding();
 });
 window.addEventListener("resize", () => {
-    adjustPadding()
+    adjustPadding();
 });
 
 // FUNCIONALIDAD Y ANIMACIÓN MENU DESPLEGLABE
@@ -47,6 +47,7 @@ const $openClose = document.querySelector("#menu_button"),
 
 $openClose.addEventListener("click", () => {
     $aside.classList.toggle("desplegar");
+    adjustPadding();
 });
 
 $menuElements.forEach((menuElement, index) => {
