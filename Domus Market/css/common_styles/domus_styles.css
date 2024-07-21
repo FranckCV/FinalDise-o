@@ -11,6 +11,10 @@
     --border-tag: 25px;
     --border-menu: 10px;
 
+    --font-icon-cel: 20px;
+    --font-icon-tab: 2.5vw;
+    --font-icon-pc: 1.55vw;
+
     --background: #ffffff;
     --color1: #0C0A3E;
     --color2: #1e1c7a;
@@ -58,7 +62,6 @@ h1 {
 }
 
 input[type="text" i] {
-    padding-block: 1px;
     padding-inline: 20px;
     outline: none;
 }
@@ -78,6 +81,7 @@ header {
     position: sticky; 
     z-index: 1501;
     top: 0;
+    /* padding-top: 1px; */
 }
 
 .header_item {
@@ -105,7 +109,7 @@ header {
 .header_option:hover {
     color: var(--color5);
     animation-name: header_item_floating;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-iteration-count: infinite;
 }
 
@@ -151,10 +155,8 @@ header p {
     width: 90%;
     border-radius: 100px;
     border: 0px;
-    padding-block: 5px;
-    font-size: 90%;
-    height: 3.5vh;
-    margin-block: 10px;
+    padding-block: 7.5px;
+    margin-bottom: 10px;
 }
 
 #search i {
@@ -179,7 +181,8 @@ nav {
     align-items: center;
     gap: 5%;
     grid-area: nav;
-    padding: 10px;
+    z-index: 2000;
+    height: 100%;
 }
 
 .nav_element {
@@ -187,13 +190,17 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-radius: var(--border-item);    
+    padding-inline: 2.75vw;
+    border-radius: var(--border-article);    
     border: 1px solid var(--font2);
     background-color: var(--color2);
     color: var(--font2);
     transition: 0.1s ease;
     cursor: pointer;
     gap: 15px;
+    margin-block: 2.5vw;
+    /* height: 40px; */
+    /* width: 40px; */
 }
 
 .nav_element i {
@@ -237,7 +244,7 @@ nav {
     transform: translateX(-100%);
 }
 
-.menu_element {    
+.menu_element {
     background-color: var(--background);
     color: var(--color9);
     padding-block: 5px;
@@ -312,6 +319,17 @@ nav {
     animation-name: menu_exclusividad_color , menu_exclusividad_scale;
     animation-duration: 0.6s;
     animation-iteration-count: infinite;
+}
+
+.icon_exclusividad {
+    display: inline-block;
+    background-image: url('../../img/elementos/iconExclusividadDomus.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    height: var(--font-icon-cel);
+    width: var(--font-icon-cel);
+    padding: 0;
+    margin: 0;
 }
 
 @keyframes menu_exclusividad_color {
@@ -476,26 +494,17 @@ article {
     }
 
     .header_option {
-        transition: color 0.1s ease;
         font-size: 2.5vw;
         gap: 10px;
     }
 
     #search input {
         width: 100%;
-        border-radius: 100px;
-        border: 0px;
-        padding-block: 5px;
-        font-size: 90%;
+        margin: 0;
     }
     
     #search i {
-        position: absolute;
-        right: 30px;
-        color: #888;
-        padding: 7px;
-        border-radius: var(--border-item);
-        transition: 0.25s ease;
+        right: 25px;
     }
         
     nav {
@@ -503,9 +512,13 @@ article {
     }
 
     .nav_element {
-        padding-inline: 1.5vw;
+        margin-block: 1.5vw;
         font-size: 1.75vw;
+        padding-inline: 2vw;
+        padding-block: 1vw;
         gap: 0.75vw;
+        /* height: auto;
+        width: auto; */
     }
 
     .nav_element i {
@@ -523,10 +536,14 @@ article {
     #menu_content {
         width: 45%;
         padding: 25px;
+        font-size: 1.75vw;
     }
 
-    /* PIE DE PAGINA */
-    
+    .icon_exclusividad {
+        height: var(--font-icon-tab);
+        width: var(--font-icon-tab);
+    }
+
     footer {
         padding: 25px;
         background-color: var(--color8);
@@ -541,43 +558,23 @@ article {
 }
 
 @media (min-width:1001px){
-    /* HEADER */
     header {
-        background-color: var(--color1);
-        display: grid;
         grid-template-columns: 1.5fr 3fr 1fr 1fr;
         grid-template-rows: repeat(2,auto);
         grid-template-areas: "h_domus h_buscar h_carrito h_perfil"
                              "nav nav nav nav";
-        align-items: center;
-        width: 100%;
-        position: sticky; 
-        z-index: 1501;
-        top: 0;
         font-size: 0.75vw;
     }    
     
     .header_item {
-        display: flex;
-        justify-content: center;
-        align-items: center;    
-        color: var(--font2);
-        gap: 5%;
-        font-size: 155%;
-        cursor: pointer;
+        margin-block: 20px;
+        font-size: 1.5vw;
     }
     
     .header_option {
-        transition: color 0.1s ease;
+        gap: 10px;
     }
-    
-    .header_option:hover {
-        color: var(--color5);
-        animation-name: header_item_floating;
-        animation-duration: 0.3s;
-        animation-iteration-count: infinite;
-    }
-    
+      
     #index_logo {
         grid-area: h_domus;
         padding-inline: 15%;
@@ -588,55 +585,46 @@ article {
     }
 
     #search input {
-        width: 100%;
-        border-radius: 100px;
-        border: 0px;
         padding-block: 10px;
-        font-size: 90%;
-        height: 200%;
+        padding-inline: 2vw;
+        margin: 0;
     }
     
     #search i {
-        position: absolute;
-        right: 40px;
-        color: #888;
-        padding: 7px;
-        border-radius: var(--border-item);
-        transition: 0.25s ease;
+        right: 4.5vw;
+        padding: 10px;
     }
-        
+
+    nav {
+        gap: 3.5vw;
+    }
+
     .nav_element {
-        font-size: 150%;    
-        padding-inline: 30px;
-        border-radius: var(--border-item);        
-        margin-block: 10px;    
+        margin-block: 0.75vw;
+        font-size: 1.1vw;    
+        padding-inline: 1.25vw;
+        padding-block: 0.5vw;
+        gap: 0.75vw;
+        /* height: auto;
+        width: auto; */
     }
     
     .nav_element p {
         display: inline;
     }
 
-    /* MENU */
-    
     #menu_content {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--color9);
-        width: 25vw;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom:0;
-        overflow-y: scroll;
+        width: 30vw;
         padding: 15px;
-        transition: 0.5s;
-        z-index: 1000;
-        color: var(--background);
         gap: 10px;
+        font-size: 1.1vw;
     }
     
-    /* PIE DE PAGINA */
-    
+    .icon_exclusividad {
+        height: var(--font-icon-pc);
+        width: var(--font-icon-pc);
+    }
+
     footer {
         padding: 25px;
         background-color: var(--color8);
