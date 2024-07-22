@@ -109,7 +109,7 @@ $menuElements.forEach((menuElement, index) => {
 
 // ANIMACION TITULOS TIPO 1
 
-gsap.utils.toArray('h1').forEach(h1=>{
+gsap.utils.toArray('.article_title_1').forEach(h1=>{
     gsap.fromTo(h1,{
         letterSpacing:'5px',
         opacity:0,
