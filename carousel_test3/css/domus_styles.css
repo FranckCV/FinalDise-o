@@ -1,0 +1,333 @@
+:root {    
+    --height-main-header: 22vh;
+
+    --border-article: 50px;
+    --border-title: 7px;
+    --border-item: 25px;
+    --border-product: 10px;
+    --border-tag: 25px;
+    --border-menu: 10px;
+
+    --color_test: #000000;
+    --font_test: #fff;
+
+    --background: #ffffff;
+    --color1: #0C0A3E;
+    --color2: #242281;
+    --color3: #fff;
+    --color4: #2756f0;
+    --color5: #218aec;
+    --color6: #ffffff;
+    --color7: #cde3ff;
+    --color8: #060528;
+    --color9: #3532d3;
+    --color-title1: #00095c;
+    --color-title2: #00223d;
+    --color-button-product: #0011a8;
+    --color-button-product2: #005fee;
+    --color-background-product: #bebebe;
+    --color-product: #fff;
+    --font1: #000;
+    --font2: #fff;
+    --font3: #fff;
+}
+
+.body_section {
+    background-color: var(--background);
+    margin: 0px;
+    font-family: Poppins, sans-serif;
+    font-size: 90%;  
+    min-height: 100vh;
+    color: #000;
+    display: grid;
+    grid-template-columns: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    color: var(--font2);
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: var(--font2);
+    font-size: 25px;
+}
+
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 20px;
+    outline: none;
+}
+
+header {
+    background-color: var(--color1);
+    display: grid;
+    grid-template-columns: 15% auto 15% 15%;
+    grid-template-rows: auto auto;
+    align-items: center;
+    width: 100%;
+    position: fixed; 
+    z-index: 1010; 
+}
+
+#buscar {
+    position: relative;
+    /* width: 250px; */
+}
+
+#buscar input {
+    width: 90%;
+    border-radius: 100px;
+    border: 0px;
+    height: 40px;
+}
+
+#buscar i {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+header > a,
+header > div {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: var(--font2);
+    gap: 10px;
+    margin-block: 35px;
+}
+
+header p {
+    margin: 0;
+}
+
+header i {
+    font-size: 150%;
+}
+
+header img {
+    height: 60px;
+} 
+
+nav {
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    z-index: 999;
+    grid-column: 1 / -1;
+    font-size: 95%;
+    padding: 5px
+}
+
+nav a,
+nav div {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5px;
+    padding-inline: 20px;
+    border-radius: var(--border-item);    
+    border: 1px solid var(--font2);
+    background-color: var(--color2);
+    color: var(--font2);
+    margin-block: 5px;
+}
+
+nav div:hover,
+nav a:hover {    
+    background-color: var(--font2);
+    color: var(--color2);
+    transition: 0.025s;
+}
+
+nav i {
+    margin-right: 10px;
+    font-size: 125%;
+}
+
+/* MENU */
+
+#menu_content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color9);
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    overflow-y: scroll;
+    padding: 15px;
+    margin-top: var(--height-main-header);
+    transition: 0.5s;
+    z-index: 1000;
+    color: var(--background);
+    gap: 10px;
+}
+/* 
+#menu_content:hover{
+    overflow-y: scroll;
+} */
+
+.desplegar {
+    transform: translateX(-100%);
+}
+
+.menu_element {    
+    background-color: var(--background);
+    color: var(--color9);
+    padding-block: 5px;
+    padding-inline: 10px;
+    border-radius: var(--border-menu);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;    
+    cursor: pointer;
+    border: 1px solid var(--background);
+    width: 100%;
+}
+
+.menu_element:hover {
+    color: var(--background);
+    background-color: var(--color9);
+}
+
+.menu_element i,
+.menu_element span {
+    text-align: center;
+    justify-self: center;
+}
+
+.menu_element .fa-chevron-down {
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.menu_element .fa-chevron-down:hover {
+    background-color: #e7e7e7;
+}
+
+.submenu_content {
+    display: none;
+    flex-direction: column;
+    margin-inline: 10px;
+    gap: 5px;
+}
+
+.submenu_content a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--color5);
+    padding-inline: 20px;
+    border-radius: 10px;
+}
+
+.submenu_content a:hover {    
+    background-color: var(--color2);
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    padding: 25px;
+    background-color: var(--color8);
+    color: var(--font3);
+    display: grid;
+    justify-content: center;
+    gap: 6.5%;
+    text-align: center;
+    grid-template-columns: repeat(4,auto);    
+}
+
+footer h2 {
+    background-color: var(--background);
+    color: var(--color8);
+    text-align: center;
+    border-radius: var(--border-tag);
+    padding-inline: 20px;
+    font-size: 120%;
+}
+
+#logo_footer {
+    height: 105px;
+    border-bottom: 1px solid var(--background);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#social {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,50px);
+    justify-items: center;
+}
+
+#social i {
+    font-size: 205%;
+}
+
+.footer_column {
+    align-self: flex-start;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_column a,
+.footer_column p {
+    margin-bottom: 10px;
+}
+
+.footer_end {
+    color: var(--font2);
+    text-align: center;
+    background-color: #000;
+    grid-column: 1/-1;
+}
+
+/* CONTENIDO */
+
+section {
+    display: grid;
+    grid-template-columns: 100%;
+    /* gap: 10px; */
+    margin-top: var(--height-main-header);
+}
+
+section article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    /* border-radius: var(--border-article); */
+}
+
+.article_title_1 {
+    border-radius: var(--border-title);
+    width: fit-content;
+    padding-inline: 20px;
+    padding-block: 5px;
+    margin-block: 5px;
+    justify-self: center;
+    background-color: var(--color-title2);
+    /* background-color: inherit; */
+    filter: brightness(1.5);
+}
+
+.article_title_1:hover {
+    scale: 1.075;
+    transition: 0.1s;
+}

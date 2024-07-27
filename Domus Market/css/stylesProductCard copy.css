@@ -1,5 +1,9 @@
 :root {
     --size-product-pic: 150px;
+    --size-btn-chevron-product: 2.5vw;
+
+    --font-btn-chevron-product: 1vw;
+
     --color-button-product: #003f9e;
     --color-button-product2: #14006e;
     --color-background-product: #bebebe;
@@ -13,10 +17,11 @@
 }
 
 .slider_product {
-    background-color: #000;
+    /* background-color: #000; */
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .list_product {
@@ -24,54 +29,38 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
-.btn_slider_product {
-	/* position: absolute;
-	top: calc(50%);
-	height: 15px;
-	width: 15px;
-	border-left: 8px solid var(--background);
-	border-top: 8px solid var(--background); */
+.btn_slider_product {	
 	cursor: pointer;
-    z-index: 2000;
-    color: white;
-    background-color: #0014c4;
+    background-color: white;
+    color: #0014c4;
     padding: 20px;
-    border-radius: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-btn-chevron-product);
+
+	height: var(--size-btn-chevron-product);
+	width: var(--size-btn-chevron-product);
+    transition: 0.2s ease;
 }
 
 .btn_slider_product i {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 .btn_slider_product:hover {
 	transform: scale(1.2);
+    background-color: #3b1fb8;
+    color: #fff;
 }
-
-.btn_slider_product.inactive {
-	border-color: var(--color2);
-}
-
-/* .btn_slider_product:first-of-type {
-	transform: rotate(-45deg);
-	left: 100px
-}
-
-.btn_slider_product:last-of-type {
-	transform: rotate(135deg);
-	right: 100px;
-} */
-
-
-
-
-
-
-
-
 
 .product {
     border-radius: var(--border-product);
