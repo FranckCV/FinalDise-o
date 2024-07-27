@@ -1,21 +1,52 @@
 :root {
-    --size-product-pic: 150px;
-    --size-btn-chevron-product: 2.5vw;
+  --size-product-pic: 150px;
+  --size-btn-chevron-product: 2.5vw;
 
-    --border-product: 10px;
-    
-    --font-btn-chevron-product: 1vw;
+  --border-product: 10px;
+  
+  --font-btn-chevron-product: 1vw;
 
-    --color-button-product: #003f9e;
-    --color-button-product2: #14006e;
-    --color-background-product: #bebebe;
-    --color-product: #fff;
+  --color-button-product: #003f9e;
+  --color-button-product2: #14006e;
+  --color-background-product: #bebebe;
+  --color-product: #fff;
 }
 
-/* PRODUCTOS */
+a {
+  color: var(--font2);
+  text-decoration: none;
+}
 
-.article_products {
-    flex-direction: column;
+h1 {
+  text-align: center;
+  color: var(--font2);
+  font-size: 25px;
+}
+
+input[type="text" i] {
+  padding-inline: 20px;
+  outline: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins",sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 35px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left top, #031a9a, #8b53ff);
 }
 
 .slider_product {
@@ -220,5 +251,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:599px){
+  .list_product {
+    grid-auto-columns: 100%;
+  }
+}
+
+@media (min-width:600px) and (max-width:1000px){
+  .list_product {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
 
 
