@@ -627,7 +627,7 @@ article {
         color: var(--font3);
         display: grid;
         justify-content: center;
-        gap: 6.5%;
+        gap: 5vw;
         text-align: center;
         grid-template-columns: repeat(4,auto);
         grid-template-rows: auto;
