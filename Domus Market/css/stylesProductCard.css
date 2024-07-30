@@ -11,7 +11,7 @@
   --space-btn-chevron-product-tab: -10vw;
   --space-btn-chevron-product-pc: -4.5rem;
 
-  --border-product: 10px;
+  --border-product: 7.5px;
 
   --font-product-buttons: 1.15rem;
   
@@ -70,7 +70,7 @@
 .list_product {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 5) - 10px);
+  grid-auto-columns: calc((100% / 5) - 12px);
   gap: 16px;
   border-radius: var(--border-product);
   overflow-x: auto;
@@ -101,7 +101,7 @@
   scroll-snap-align: start;
   border-radius: var(--border-product);
   padding: 0px;
-  font-size: 85%;
+  /* font-size: 85%; */
   text-align: center;
   display: grid;
   grid-template-columns: repeat(2,auto);
@@ -122,7 +122,7 @@
 }
 
 .product_info {
-  font-size: 1.2vw;
+  font-size: 1.15vw;
   border-top-left-radius: var(--border-product);
   border-top-right-radius: var(--border-product);
   grid-area: info;
@@ -148,7 +148,7 @@
 
 .product_info, 
 .product_option {
-  padding: 0.9rem;
+  padding: 0.75rem;
 }
 
 .product_name {
@@ -220,8 +220,6 @@
   background-color: var(--color-button-product);
   color: white;
 }
-
-
 
 @media (max-width:599px){
   .slider_product {
