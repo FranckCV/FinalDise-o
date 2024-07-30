@@ -192,8 +192,7 @@
 
 /* 2 O MAS ARTICLES */
 
-.article_brands>div ,
-.article_products>div {
+.article_brands > div {
     margin: 20px;
 }
 

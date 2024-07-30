@@ -79,7 +79,7 @@ document.querySelectorAll(".slider_product").forEach(wrapper => {
 
   let autoPlay = () => {
     // if the device is not mobile or tab, enabling auto play
-    if (window.innerWidth < 600 || !isAutoPlay) return; // returning if the device is not desktop & isAutoPlay is false
+    if (window.innerWidth < 0 || !isAutoPlay) return; // returning if the device is not desktop & isAutoPlay is false
 
     // autoplaying the carousel after every 2500 ms
     timeoutId = setTimeout(() => {
