@@ -3,13 +3,15 @@
   --size-slider-product-tab: 70vw;
   --size-slider-product-pc: 80vw;
 
+  --size-subslider-product-cel: 60vw;
+  --size-subslider-product-tab: 25vw;
+  --size-subslider-product-pc: 47vw;
+
   --size-product-pic-cel: 45vw;
   --size-product-pic-tab: 18vw;
   --size-product-pic-pc: 12vw;
 
-  --space-btn-chevron-product-cel: -15vw;
-  --space-btn-chevron-product-tab: -10vw;
-  --space-btn-chevron-product-pc: -4.5rem;
+  --space-btn-chevron-product: -4rem;
 
   --border-product: 7.5px;
 
@@ -37,6 +39,49 @@
   position: relative;
 }
 
+.subslider_product {
+  max-width: var(--size-subslider-product-pc);
+  width: 100%;
+  position: relative;
+}
+
+.list_product {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  border-radius: var(--border-product);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.slider_product .list_product {
+  grid-auto-columns: calc((100% / 5) - 12px);
+}
+
+.subslider_product .list_product {
+  grid-auto-columns: calc((100% / 3) - 9px);
+}
+
+.list_product.no-transition {
+  scroll-behavior: auto;
+}
+
+.list_product::-webkit-scrollbar {
+  display: none;
+}
+
+.list_product.dragging {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+
+.list_product.dragging .product {
+  user-select: none;
+  cursor: grab;
+}
+
 .btn_slider_product {
   position: absolute;
   top: 50%;
@@ -56,45 +101,15 @@
 }
 
 .btn_slider_product:first-child {
-  left: var(--space-btn-chevron-product-pc);
+  left: var(--space-btn-chevron-product);
 }
 
 .btn_slider_product:last-child {
-  right: var(--space-btn-chevron-product-pc);
+  right: var(--space-btn-chevron-product);
 }
 
 .btn_slider_product:active {
   transform: translateY(-50%) scale(0.85);
-}
-
-.list_product {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 5) - 12px);
-  gap: 16px;
-  border-radius: var(--border-product);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-
-.list_product.no-transition {
-  scroll-behavior: auto;
-}
-
-.list_product::-webkit-scrollbar {
-  display: none;
-}
-
-.list_product.dragging {
-  scroll-behavior: auto;
-  scroll-snap-type: none;
-}
-
-.list_product.dragging .product {
-  user-select: none;
-  cursor: grab;
 }
 
 .product {
@@ -141,6 +156,7 @@
 }
 
 .product_pic {
+  width: var(--size-product-pic-pc);
   height: var(--size-product-pic-pc);
   justify-self: center;
   grid-area: prod_card_pic;
@@ -148,13 +164,14 @@
 
 .product_info, 
 .product_option {
-  padding: 0.75rem;
+  padding-inline: 1.05rem;
+  padding-block: 0.75rem;
 }
 
 .product_name {
   margin: 0;
   grid-area: prod_card_name;
-  font-size: 100%;
+  font-size: 90%;
 }
 
 .product_price {
@@ -226,15 +243,15 @@
     max-width: var(--size-slider-product-cel);
   }
 
-  .btn_slider_product:first-child {
-    left: var(--space-btn-chevron-product-cel);
-  }
-  
-  .btn_slider_product:last-child {
-    right: var(--space-btn-chevron-product-cel);
+  .subslider_product {
+    max-width: var(--size-subslider-product-cel);
   }
 
-  .list_product {
+  .slider_product .list_product {
+    grid-auto-columns: 100%;
+  }
+
+  .subslider_product .list_product {
     grid-auto-columns: 100%;
   }
 
@@ -245,6 +262,7 @@
 
   .product_pic {
     height: var(--size-product-pic-cel);
+    width: var(--size-product-pic-cel);
   }
   
 }
@@ -253,17 +271,17 @@
   .slider_product {
     max-width: var(--size-slider-product-tab);
   }
-  
-  .btn_slider_product:first-child {
-    left: var(--space-btn-chevron-product-tab);
-  }
-  
-  .btn_slider_product:last-child {
-    right: var(--space-btn-chevron-product-tab);
+
+  .subslider_product {
+    max-width: var(--size-subslider-product-tab);
   }
 
-  .list_product {
+  .slider_product .list_product {
     grid-auto-columns: calc((100% / 3) - 9px);
+  }
+
+  .subslider_product .list_product {
+    grid-auto-columns: 100%;
   }
 
   .product_info {    
@@ -273,6 +291,7 @@
 
   .product_pic {
     height: var(--size-product-pic-tab);
+    width: var(--size-product-pic-tab);
   }  
 }
 
