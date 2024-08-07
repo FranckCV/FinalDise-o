@@ -107,9 +107,9 @@ $menuElements.forEach((menuElement, index) => {
     });
 });
 
-// ANIMACION TITULOS TIPO 1
+// ANIMACION TITULOS TIPO 1 ESTILO 1
 
-gsap.utils.toArray('.article_title_1').forEach(h1=>{
+gsap.utils.toArray('.title1_1').forEach(h1=>{
     gsap.fromTo(h1,{
         letterSpacing:'5px',
         opacity:0,
@@ -126,3 +126,21 @@ gsap.utils.toArray('.article_title_1').forEach(h1=>{
     });
 });
 
+// ANIMACION TITULOS TIPO 1 ESTILO 2
+
+gsap.utils.toArray('.title1_2').forEach(h1=>{
+    gsap.fromTo(h1,{
+        letterSpacing:'5px',
+        opacity:0,
+        y:-150,
+    },{
+        letterSpacing:'0',
+        opacity:1,
+        y:0,
+        duration: 0.2,
+        scrollTrigger: {
+            trigger: h1,
+            start: "top 85%",
+        }
+    });
+});

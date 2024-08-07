@@ -5,7 +5,7 @@
     --height-main-header: calc( var(--height-header1) + var(--height-header2) + var(--height-nav));
     
     --border-article: 50px;
-    --border-title: 7px;
+    --border-title: 70px;
     --border-item: 25px;
     --border-product: 10px;
     --border-tag: 25px;
@@ -457,18 +457,29 @@ article {
     justify-content: center;
     align-items: center;
     padding-block: 20px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.article_title_1 {
+.title1_1,
+.title1_2 {
     border-radius: var(--border-title);
     width: fit-content;
-    padding-inline: 20px;
-    padding-block: 5px;
+    padding-inline: 1.5vw;
+    padding-block: 0.3vw;
     margin-block: 5px;
+    margin-inline: 7.5vw;
     justify-self: center;
-    background-color: var(--color-title2);
     filter: brightness(1.5);
     /* transition: scale 0.25s ease; */
+}
+
+.title1_1 {
+    background-color: var(--color-title1);
+}
+
+.title1_2 {
+    background-color: var(--color-title2);
 }
 
 /* .article_title_1:hover {

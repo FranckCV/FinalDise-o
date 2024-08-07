@@ -1,3 +1,11 @@
+:root {    
+    --size-img-for-sale-gallery: 60vw;
+    --gap-for-sale-gallery: 1vw;
+
+    --size-pagination-char: 3vw;
+}
+
+
 /* ---------------------------- HOMEPAGE ---------------------------- */
 
 /* PROMOCIONES Y ANUNCIOS */
@@ -10,10 +18,12 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: var(--color10);
-    border: 5px solid var(--color10);
+    /* background-color: var(--color10); */
+    background-color: black;
+    /* border: 5px solid var(--color10); */
+    border: 5px solid black;
     border-radius: 100%;
-    padding: 15px;
+    padding: 1.1vw;
 }
 
 .carousel-indicators .active {
@@ -36,7 +46,7 @@
 }
 
 .domus_title {
-    font-size: 250%;
+    font-size: 2rem;
     margin-block: 0.75rem;
 }
 
@@ -45,28 +55,16 @@
     width: 100%;
 }
 
-.domus_text {
-    text-align: right;
-    grid-template-areas: "img title"
-                         "img text";
-}
-
-.domus_text2 {
-    text-align: left;
-    grid-template-areas: "title img"
-                         "text img";
-}
-
 .domus_info {
     display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(2,auto);    
     column-gap: 25px;
     row-gap: 15px;
     align-items: flex-start;
-    padding-inline: 5%;
-    padding-block: 2%;
-    /* color: var(--font2); */
+    padding-inline: 5rem;
+    padding-block: 3rem;
+    justify-items: center;
+    font-size: 1.3vw;
+    align-items: center;
 }
 
 .domus_info h2 {
@@ -75,12 +73,35 @@
     grid-area: title;
     margin-block: 5px;
     font-size: 150%;
+    grid-area: d_title;
+    font-weight: bold;
 }
 
 .domus_info img {
-    width: 350px;
     border-radius: 50px;
-    grid-area: img;
+    grid-area: d_img;
+}
+
+.domus_info p {
+    grid-area: d_text;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.domus_text {
+    text-align: right;    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "d_img d_title"
+                         "d_img d_text";
+}
+
+.domus_text2 {
+    text-align: left;    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "d_title d_img"
+                         "d_text d_img";
 }
 
 /* OFERTAS */
@@ -89,7 +110,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-        height: auto;
+    height: auto;
     background-color: var(--color4);
     justify-content: center;
 }
@@ -97,36 +118,35 @@
 .for_sale_gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    padding-block: 10px;
-    height: auto;
+    gap: var(--gap-for-sale-gallery);
+    padding-inline: 0rem;
     justify-content: center;
+    align-items: center;
 }
 
 .for_sale_gallery img {
-    height: 325px;
     border-radius: var(--border-item);
     text-align: center;
 }
 
-/* LO MAS NUEVO */
-
-#product_new {
-    background-color: var(--color5);
+.img_for_sale_horizontal {
+    width: var(--size-img-for-sale-gallery);
 }
 
-#product_new  h1 {
-    background-color: var(--color-title1);
+.img_for_sale_vertical {
+    width: calc((var(--size-img-for-sale-gallery) - var(--gap-for-sale-gallery)) / 2);
+}
+
+/* LO MAS NUEVO */
+
+.article_product_new {
+    background-color: var(--color5);
 }
 
 /* LO MAS POPULAR */
 
-#product_popular {
+.article_product_popular {
     background-color: var(--color6);
-}
-
-#product_popular  h1 {
-    background-color: var(--color-title1);
 }
 
 /* MARCAS */
@@ -142,7 +162,7 @@
     gap: 1vw;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 2fr 4.5fr;
+    grid-template-columns: 1.1fr 2fr 4.5fr;
     grid-template-areas: "b_logo b_new b_product";
     margin-inline: 1vw;
     justify-items: center;
@@ -163,15 +183,27 @@
 }
 
 .brand_picture img {
-    /* height: 8vw; */
-    width: 8vw;
+    width: 10vw;
     border-radius: var(--border-item);
 }
 
 .brand_picture img ,
 .brand_picture p {
     box-shadow: 0px 0px 5px var(--color1);
+    transition: 0.1s ease;
 }
+
+.brand_picture img:hover ,
+.brand_picture p:hover {
+    box-shadow: 0px 0px 15px var(--color1);
+
+}
+
+.brand_picture img ,
+.brand_picture p {
+    box-shadow: 0px 0px 5px var(--color1);
+}
+
 
 .brand_name {
     text-align: center;
@@ -180,6 +212,7 @@
     background-color: var(--color9);
     border-radius: var(--border-item);
     padding-inline: 20px;
+    padding-block: 5px;
     margin: 0;
 }
 
@@ -191,7 +224,142 @@
     grid-area: b_product;
 }
 
+/* ------------------- MARCAS --------------- */
+
+.article_brands_gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-inline: 5vw;
+    height: auto;
+    background-color: var(--color7);
+    justify-content: center;
+}
+
+.brands_filters {
+    display: grid;
+    background-color: var(--color9);
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    text-align: center;
+    color: var(--background);
+    padding-block: 10px;
+    border-radius: var(--border-tag);
+    align-items: center;
+    padding-inline: 4vw;
+    padding-block: 1vw;
+}
+
+.brands_filters .select_filter {
+    justify-self: start;
+    font-size: 1.2vw;
+    /* gap: 20px; */
+}
+
+.select_filter label {
+    margin-inline-end: 1vw;
+}
+
+.select_filter select {
+    text-align: center;
+    outline: none;
+    border: 0px;
+    padding: 5px;
+    border-radius: var(--border-tag);
+}
+
+/* select option {
+    text-align: left;
+} */
+
+.brands_filters .pagination_brands {
+    justify-self: end;
+    padding: 0;
+}
+
+.brands_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding-block: 2vw;
+    padding-inline: 1vw;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: var(--border-tag);
+}
+
+.pagination_brands {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color: var(--background);
+    background-color: var(--color9);
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 1vw;
+}
+
+.pagination_brands i ,
+.pagination_brands p {
+    color: var(--font2);
+    padding: 0;
+    margin: 0;
+    border-radius: 100%;
+    width: var(--size-pagination-char);
+    height: var(--size-pagination-char);
+    text-align: center;
+    align-content: center;
+    font-size: 1.2vw;
+}
+
+.pagination_brands i {
+    background-color: #1b2f80;
+}
+
+.pagination_brands p {
+    color: var(--color10);
+    background-color: white;
+}
+
+.pagination_brands i:hover {
+    background-color: #00197c;
+}
+
+.pagination_brands p:hover {
+    background-color: var(--color10);
+    color: white;
+}
+
+
 @media (max-width:599px){
+    :root {    
+        --size-img-for-sale-gallery: 85vw;
+        --gap-for-sale-gallery: 3vw;
+    }
+
+    .domus_info {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,auto);
+        font-size: 4vw;
+        padding-inline: 10vw;
+        padding-block: 5vw;
+    }
+
+    .domus_text {
+        text-align: right;
+        grid-template-areas: "d_img"
+                             "d_title"
+                             "d_text";
+    }
+    
+    .domus_text2 {
+        text-align: left;
+        grid-template-areas: "d_img"
+                             "d_title"
+                             "d_text";
+    }
+
     .article_brands {
         row-gap: 10vw;
     }
@@ -211,12 +379,44 @@
     }
 
     .brand_picture img {
-        /* height: 35vw; */
         width: 35vw;
+    }
+
+    .brands_gallery {
+        gap: 7vw;
+        padding-block: 7vw;
+        padding-inline: 2vw;
+        /* justify-content: center; */
     }
 }
 
 @media (min-width:600px) and (max-width:1000px){
+    :root {    
+        --size-img-for-sale-gallery: 80vw;
+        --gap-for-sale-gallery: 2vw;
+    }
+    
+    .domus_info {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,auto);
+        font-size: 2.5vw;
+        padding-block: 4vw;
+    }
+
+    .domus_text {
+        text-align: right;
+        grid-template-areas: "d_img"
+                             "d_title"
+                             "d_text";
+    }
+    
+    .domus_text2 {
+        text-align: left;
+        grid-template-areas: "d_img"
+                             "d_title"
+                             "d_text";
+    }
+
     .article_brands {
         row-gap: 3vw;
     }
@@ -468,76 +668,6 @@
     background-color: var(--color4);
 }
 
-/* ------------------- MARCAS --------------- */
-
-.article_brands_gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    height: auto;
-    background-color: var(--color7);
-    justify-content: center;
-}
-
-.brands_filters {
-    display: flex;
-    background-color: var(--color9);
-    width: 100%;
-    text-align: center;
-    color: var(--background);
-    padding-block: 10px;
-    border-radius: var(--border-tag);
-    align-items: center;
-}
-
-.select_filter label {
-    margin-inline-end: 20px;
-}
-
-.select_filter select {
-    text-align: center;
-    outline: none;
-    border: 0px;
-    padding: 5px;
-    border-radius: var(--border-tag);
-}
-
-.brands_gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-    padding: 20px;
-    justify-content: center;
-    background-color: var(--background);
-    border-radius: var(--border-tag);
-}
-
-.pagination_brands {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    color: var(--background);
-    background-color: var(--color9);
-    padding: 10px;
-    border-radius: var(--border-tag);
-    font-size: 20px;
-}
-
-.pagination_brands i ,
-.pagination_brands p {
-    background-color: var(--color4);
-    color: var(--font2);
-    padding: 0;
-    margin: 0;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    align-content: center;
-}
-
 /* ------------------- MARCA SAMSUNG --------------- */
 
 .article_selected_brand {
@@ -552,7 +682,6 @@
 }
 
 .brand_page {    
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -571,4 +700,42 @@
     padding: 20px;
     color: var(--color-title2);
 }
+
+/* ------------------ CATALOGO ------------------------ */
+
+/* .article_catalogue {
+    a
+} */
+
+.catalogue_content {
+    width: 100%;
+    padding-inline: 1vw;
+    gap: 1vw;
+    display: flex;
+    /* grid-template-columns: 30% auto; */
+    /* text-align: right; */
+}
+
+.catalogue_filters {
+    width: 60vw;
+    background-color: #4c4cff;
+    height: auto;
+}
+
+.catalogue_products {
+    background-color: #7fffd4;
+}
+
+.wrap_product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: blue;
+    margin-block: 10px;
+    margin-inline: 30px;
+}
+
+
+
 
