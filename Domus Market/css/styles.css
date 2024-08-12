@@ -1,10 +1,20 @@
 :root {    
     --size-img-for-sale-gallery: 60vw;
     --gap-for-sale-gallery: 1vw;
+    --space-catalogue: 4vw;
+    --size-slider-subcategory-pc: 57vw;
+    --size-subslider-subcategory-pc: 50vw;
+    --space-btn-chevron-subcategory: -5vw;
 
     --size-pagination-char: 3vw;
-}
+    --border-radius-element: 10px;
+    --border-radius-content: 15px;
+    --border-subcategory: 20px;
 
+    --color-subcategory: #0036a2;
+    --color-catalogue: #367fec;
+    --color-filter: #003d98;
+}
 
 /* ---------------------------- HOMEPAGE ---------------------------- */
 
@@ -452,6 +462,355 @@
 
 
 
+/* ------------------- MARCA SAMSUNG --------------- */
+
+.article_selected_brand {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../img/marcas/banner_samsung.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    /* filter: brightness(0.5); */
+}
+
+.brand_page {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* ------- CATEGORIA TECNOLOGIA ------- */
+
+.article_category {
+    flex-direction: column;
+}
+
+.subcategory_picture .subcategory-icon {
+    font-size: 200px;
+    padding: 20px;
+    color: var(--color-title2);
+}
+
+
+
+
+
+
+
+/* ------------------ SUBCATEGORIAS ------------------------ */
+
+.slider_subcategory {
+    max-width: var(--size-slider-subcategory-pc);
+    width: 100%;
+    position: relative;
+}
+
+.subslider_subcategory {
+    max-width: var(--size-subslider-subcategory-pc);
+    width: 100%;
+    position: relative;
+}
+
+.list_subcategory {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    border-radius: var(--border-subcategory);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-block: 0.5vw;
+}
+
+.slider_subcategory .list_subcategory {
+    grid-auto-columns: calc((100% / 5) - 13px);
+}
+
+.subslider_subcategory .list_subcategory {
+    grid-auto-columns: calc((100% / 3) - 9px);
+}
+
+.list_subcategory.no-transition {
+    scroll-behavior: auto;
+}
+
+.list_subcategory::-webkit-scrollbar {
+    display: none;
+}
+
+.list_subcategory.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.list_subcategory.dragging .subcategory {
+    user-select: none;
+    cursor: grab;
+}
+
+.btn_slider_subcategory {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--font-product-buttons);
+    height: 50px;
+    width: 50px;
+    color: var(--font3);
+    background-color: var(--color10);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.btn_slider_subcategory:first-child {
+    left: var(--space-btn-chevron-subcategory);
+}
+
+.btn_slider_subcategory:last-child {
+    right: var(--space-btn-chevron-subcategory);
+}
+
+.btn_slider_subcategory:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.subcategory {
+    scroll-snap-align: start;
+    padding: 0px;
+    font-size: 1.25vw;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: "sc_icon" "sc_name";
+    color: var(--font2);
+    gap: 1vw;
+    transition: 0.1s ease;
+    align-items: center;
+    scale: 0.92;
+}
+
+.subcategory:hover {
+    scale: 0.98;
+}
+
+.subcategory_icon,
+.subcategory_name {
+    box-shadow: 0px 0px 7px #000000;
+    background-color: var(--color-subcategory);    
+}
+
+.subcategory_icon {
+    grid-area: sc_icon;
+    border-radius: 100%;
+    height: 11vw;
+    width: 11vw;
+    /* padding-block: 0.5vw; */
+    padding: 0.5vw;
+}
+
+.subcategory_icon i {
+    font-size: 700%;
+}
+
+.subcategory_name {
+    grid-area: sc_name;
+    border-radius: var(--border-subcategory);
+    padding-block: 0.3vw;
+    padding-inline: 0.7vw;
+}
+
+
+/* .subcategory_icon:hover,
+.subcategory_name:hover {
+    box-shadow: 0px 0px 0px #000000;
+}
+
+@keyframes anim-shadow-subcategory {
+    0% ,100% { 
+        box-shadow: 0px 0px 7px #000000;
+    }
+    50% { 
+        box-shadow: 0px 0px 0px #000000;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------ CATALOGOS ------------------------ */
+
+/* .article_catalogue {
+    a
+} */
+
+.catalogue_content {
+    width: 100%;
+    padding-inline: var(--space-catalogue);
+    gap: var(--space-catalogue);
+    display: flex;
+}
+
+.ctlg_filters {
+    font-size: 1vw;
+    text-align: center;
+    background-color: var(--color-catalogue);
+    height: fit-content;
+    display: grid;
+    gap: 0.5vw;
+    padding: 1.2vw;
+    color: white;
+    border-radius: var(--border-radius-content);
+}
+
+.ctlg_filters_head {
+    font-size: 120%;
+    gap: 0;
+}
+
+.ctlg_filters_head span,
+.ctlg_filters_head i {
+    margin: 0;
+}
+
+.ctlg_filters_head hr {
+    margin: 0.75vw;
+}
+
+.ctlg_filters_content {
+    margin-block: 1vw;
+    gap: 1vw;
+    display: grid;
+}
+
+.ctlg_filters_element {
+    display: grid;
+    grid-template-columns: 12vw 2vw;
+    align-items: center;
+    gap: 1vw;
+    background-color: var(--color-filter);
+    padding-block: 0.5vw;
+    padding-inline: 0.7vw;
+    border-radius: var(--border-radius-element);
+    transition: 0.07s ease;
+}
+
+.ctlg_filters_element:hover {
+    color: var(--color-filter);
+    background-color: white;
+}
+
+.ctlg_filters_element p,
+.ctlg_filters_element i {
+    padding: 0;
+    margin: 0;
+}
+
+.ctlg_filters_element p {
+    text-align: left;
+}
+
+.ctlg_filters_element i {
+    text-align: right;
+}
+
+.ctlg_filters_clean {
+    align-items: center;
+    gap: 1vw;
+    background-color: #ffffff;
+    color: var(--color-filter);
+    padding-block: 0.5vw;
+    padding-inline: 0.7vw;
+    border-radius: var(--border-radius-element);
+    transition: scale 0.05s ease;
+}
+
+.ctlg_filters_clean:hover {
+    /* color: #ffffff; */
+    /* color: var(--color-filter); */
+    scale: 1.05;
+}
+
+
+
+
+
+
+
+
+.catalogue_products {
+    background-color: #e1e1e1;
+    border-radius: var(--border-radius-content);
+}
+
+.wrap_product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-block: 10px;
+    margin-inline: 30px;
+}
+
+.catalogue_products .brands_filters ,
+.catalogue_products .pagination_brands {
+    border-radius: 0;
+    background-color: var(--color-catalogue);
+}
+
+.catalogue_products .brands_filters {
+    border-top-left-radius: var(--border-radius-content);
+    border-top-right-radius: var(--border-radius-content);
+}
+
+.catalogue_products .brands_filters select {
+    border-radius:  var(--border-radius-element);
+}
+
+.catalogue_products .pagination_brands {
+    border-bottom-left-radius:  var(--border-radius-content);
+    border-bottom-right-radius:  var(--border-radius-content);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -667,75 +1026,3 @@
 #product_brand {
     background-color: var(--color4);
 }
-
-/* ------------------- MARCA SAMSUNG --------------- */
-
-.article_selected_brand {
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url(../img/marcas/banner_samsung.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px;
-    /* filter: brightness(0.5); */
-}
-
-.brand_page {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-/* ------- CATEGORIA TECNOLOGIA ------- */
-
-.article_category {
-    flex-direction: column;
-}
-
-.subcategory_picture .subcategory-icon {
-    font-size: 200px;
-    padding: 20px;
-    color: var(--color-title2);
-}
-
-/* ------------------ CATALOGO ------------------------ */
-
-/* .article_catalogue {
-    a
-} */
-
-.catalogue_content {
-    width: 100%;
-    padding-inline: 1vw;
-    gap: 1vw;
-    display: flex;
-    /* grid-template-columns: 30% auto; */
-    /* text-align: right; */
-}
-
-.catalogue_filters {
-    width: 60vw;
-    background-color: #4c4cff;
-    height: auto;
-}
-
-.catalogue_products {
-    background-color: #7fffd4;
-}
-
-.wrap_product {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    background-color: blue;
-    margin-block: 10px;
-    margin-inline: 30px;
-}
-
-
-
-

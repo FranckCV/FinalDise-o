@@ -140,24 +140,76 @@
                 ¡NUEVAS OFERTAS Y ÚLTIMOS DESCUENTOS!
             </h1>
             <div class="catalogue_content">
-                <div class="catalogue_filters">
-                    <div class="catalogue_filters_element">
-                        a
+                <div class="ctlg_filters">
+                    <div class="ctlg_filters_head"> 
+                        <i class="fa-solid fa-filter"></i>
+                        <span>
+                            Filtros
+                        </span>
+                        <hr>
+                        <span>
+                            Resultados: 
+                            <b>183</b>
+                        </span>
                     </div>
-                    <div class="catalogue_filters_element">
-                        a
-                    </div>
-                    <div class="catalogue_filters_element">
-                        a
-                    </div>
-                    <div class="catalogue_filters_element">
-                        a
-                    </div>
-                    <div class="catalogue_filters_element">
-                        a
+                    <div class="ctlg_filters_content">
+                        <div class="ctlg_filters_element">
+                            <p>CATEGORIAS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="ctlg_filters_subcontent">
+                            <div class="ctlg_filters_subelement">
+                                a
+                            </div>
+                        </div>
+                        <div class="ctlg_filters_element">
+                            <p>SUBCATEGORIAS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="ctlg_filters_element">
+                            <p>GAMA DE PRECIOS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="ctlg_filters_element">
+                            <p>CALIFICACION</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="ctlg_filters_element">
+                            <p>DESCUENTOS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>                    
+                    <div class="ctlg_filters_clean">
+                        Limpiar Filtros
                     </div>
                 </div>
                 <div class="catalogue_products">
+                    <div class="brands_filters">
+                        <div class="select_filter">
+                            <label for="order">Ordenar por:</label>
+                            <select id="brands_order" name="order">                                    
+                                <option value="">Más Populares</option>
+                                <option value="">Más Recientes</option>
+                                <option value="">Mejores Descuentos</option>
+                                <option value="">Mejores Calificaciones</option>
+                                <option value="">Desde el Menor Precio</option>
+                                <option value="">Desde el Mayor Precio</option>
+                                <option value="">A - Z</option>
+                                <option value="">Z - A</option>
+                            </select>
+                        </div>
+                        <div class="pagination_brands">
+                            <i class="fa-solid fa-caret-left"></i>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <!-- <p>4</p> -->
+                            <!-- <p>5</p> -->
+                            <p>...</p>
+                            <p>16</p>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                    </div>
                     <div class="wrap_product">
                         <div class="product">
                             <a class="product_info" href="#">
@@ -897,6 +949,102 @@
                                 <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination_brands">
+                        <i class="fa-solid fa-caret-left"></i>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>...</p>
+                        <p>16</p>
+                        <i class="fa-solid fa-caret-right"></i>
                     </div>
                 </div>
             </div>            
