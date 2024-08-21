@@ -1,103 +1,90 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 form {
-    background-color: #ffffff;
+    background-color: #1e1c7a;
     padding: 20px;
-    padding-bottom: 0px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+    margin: 20px;
 }
-
-#logoRegistro {
+#form_logo{
+    background-color: #0C0A3E;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    background-color: #3b3b6b;
-}
-
-#logoRegistro img {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
-    object-fit: cover;
+    width: 25%;
+    height: 35%;
 }
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
+#logo_form{
+    width: 50%;
+    height: 50%;
 }
-
-.grupo {
-    position: relative;
-}
-
-.grupo input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+input, select{
     border-radius: 5px;
+    margin-top: 15px;
+    width: 50%;
+    height: 30px;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    text-align: center;
+}
+
+input:focus {
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
     outline: none;
 }
-
-.grupo label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ffffff;
-    padding: 0 5px;
-    color: #aaa;
-    pointer-events: none;
-    transition: 0.3s;
+input::placeholder, select {
+    text-align: center;
+    color: #999;
 }
-
-.grupo input:focus + label,
-.grupo input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 5px;
-    color: #333;
-    font-size: 12px;
-}
-
 input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #3b3b6b;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
+    background-color: #0C0A3E;
+    color: #fff;
     cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
+    height: 40px;
+    transition: transform 0.5s ease;
+    transform-origin: center;
 }
-
 input[type="submit"]:hover {
-    background-color: #222246;
+    background-color: #2756f0;
+    transform: scale(1.1);    
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    animation-name: item_floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
-#terminos {
-    margin-right: 10px;
+@keyframes item_floating {
+    0%, 100% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
 }
-
-#otroLabel {
-    color: #555;
+@media screen and ( max-width: 860px) {
+    input,select{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 25px;
+    }
 }
-
-#otroLabel a {
-    color: #555;
-    text-decoration: none;
-}
-
-#otroLabel a:hover {
-    text-decoration: underline;
+@media screen and ( max-width: 772px) {
+    input,select{
+        font-size: 11px;
+        width: 100%;
+    }
 }
