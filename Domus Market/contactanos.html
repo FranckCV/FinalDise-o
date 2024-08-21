@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,8 +10,7 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
-    <link rel="stylesheet" href="css/stylesProductCard.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contactanos.css">
     <title> | Domus Market</title>
 </head>
 <body class="body_section">
@@ -134,99 +134,50 @@
             <span>Exclusividad Domus</span>                
         </a>     
     </aside>
+
+    <!-- contenido propio -->
     <section class="body_page">
-        <article class="article_category">
-            <h1 class="title1_1">
-                CATEGORIA TECNOLOGIA
-            </h1>
-            <div class="category_content">
-                <div class="category">
-                    <i class="category_icon fa-solid fa-microchip"></i>
-                </div>                
-                <div class="slider_subcategory subslider_subcategory">
-                    <i class="btn_slider_subcategory fas fa-angle-left"></i>
-                    <div class="list_subcategory">
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Telefonia
-                            </div>
+        
+        <div class="container mt-5 pt-5">
+            <fieldset class="shadow-drop-center p-4 rounded" id="fields">
+                <legend class="legend_contacto">Contáctanos</legend>
+                <p>Si tienes alguna duda, comentario o sugerencia puedes contactarnos y nos comunicaremos contigo lo antes posible.</p>
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">Nombres:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
                         </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-tablet"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Tablets
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-headphones"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Audio
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-gamepad"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Zona Gamer
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-desktop"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Cómputo
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-camera"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Fotografía
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-tv"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Televisores
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-keyboard"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Accesorios
-                            </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="apellido" class="form-label">Apellidos:</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido">
                         </div>
                     </div>
-                    <i class="btn_slider_subcategory fas fa-angle-right"></i>
-                </div>
-            </div>                        
-        </article>
-        <article class="article_for_sale">
-            <div class="for_sale_gallery">
-                <img class="img-fluid img_for_sale_horizontal" src="img/promociones/samsungProm1.png" alt="o1">
-                <img class="img-fluid img_for_sale_vertical" src="img/ofertas/samsungOfer2.png" alt="o2">
-                <img class="img-fluid img_for_sale_vertical" src="img/ofertas/samsungOfer3.png" alt="o4">
-                <img class="img-fluid img_for_sale_horizontal" src="img/promociones/samsungProm2.png" alt="o3">
-            </div>                                  
-        </article>
-        <article class="article_catalogue">
-            
-        </article>     
-    </section>    
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="telefono" class="form-label">Número de celular:</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Comentarios:</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="terminos" name="terminos">
+                        <label class="form-check-label" for="terminos">He leído y acepto la política de privacidad</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="enviar_contacto">Enviar</button>
+                </form>
+            </fieldset>
+        </div>
+    </section>
+    <!-- -------- -->
+     
     <footer>
         <div id="footer_pictures">
             <a href="index.html">
@@ -289,6 +240,6 @@
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
-    <script src="js/scriptListSubcategory.js"></script>
+    <script src="js/scriptIndexAnimExclusividad.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,8 +10,7 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
-    <link rel="stylesheet" href="css/stylesProductCard.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/perfil.css">
     <title> | Domus Market</title>
 </head>
 <body class="body_section">
@@ -134,99 +134,61 @@
             <span>Exclusividad Domus</span>                
         </a>     
     </aside>
+
+    <!-- contenido propio -->
     <section class="body_page">
-        <article class="article_category">
-            <h1 class="title1_1">
-                CATEGORIA TECNOLOGIA
-            </h1>
-            <div class="category_content">
-                <div class="category">
-                    <i class="category_icon fa-solid fa-microchip"></i>
-                </div>                
-                <div class="slider_subcategory subslider_subcategory">
-                    <i class="btn_slider_subcategory fas fa-angle-left"></i>
-                    <div class="list_subcategory">
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Telefonia
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-tablet"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Tablets
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-headphones"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Audio
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-gamepad"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Zona Gamer
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-desktop"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Cómputo
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-camera"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Fotografía
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-tv"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Televisores
-                            </div>
-                        </div>
-                        <div class="subcategory">
-                            <div class="subcategory_icon">
-                                <i class="fa-solid fa-keyboard"></i>
-                            </div>
-                            <div class="subcategory_name">
-                                Accesorios
-                            </div>
-                        </div>
-                    </div>
-                    <i class="btn_slider_subcategory fas fa-angle-right"></i>
+        <div class="contenedor_perfil">
+            <aside class="aside_perfil">
+                <div class="profile">
+                    <img src="img/iconos/usuario.png" alt="Foto de perfil" id="foto_perfil">
+                    <h2>¡Hola, Fabiana!</h2>
                 </div>
-            </div>                        
-        </article>
-        <article class="article_for_sale">
-            <div class="for_sale_gallery">
-                <img class="img-fluid img_for_sale_horizontal" src="img/promociones/samsungProm1.png" alt="o1">
-                <img class="img-fluid img_for_sale_vertical" src="img/ofertas/samsungOfer2.png" alt="o2">
-                <img class="img-fluid img_for_sale_vertical" src="img/ofertas/samsungOfer3.png" alt="o4">
-                <img class="img-fluid img_for_sale_horizontal" src="img/promociones/samsungProm2.png" alt="o3">
-            </div>                                  
-        </article>
-        <article class="article_catalogue">
-            
-        </article>     
-    </section>    
+                <div id="opciones_perfil">
+                    <div class="opcion_perfil">
+                        <img src="img/iconos/user.png" alt="" class="img_perfil">
+                        <p>Usuarios</p>
+                        <img src="img/iconos/flecha.png" alt="" class="flecha">
+                    </div>
+    
+                    <div class="opcion_perfil">
+                        <img src="img/iconos/ubicacion.png" class="img_perfil" alt="">
+                        <p>Direcciones</p>
+                        <img src="img/iconos/flecha.png" alt="" class="flecha">
+                    </div>
+    
+                    <div class="opcion_perfil">
+                        <img src="img/iconos/tarjeta-de-credito.png" alt="" class="img_perfil">
+                        <p>Tarjeta de crédito</p>
+                        <img src="img/iconos/flecha.png" alt="" class="flecha">
+                    </div>
+    
+                    <div class="opcion_perfil">
+                        <img src="img/iconos/entrega-de-pedidos.png" alt="" class="img_perfil">
+                        <p>Mis pedidos</p>
+                        <img src="img/iconos/flecha.png" alt="" class="flecha">
+                    </div>
+    
+                    <div class="opcion_perfil">
+                        <img src="img/iconos/me-gusta.png" alt="" class="img_perfil">
+                        <p>Lista de deseos</p>
+                        <img src="img/iconos/flecha.png" alt="" class="flecha">
+                    </div>
+                    <div class="opcion_perfil" onclick="confirmarCierreSesion()">
+                        <img src="img/iconos/cerrar.png" class="img_perfil">
+                        <p>Cerrar sesión</p>
+                        <img src="img/iconos/flecha.png" alt="" class="flecha">
+                    </div>
+                </div>
+            </aside>
+    
+            <main class="main_perfil">
+                <h2>Lista de deseos</h2>
+                
+            </main>
+        </div>
+    </section>
+    <!-- -------- -->
+     
     <footer>
         <div id="footer_pictures">
             <a href="index.html">
@@ -289,6 +251,6 @@
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
-    <script src="js/scriptListSubcategory.js"></script>
+    <script src="js/scriptIndexAnimExclusividad.js"></script>
 </body>
 </html>
