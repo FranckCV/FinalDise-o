@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
+    <link rel="stylesheet" href="css/stylesProductCard.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="img/elementos/iconDomus.png">
     <title> | Domus Market</title>
@@ -149,460 +150,956 @@
                 <img class="img-fluid img_for_sale_vertical" src="img/promociones/samsungProm2.png" alt="o2">
             </div>                                  
         </article>
-        <article class="article_catalogue">
-            <main class="container-fluid mt-5 pt-5">
-                <div class="row">
-                    <div class="col-2">
-                        <!-- Sidebar de filtros -->
-                        <div class="p-3 bg-light rounded">
-                            <h4>Filtros</h4>
-                            <hr>
-                            <div>
-                                <p>Categorias</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Subcategorias</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Gama de Precios</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Calificación</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <div>
-                                <p>Descuentos</p>
-                                <!-- Opciones de filtro -->
-                            </div>
-                            <button class="btn btn-primary w-100 mt-3">Limpiar Filtros</button>
-                        </div>
-                    </div>                    
-                    <div class="col-10">                        
-                        <!-- Resultados de búsqueda -->
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h2 class="mb-0">Resultados para: <span class="text-primary">Búsqueda</span></h2>
-                            <div>
-                                <label for="sort" class="me-2">Ordenar por:</label>
-                                <select id="sort" class="form-select d-inline-block w-auto">
-                                    <option value="popular">Más populares</option>
-                                    <option value="price-asc">Precio: Bajo a Alto</option>
-                                    <option value="price-desc">Precio: Alto a Bajo</option>
-                                </select>
-                            </div>
-                        </div>
-        
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center mt-3">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Siguiente</a>
-                                </li>
-                            </ul>
-                        </nav>
-        
-                        <div class="row d-flex justify-content-between">
-                            <!-- Cada card de producto -->
-                            <div class="products-container row">
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- Más tarjetas de producto aquí -->
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-        
-                            <div class="products-container row">
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- Más tarjetas de producto aquí -->
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-        
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- Más tarjetas de producto aquí -->
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                                <div class="product col">
-                                    <a class="product_info" href="product">
-                                        <img src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                            alt="Photo_Product">
-                                        <p>Samsung Galaxy S20 de 256GB</p>
-                                        <div class="product_price price_regular">
-                                            <p class="product_price_title">Regular</p>
-                                            <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_online">
-                                            <p class="product_price_title">Online</p>
-                                            <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                        </div>
-                                        <div class="product_price price_for_sale">
-                                            <p class="product_price_title">Oferta</p>
-                                            <p class="product_price_number">S/. 3,499<sup>.99</sup></p>
-                                        </div>
-                                    </a>
-                                    <a class="product_option_fav" href="fav">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a class="product_option_add" href="add">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-        
-                        </div>
-                        <!-- Repite este bloque por cada producto -->
+        <article class="article_catalogue catalogue_brand">
+            <h1 class="title1_2">
+                ¡NUEVAS OFERTAS Y ÚLTIMOS DESCUENTOS!
+            </h1>
+            <div class="catalogue_content">
+                <div class="ctlg_filters">
+                    <div class="ctlg_filters_head"> 
+                        <i class="fa-solid fa-filter"></i>
+                        <span>
+                            Filtros
+                        </span>
+                        <hr>
+                        <span>
+                            Resultados: 
+                            <b>183</b>
+                        </span>
                     </div>
-                    
+                    <div class="ctlg_filters_content">
+                        <div class="ctlg_filters_element">
+                            <i class="fa-solid fa-list"></i>
+                            <p>CATEGORIAS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="ctlg_filters_subcontent">
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-drumstick-bite"></i>
+                                Alimentos
+                            </div>
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-person-running"></i>
+                                Deporte
+                            </div>
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-house-chimney"></i>
+                                Hogar
+                            </div>
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-book"></i>
+                                Libreria y Oficina
+                            </div>
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-paw"></i>
+                                Mascotas
+                            </div>
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-shirt"></i>
+                                Ropa y Calzado
+                            </div>
+                            <div class="ctlg_filters_subelement">
+                                <i class="fa-solid fa-microchip"></i>
+                                Tecnología
+                                <!-- <input type="checkbox" name="" id=""> -->
+                            </div>
+                        </div>
+                        
+                        <div class="ctlg_filters_element">
+                            <i class="fa-solid fa-table-list"></i>
+                            <p>SUBCATEGORIAS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                                                
+                        <div class="ctlg_filters_element">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <p>GAMA DE PRECIOS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        
+                        <div class="ctlg_filters_element">
+                            <i class="fa-solid fa-star"></i>
+                            <p>CALIFICACION</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        
+                        <div class="ctlg_filters_element">
+                            <i class="fa-solid fa-percent"></i>
+                            <p>DESCUENTOS</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                    </div>                    
+                    <div class="ctlg_filters_clean">
+                        Limpiar Filtros
+                    </div>
                 </div>
+                <div class="catalogue_products">
+                    <div class="brands_filters">
+                        <div class="select_filter">
+                            <label for="order">Ordenar por:</label>
+                            <select id="brands_order" name="order">                                    
+                                <option value="">Más Populares</option>
+                                <option value="">Más Recientes</option>
+                                <option value="">Mejores Descuentos</option>
+                                <option value="">Mejores Calificaciones</option>
+                                <option value="">Desde el Menor Precio</option>
+                                <option value="">Desde el Mayor Precio</option>
+                                <option value="">A - Z</option>
+                                <option value="">Z - A</option>
+                            </select>
+                        </div>
+                        <div class="pagination_brands">
+                            <i class="fa-solid fa-caret-left"></i>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <!-- <p>4</p> -->
+                            <!-- <p>5</p> -->
+                            <p>...</p>
+                            <p>16</p>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                    </div>
+                    <div class="wrap_product">
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/" alt="Photo_Product">
+                                <p class="product_name">
+                                    XXXXXXX XXXXXXXXXXX XXXXXX XXXXXXX
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination_brands">
+                        <i class="fa-solid fa-caret-left"></i>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>...</p>
+                        <p>16</p>
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
                 </div>
-            </main>
-        </article>
+            </div>
+        </article> 
     </section>    
     <footer>
         <div id="footer_pictures">
@@ -666,5 +1163,6 @@
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
+    <script src="js/scriptListSubcategory.js"></script>
 </body>
 </html>

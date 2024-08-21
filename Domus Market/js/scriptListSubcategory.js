@@ -3,7 +3,7 @@ document.querySelectorAll(".slider_subcategory").forEach(wrapper => {
   let btns = wrapper.querySelectorAll(".btn_slider_subcategory");
   let carouselChildren = [...carousel.children];
 
-  let timeAutoPlay = 500;
+  let timeAutoPlay = 2500;
 
   // getting card width
   let cardWidth = carousel.querySelector(".subcategory").offsetWidth;

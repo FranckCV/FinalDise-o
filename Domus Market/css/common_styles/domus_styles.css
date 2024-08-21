@@ -22,7 +22,7 @@
     --color4: #2756f0;
     --color5: #218aec;
     --color6: #ffffff;
-    --color7: #cde3ff;
+    --color7: #040136;
     --color8: #02011f;
     --color9: #3532d3;
     --color10: #2709ac;
@@ -479,7 +479,9 @@ article {
 }
 
 .title1_2 {
-    background-color: var(--color-title2);
+    color: var(--color-title1);
+    background-color: var(--font2);
+    font-weight: bold;
 }
 
 /* .article_title_1:hover {
