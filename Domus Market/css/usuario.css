@@ -6,6 +6,10 @@
     gap:10px;
     color: white;
 }
+p{
+    text-align: start;
+    margin:5px;
+}
 h2,h3{
     text-align: center;
     font-size: 1.4rem;
