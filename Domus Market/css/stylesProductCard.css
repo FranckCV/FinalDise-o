@@ -265,13 +265,15 @@
 
   .product_info {    
     grid-template-columns: var(--size-product-pic-cel);
-    font-size: 4.7vw;
+    font-size: 4.2vw;
   }
 
   .product_pic {
     height: var(--size-product-pic-cel);
     width: var(--size-product-pic-cel);
   }
+
+
   
 }
 
