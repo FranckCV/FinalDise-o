@@ -1,9 +1,9 @@
-body {
+.login_body {
     background-color: #222246;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     margin: 0;
 }
 
@@ -26,18 +26,18 @@ body {
     width: 50px;
 }
 
-p{
+.login-container p{
     font-size: small;
     display: flex;
     justify-content: end;
 }
 
-.btn{
+.login-container .btn{
     background-color: #242281;
     border-color: #242281;
 }
 
-.btn:hover{
+.login-container .btn:hover{
     background-color: #00095c;
     border-color: #242281;
 }

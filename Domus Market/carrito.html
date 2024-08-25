@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
-    <!-- <link rel="stylesheet" href="css/stylesProductCard.css"> -->
+    <link rel="stylesheet" href="css/stylesProductCard.css">
+    <link rel="stylesheet" href="css/stylesGalleryImages.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/carrito.css">
     <title>Carrito de compras</title>
@@ -161,163 +162,353 @@
         <hr class="">
         <div class="container my-5">
             <h2 class="mb-4">¿Algo más? Agrégalo ahora</h2>
-            <article>
-                <div class="list_product">
-                    <i id="left" class="arrow-car fa-solid fa-angle-left"></i>
-                    <div class="carousel">
+            <article class="article_products article_product_popular">
+                
+                <div class="slider_product">
+                    <i class="btn_slider_product fas fa-angle-left"></i>
+                    <div class="list_product">
                         <div class="product">
-                            <a class="product_info" href="product">
-                                <img class="img-product" src="img/productos/Audífonos inalámbricos verdaderos con cancelación de ruido Samsung Galaxy Buds Live (Mystic Black).png" alt="Photo_Product">
-                                <p class="nombreProducto">Samsung Galaxy A24 Negro</p>
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Tecnologia/Samsung Galaxy S24 Ultra 6.8 12GB RAM 512GB - Negro Titanio + CARGADOR 45w.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Samsung Galaxy S24 Ultra 6.8" 12GB RAM 512GB - ...
+                                </p>                                    
                                 <div class="product_price price_regular">
-                                    <p class="product_price_title">Regular</p>
-                                    <p class="product_price_number">S/. 1,200<sup>.00</sup></p>
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 6,999
+                                        <sup>.00</sup>
+                                    </p>
                                 </div>
                                 <div class="product_price price_online">
-                                    <p class="product_price_title">Online</p>
-                                    <p class="product_price_number">S/. 1,100<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">Oferta</p>
-                                    <p class="product_price_number oferta">S/. 999<sup>.99</sup></p>
-                                </div>
-                            </a>
-                            <a class="product_option_fav" href="fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                            <button class="product_option_add agregar" href="">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-
-                        <div class="product">
-                            <a class="product_info" href="product">
-                                <img class="img-product" src="img/productos/Audífonos inalámbricos verdaderos con cancelación de ruido Samsung Galaxy Buds Live (Mystic Black).png" alt="Photo_Product">
-                                <p class="nombreProducto">Samsung Galaxy S24 Ultra</p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">Regular</p>
-                                    <p class="product_price_number">S/. 5,500<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">Online</p>
-                                    <p class="product_price_number">S/. 5,200<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">Oferta</p>
-                                    <p class="product_price_number oferta">S/. 4,999<sup>.99</sup></p>
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 5,329
+                                        <sup>.00</sup>
+                                    </p>
                                 </div>
                             </a>
-                            <a class="product_option_fav" href="fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                            <button class="product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-
-                        <div class="product">
-                            <a class="product_info" href="product">
-                                <img class="img-product" src="img/productos/Celular Samsung Galaxy S21 Plus 5G 128GB - Púrpura.png" alt="Photo_Product">
-                                <p class="nombreProducto">Samsung Galaxy S21 Plus 5G</p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">Regular</p>
-                                    <p class="product_price_number">S/. 4,200<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">Online</p>
-                                    <p class="product_price_number">S/. 4,000<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">Oferta</p>
-                                    <p class="product_price_number oferta">S/. 3,899<sup>.99</sup></p>
-                                </div>
-                            </a>
-                            <a class="product_option_fav" href="fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                            <button class="product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-
-                        <div class="product">
-                            <a class="product_info" href="product">
-                                <img class="img-product" src="img/productos/Celular Samsung Galaxy S21 Plus 5G 128GB - Púrpura.png" alt="Photo_Product">
-                                <p class="nombreProducto">Samsung Galaxy S20 de 256GB</p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">Regular</p>
-                                    <p class="product_price_number">S/. 3,800<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">Online</p>
-                                    <p class="product_price_number">S/. 3,600<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">Oferta</p>
-                                    <p class="product_price_number oferta">S/. 3,499<sup>.99</sup></p>
-                                </div>
-                            </a>
-                            <a class="product_option_fav" href="fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                            <button class="product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-
-                        <div class="product">
-                            <a class="product_info" href="product">
-                                <img class="img-product" src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro_7.png" alt="Photo_Product">
-                                <p class="nombreProducto">Samsung Galaxy Note 20 Ultra</p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">Regular</p>
-                                    <p class="product_price_number">S/. 6,000<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">Online</p>
-                                    <p class="product_price_number">S/. 5,800<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">Oferta</p>
-                                    <p class="product_price_number oferta">S/. 5,499<sup>.99</sup></p>
-                                </div>
-                            </a>
-                            <a class="product_option_fav" href="fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                            <button class="product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-
-                        <div class="product">
-                            <a class="product_info" href="product">
-                                <img class="img-product" src="img/productos/Celular Samsung Galaxy A24 128GB 4GB RAM Negro_7.png" alt="Photo_Product">
-                                <p class="nombreProducto">Samsung Galaxy Z Fold 3</p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">Regular</p>
-                                    <p class="product_price_number">S/. 7,200<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">Online</p>
-                                    <p class="product_price_number">S/. 7,000<sup>.00</sup></p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">Oferta</p>
-                                    <p class="product_price_number oferta">S/. 6,799<sup>.99</sup></p>
-                                </div>
-                            </a>
-                            <a class="product_option_fav" href="fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                            <button class="product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
                     </div>
-                    <i id="right" class="arrow-car fa-solid fa-angle-right"></i>
-                </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="producto1.html">
+                                <img class="product_pic" src="img/productos/Tecnologia/Celular Samsung Galaxy A24 128GB 4GB RAM Negro/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Samsung Galaxy A24 Negro
+                                </p>                                    
+                                <div class="product_price price_regular">
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 1,600
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 898
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Tecnologia/Lenovo HE05 + Reloj Pulsera Digital de REGALO.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Lenovo HE05 + Reloj Pulsera Digital de REGALO
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. xxxx
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. XXXX
+                                        <sup>.xx</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Hogar/Batería Krea 7 Piezas Antiadherente.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Batería Krea 7 Piezas Antiadherente
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 301
+                                        <sup>.99</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 199
+                                        <sup>.99</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 129
+                                        <sup>.99</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Tecnologia/Laptop Lenovo IdeaPad Gaming3 15IAH7 i5-12450H 8GB RAM 512GB SSD RTX3060.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Laptop Lenovo IdeaPad Gaming3 15IAH7 i5-...
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 3,529
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 3,299
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 3,199
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Ropa y Calzado/Casaca Diger Denim Stretch Hombre Pionier.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Casaca Diger Denim Stretch Hombre Pionier
+                                </p>                        
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 279
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>                        
+                            </a>
+                            <div class="product_option product_option_fav">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="product_option product_option_add">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Alimentos/Whisky Johnnie Walker Blue Label Botella 750ml.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Whisky Johnnie Walker Blue Label Botella 750ml
+                                </p>                        
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 1,449
+                                        <sup>.90</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Tecnologia/Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 2,500
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 1,478
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Tecnologia/Smartphone SAMSUNG Galaxy A15 6.5 8GB 256GB 50MP + 5MP + 2MP Blue Black.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Smartphone SAMSUNG Galaxy A15 6.5 8GB Blue Black
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 799
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 699
+                                        <sup>.99</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_for_sale">
+                                    <p class="product_price_title">
+                                        Oferta
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 649
+                                        <sup>.99</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                        <div class="product">
+                            <a class="product_info" href="#">
+                                <img class="product_pic" src="img/productos/Tecnologia/Celular Apple Iphone 13 128GB Negro.png" alt="Photo_Product">
+                                <p class="product_name">
+                                    Celular Apple Iphone 13 128GB Negro
+                                </p>                                    
+                                <div class="product_price price_regular">                    
+                                    <p class="product_price_title">
+                                        Regular
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 4,699
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                                <div class="product_price price_online">
+                                    <p class="product_price_title">
+                                        Online
+                                    </p>                    
+                                    <p class="product_price_number">
+                                        S/. 2,499
+                                        <sup>.00</sup>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="product_option product_option_fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="product_option product_option_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                        </div>
+                    </div>
+                    <i class="btn_slider_product fas fa-angle-right"></i>
+                </div>            
             </article>
         </div>
 
@@ -363,7 +554,6 @@
         </div>
         <div id="footer_servicio" class="footer_column">
             <h2>Servicio al Cliente</h2>
-            <a href="terminos.html">Tutorial de compra</a>
             <a href="terminos.html">Terminos y Condiciones</a>
             <a href="faq.html">Preguntas Frecuentes</a>
             <a href="devoluciones.html">Devoluciones y Cambios</a>
@@ -372,14 +562,15 @@
         <div id="footer_nosotros" class="footer_column">
             <h2>Sobre nosotros</h2>
             <a href="nosotros.html">Conócenos</a>
-            <a href="puntosVenta.html">Puntos de Venta</a>
-            <p>Encuentranos en SUNAT</p> 
+            <p>Puntos de Venta</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0777467455528!2d-79.86560812524452!3d-6.760374293236254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceeeffd190ddd%3A0xce387ae6229aa09e!2sUSAT!5e0!3m2!1ses-419!2spe!4v1724621773294!5m2!1ses-419!2spe" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>        
     </footer>    
     <div class="footer_end">
         &copy; 2024 Copyright: Grupo 02 <br>
         Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
     </div>
+
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
     <script src="js/common_script/gsap.min.js"></script>
     <script src="js/common_script/ScrollTrigger.min.js"></script>

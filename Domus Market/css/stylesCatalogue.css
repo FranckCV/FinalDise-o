@@ -13,6 +13,30 @@
     background: linear-gradient(var(--color-catalogue-background),var(--color-catalogue-background2));
 }
 
+.brands_filters {
+    display: grid;
+    background-color: var(--color9);
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    text-align: center;
+    color: var(--background);
+    padding-block: 10px;
+    border-radius: var(--border-tag);
+    align-items: center;
+    padding-inline: 4vw;
+    padding-block: 1vw;
+}
+
+.brands_filters .select_filter {
+    justify-self: start;
+    font-size: 1.2vw;
+}
+
+.brands_filters .pagination_brands {
+    justify-self: end;
+    padding: 0;
+}
+
 .select_filter label {
     margin-inline-end: 1vw;
 }
