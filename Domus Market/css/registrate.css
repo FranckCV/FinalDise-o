@@ -30,9 +30,9 @@ form {
     align-items: center;
     column-gap:20px;
 }
-/* input[type="email"]{
-    width: 93%;
-} */
+input[type="email"], input[type="password"]{
+    width: 94%;
+}
 #logo_form{
     width: 50%;
     height: 50%;
@@ -96,6 +96,9 @@ h1{
 @media screen and ( max-width: 772px) {
     input,select{
         font-size: 11px;
+        width: 100%;
+    }
+    input[type="password"],input[type="email"]{
         width: 100%;
     }
 }
