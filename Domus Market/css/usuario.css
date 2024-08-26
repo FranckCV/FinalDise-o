@@ -6,7 +6,7 @@
     color:black;
 }
 .contenedor_perfil {
-    margin:10px;
+    margin:10px 20px 10px 10px;
     display: grid;
     grid-template-columns: 20% 80%;
     gap:10px;
