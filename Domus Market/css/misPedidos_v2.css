@@ -23,6 +23,8 @@
     background-color: #3b3b6b; /* Fondo de las tarjetas de pedidos */
     padding: 10px;
     border-radius: 5px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
 }
 
 .order-card {
@@ -36,7 +38,8 @@
     font-weight: bold;
     background-color: #060528;
     text-align: center;
-
+    border-style: solid;
+    border-radius: 0.5rem;
 }
 
 .order-body {
@@ -55,4 +58,9 @@
     justify-content: center;
     flex-direction: row;
     font-weight: bolder;
+}
+
+.cantidad_carrito{
+    padding-top: 0.4rem;
+    font-size: 1.6rem;
 }
