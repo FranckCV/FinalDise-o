@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +14,23 @@
     <link rel="stylesheet" href="css/perfil.css">
     <title> | Domus Market</title>
 </head>
+
 <body class="body_section">
     <header>
-        <a class="header_item" id="index_logo" href="index.html">            
-            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
-        </a>        
+        <a class="header_item" id="index_logo" href="index.html">
+            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">
+        </a>
         <div class="header_item" id="search">
             <input type="text">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <a class="header_item header_option" id="header_carrito" href="carrito.html">
             <i class="fa-solid fa-cart-shopping"></i>
-            <p>Mi Carrito</p>            
+            <p>Mi Carrito</p>
         </a>
         <a class="header_item header_option" id="header_perfil" href="iniciar_sesion.html">
             <i class="fa-solid fa-user"></i>
-            <p>Mi Perfil</p>            
+            <p>Mi Perfil</p>
         </a>
         <nav>
             <div id="menu_button" class="nav_element active_menu">
@@ -52,7 +53,7 @@
                 <i class="fa-solid fa-star"></i>
                 <!-- <img class="img-fluid" src="img/elementos/iconDomus.png"></img> -->
                 <p>Exclusividad Domus</p>
-            </a>   
+            </a>
         </nav>
     </header>
     <aside id="menu_content" class="menu_items desplegar">
@@ -90,7 +91,7 @@
                 <i class="fa-solid fa-microchip"></i>
                 Tecnología
             </a>
-        </div>        
+        </div>
         <div class="menu_element">
             <i class="fa-solid fa-tag"></i>
             <span>Marcas Asociadas</span>
@@ -126,19 +127,18 @@
                 Lenovo
             </a>
             <a href="marcas.html">
-                <i class="fa-solid fa-plus"></i> 
-                Ver más... 
+                <i class="fa-solid fa-plus"></i>
+                Ver más...
             </a>
-        </div>  
-        <a href="exclusividad.html" class="menu_element menu_exclusividad">                
+        </div>
+        <a href="exclusividad.html" class="menu_element menu_exclusividad">
             <i class="fa-solid fa-star"></i>
-            <span>Exclusividad Domus</span>                
-        </a>     
+            <span>Exclusividad Domus</span>
+        </a>
     </aside>
 
     <!-- contenido propio -->
     <section class="body_page">
-
         <div class="contenedor_perfil">
             <aside class="aside_perfil">
                 <div class="profile">
@@ -151,38 +151,61 @@
                         <p>Mi perfil</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="misDirecciones.html" class="opcion_perfil">
                         <img src="img/iconos/ubicacion.png" class="img_perfil" alt="">
                         <p>Direcciones</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="misTarjetas.html" class="opcion_perfil">
                         <img src="img/iconos/tarjeta-de-credito.png" alt="" class="img_perfil">
                         <p>Tarjeta de crédito</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="misPedidos.html" class="opcion_perfil">
                         <img src="img/iconos/entrega-de-pedidos.png" alt="" class="img_perfil">
                         <p>Mis pedidos</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="ListaDeseos.html" class="opcion_perfil">
                         <img src="img/iconos/me-gusta.png" alt="" class="img_perfil">
                         <p>Lista de deseos</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-                    <div class="opcion_perfil" onclick="confirmarCierreSesion()">
+                    <div class="opcion_perfil" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="img/iconos/cerrar.png" class="img_perfil">
                         <p>Cerrar sesión</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación de cierre</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>¿Estás seguro de que quieres cerrar sesión?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Confirmar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </aside>
-    
+
             <main class="main_perfil">
                 <div class="header_perfil">
                     <h1>Perfil</h1>
@@ -196,7 +219,7 @@
                         </div>
 
                         <div>
-                            <a href="direcciones.html"> 
+                            <a href="direcciones.html">
                                 <i class="fa-solid fa-location-dot"></i>
                             </a>
                         </div>
@@ -234,42 +257,42 @@
                 <div class="profile-details">
 
                     <div class="detalle">
-    
+
                         <div class="datos_perfil">
                             <strong>Nombres:</strong>
                             <p>Fabiana Lucía</p>
                         </div>
-    
+
                         <div class="datos_perfil">
                             <strong>Apellidos:</strong>
                             <p>Paucar Mejía</p>
                         </div>
-    
+
                         <div class="datos_perfil">
                             <strong>Email:</strong>
                             <p>fabianapm060126@gmail.com</p>
                         </div>
-    
+
                         <div class="datos_perfil">
                             <strong>Documento de identidad:</strong>
                             <p>72428857</p>
                         </div>
-    
+
                         <div class="datos_perfil">
                             <strong>Género:</strong>
                             <p>Prefiero no decirlo</p>
                         </div>
-    
+
                         <div class="datos_perfil">
                             <strong>Fecha de nacimiento:</strong>
                             <p>06/01/2005</p>
                         </div>
-    
+
                         <div class="datos_perfil">
                             <strong>Teléfono:</strong>
                             <p>906300905</p>
                         </div>
-    
+
                     </div>
 
                     <div class="boletin">
@@ -278,10 +301,11 @@
                             <p id="informativo">¿Quiere recibir informativos promocionales?</p>
                             <span id="confirmar_boletin">
                                 <input type="checkbox" id="checkbox_boletin" checked>
-                                <label for="checkbox_boletin">Quiero recibir el boletín informativo con promociones.</label>
+                                <label for="checkbox_boletin">Quiero recibir el boletín informativo con
+                                    promociones.</label>
                             </span>
                         </div>
-    
+
                     </div>
 
                 </div>
@@ -290,7 +314,7 @@
 
     </section>
     <!-- -------- -->
-     
+
     <footer>
         <div id="footer_pictures">
             <a href="index.html">
@@ -303,23 +327,23 @@
                 <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>           
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
             </div>
-        </div>              
+        </div>
         <div id="footer_contactanos" class="footer_column">
             <h2>Contáctanos</h2>
             <p>
                 <i class="fa-solid fa-envelope"></i>
                 servicioalcliente@domus.pe
-            </p>            
+            </p>
             <p href="">
                 <i class="fa-solid fa-phone-volume"></i>
                 074 606240
             </p>
             <p href="">
                 <i class="fa-solid fa-clock"></i>
-                Lun-Vie: <br> 
-                    8:00 am - 05:00 pm
+                Lun-Vie: <br>
+                8:00 am - 05:00 pm
             </p>
             <p>
                 <i class="fa-solid fa-message"></i>
@@ -340,14 +364,18 @@
             <h2>Sobre nosotros</h2>
             <a href="nosotros.html">Conócenos</a>
             <p>Puntos de Venta</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0777467455528!2d-79.86560812524452!3d-6.760374293236254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceeeffd190ddd%3A0xce387ae6229aa09e!2sUSAT!5e0!3m2!1ses-419!2spe!4v1724621773294!5m2!1ses-419!2spe" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>        
-    </footer>    
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0777467455528!2d-79.86560812524452!3d-6.760374293236254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceeeffd190ddd%3A0xce387ae6229aa09e!2sUSAT!5e0!3m2!1ses-419!2spe!4v1724621773294!5m2!1ses-419!2spe"
+                width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
     <div class="footer_end">
         &copy; 2024 Copyright: Grupo 02 <br>
-        Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
+        Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez
+        Davila, Junior
     </div>
-    
+
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
     <script src="js/common_script/gsap.min.js"></script>
     <script src="js/common_script/ScrollTrigger.min.js"></script>
@@ -356,4 +384,5 @@
     <script src="js/scriptIndexAnimExclusividad.js"></script>
     <script src="js/perfilScript.js"></script>
 </body>
+
 </html>
