@@ -1,1 +1,0 @@
-document.getElementById('fecha_nacimiento').type = 'text';
