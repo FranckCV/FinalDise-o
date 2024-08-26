@@ -17,6 +17,12 @@
 
 /* ------------------ SUBCATEGORIAS ------------------------ */
 
+.article_category {
+  flex-direction: column;
+  padding-bottom: 2vw;
+  gap: 1vw;
+}
+
 .category_content {
   display: grid;
   width: 100%;

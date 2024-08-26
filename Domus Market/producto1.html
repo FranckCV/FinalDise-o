@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/stylesProductCard.css">
+    <link rel="stylesheet" href="css/stylesPageProduct.css">
     <link rel="shortcut icon" href="img/elementos/iconDomus.png">
     <title> | Domus Market</title>
 </head>
@@ -151,8 +152,6 @@
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-
-
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -180,6 +179,7 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+
                 <div class="product_head">
                     <div class="product_rating">
                         <div class="product_stars">
@@ -307,7 +307,17 @@
                                 <sup>.00</sup>
                             </p>
                         </div>
-    
+
+                        <div class="product_price price_for_sale">
+                            <p class="product_price_title">
+                                Oferta
+                            </p>                    
+                            <p class="product_price_number">
+                                S/. 2,099
+                                <sup>.00</sup>
+                            </p>
+                        </div>
+
                         <div class="product_stock">
                             <div class="product_stock_value">
                                 75
@@ -316,18 +326,16 @@
                         </div>
     
                         <div class="product_cart_quantity">
-                            <button class="cart_quantity_btn">-</button>
-                            <input type="text" value="1">
-                            <button class="cart_quantity_btn">+</button>
+                            <input type="number" min="1" max="99" value="1">
                         </div>
                     </div>                   
 
-                    <div class="product_option product_option_fav">
-                        <i class="fa-regular fa-heart"></i>
+                    <div class="product_cart_option product_cart_add">
+                        Agregar al carrito
                     </div>
 
-                    <div class="product_option product_option_add">
-                        <i class="fa-solid fa-plus"></i>
+                    <div class="product_cart_option product_cart_fav">
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
             </div>
