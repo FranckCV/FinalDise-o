@@ -3,6 +3,15 @@
     --gap-for-sale-gallery: 1vw;
 }
 
+.article_for_sale {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    background-color: var(--color4);
+    justify-content: center;
+}
+
 .for_sale_gallery {
     display: flex;
     flex-wrap: wrap;
