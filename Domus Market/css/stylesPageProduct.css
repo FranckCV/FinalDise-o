@@ -398,7 +398,7 @@
                              "pr_slider"
                              "pr_cart"
                              "pr_features";
-        font-size: 4vw;
+        font-size: 5vw;
         row-gap: 6vw;
     }
 
@@ -407,12 +407,12 @@
     }
 
     .product_head {        
-        grid-template-columns: 30vw auto;
-        grid-template-rows: 0.5fr 0.5fr 1fr;
+        grid-template-columns: 40vw auto;
+        grid-template-rows: 0.4fr 0.4fr auto;
         grid-template-areas: "prh_brand prh_rating"
                              "prh_brand prh_code"
                              "prh_title prh_title";
-       
+        height: fit-content;
     }
 
     .product_stars .stars_icon {
@@ -430,7 +430,7 @@
 
 
     .product_brand {
-        scale: 0.5;
+        scale: 0.55;
     }
 }
 
