@@ -17,3 +17,23 @@
 .form-check-input{
     border: #5f5757 0.5px solid;
 }
+
+.body_page{
+    background-color: #060639;
+}
+
+.contenedor_contactanos{
+    background-color: #3b3b6b;
+}
+
+.formulario{
+    background-color: #fff;
+}
+
+.btn-primary{
+    background-color: #3b3b6b;
+}
+
+.btn-primary:hover{
+    background-color: #192a56;
+}
