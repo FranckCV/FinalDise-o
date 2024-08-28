@@ -3,9 +3,9 @@
     --color-catalogue-background: #00152d;
     --color-catalogue: #236bd7;
     --color-filter: #003d98;
-    --border-radius-catalogue-content: 15px;
-    --space-catalogue: 3.5vw;
-    --size-pagination-char: 3vw;
+    --border-radius-catalogue-content: 1rem;
+    --space-catalogue: 2rem;
+    --size-pagination-char: 3rem;
 
 }
 
@@ -23,13 +23,13 @@
     padding-block: 10px;
     border-radius: var(--border-tag);
     align-items: center;
-    padding-inline: 4vw;
-    padding-block: 1vw;
+    padding-inline: 4rem;
+    padding-block: 1rem;
 }
 
 .brands_filters .select_filter {
     justify-self: start;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
 }
 
 .brands_filters .pagination_brands {
@@ -71,7 +71,7 @@
     height: var(--size-pagination-char);
     text-align: center;
     align-content: center;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
 }
 
 .pagination_brands i {
@@ -95,28 +95,27 @@
 .catalogue_content {
     width: 100%;
     padding-inline: var(--space-catalogue);
-    gap: calc(var(--space-catalogue) - 1vw);
+    gap: calc(var(--space-catalogue) - 0.5rem);
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 25% auto;
+    justify-content: center;
 }
 
-
-
 .ctlg_filters {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
-    background-color: white;
-    color: #00238b;
+    background-color: #dce0f6;
     height: fit-content;
     display: grid;
     gap: 4px;
-    padding: 1.2vw;
+    padding: 1.2rem;
     border-radius: var(--border-radius-catalogue-content);
 }
 
 .ctlg_filters_head {
     font-size: 120%;
     gap: 0;
+    color: #01012d;
 }
 
 .ctlg_filters_head span,
@@ -125,11 +124,11 @@
 }
 
 .ctlg_filters_head hr {
-    margin: 0.75vw;
+    margin: 0.75rem;
 }
 
 .ctlg_filters_content {
-    margin-block: 1vw;
+    margin-block: 1rem;
     gap: 3px;
     display: grid;
     color: white;
@@ -137,12 +136,12 @@
 
 .ctlg_filters_element {
     display: grid;
-    grid-template-columns: 10% 70% 15%;
+    grid-template-columns: 1fr 6fr 1fr;
     align-items: center;
-    gap: 1vw;
+    gap: 1rem;
     background-color: var(--color-filter);
-    padding-block: 0.5vw;
-    padding-inline: 0.7vw;
+    padding-block: 0.5rem;
+    padding-inline: 0.7rem;
     border-radius: var(--border-radius-element);
     transition: 0.07s ease;
     cursor: pointer;
@@ -164,17 +163,26 @@
 }
 
 .ctlg_filters_element i {
+    text-align: center;
+}
+
+.ctlg_filters_element i + i {
     text-align: right;
+}
+
+.ctlg_filters_element.active {
+    background-color: #1f50cc;
+    border: 2px solid #ffffff;
 }
 
 .ctlg_filters_clean {
     color: #ffffff;
     background-color: var(--color-catalogue);
-    border: 0.1vw solid #fff;
+    border: 0.1rem solid #fff;
     align-items: center;
-    gap: 1vw;
-    padding-block: 0.5vw;
-    padding-inline: 0.7vw;
+    gap: 1rem;
+    padding-block: 0.5rem;
+    padding-inline: 0.7rem;
     border-radius: var(--border-radius-element);
     transition: 0.05s ease;
 }
@@ -186,29 +194,43 @@
 }
 
 .ctlg_filters_subcontent {
-    display: none;
+    display: grid;
     flex-direction: column;
-    gap: 1px;
-    justify-content: center;
+    gap: 2px;
     align-items: center;
-    padding-block: 0.5vw;
+    padding-block: 0.5rem;
+    background-color: white;
+    padding-inline: 0.7rem;
+    overflow: hidden;
+    border-radius: var(--border-radius-element);
+    transition: max-height 0.3s ease-in-out, padding-block 0.3s ease-out;
+}
+
+.ctlg_filters_subcontent .show {
+    max-height: auto;
+    padding-block: 0.5rem;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .ctlg_filters_subcontent_hidden {
     display: none;
+    max-height: 0;
+    padding-block: 0; 
+    overflow: hidden;
 }
 
 .ctlg_filters_subelement {    
     background-color: #0080c5;
     color: #fff;
-    border: 0.1vw solid #fff;
+    /* border: 0.1vw solid #fff; */
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     border-radius: 7px;
-    padding-block: 0.4vw;
-    width: 90%;
+    padding-block: 0.4rem;
+    width: 100%;
     text-align: left;
+    cursor: pointer;
 }
 
 .ctlg_filters_subelement i {
@@ -222,9 +244,17 @@
     background-color: var(--color-filter);
 }
 
+
+
+
+
+
+
 .catalogue_products {
     background-color: #e1e1e1;
-    border-radius: var(--border-radius-catalogue-content);    
+    border-radius: var(--border-radius-catalogue-content);
+    display: grid;
+    grid-template-areas: "ctlg_filter" "ctlg_wrap" "ctlg_pagination";
 }
 
 .wrap_product {
@@ -234,6 +264,7 @@
     justify-content: center;
     margin-block: 10px;
     margin-inline: 30px;
+    grid-area: ctlg_wrap;
 }
 
 .catalogue_products .brands_filters ,
@@ -246,6 +277,9 @@
 .catalogue_products .brands_filters {
     border-top-left-radius: var(--border-radius-catalogue-content);
     border-top-right-radius: var(--border-radius-catalogue-content);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-area: ctlg_filter;
 }
 
 .catalogue_products .brands_filters select {
@@ -255,27 +289,37 @@
 .catalogue_products .pagination_brands {
     border-bottom-left-radius:  var(--border-radius-catalogue-content);
     border-bottom-right-radius:  var(--border-radius-catalogue-content);
+    grid-area: ctlg_pagination;
 }
 
 
 
 
 @media (max-width:599px){
-    /* .ctlg_filters {
-        font-size: 1rem;
-    } */
-    .catalogue_content {        
+    
+    .catalogue_content {
+        grid-template-columns: 85vw;
+        grid-template-rows: auto auto;
+    }
+
+    .catalogue_products .brands_filters {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
     }
+
 }
 
 
 
 @media (min-width:600px) and (max-width:1000px){
     .catalogue_content {        
+        grid-template-columns: 35% 60%;
+    }
+
+    .catalogue_products .brands_filters {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
-    } 
+    }
+
 }
   
