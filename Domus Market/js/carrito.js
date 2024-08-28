@@ -3,17 +3,15 @@
 let descuentoAplicado = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-        actualizarCarrito();
+    actualizarCarrito();
 
-        document.querySelectorAll('.agregar').forEach(button => {
-            button.addEventListener('click', event => {
-                const productElement = event.target.closest('.product');
-                const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
-                const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
-                agregarProducto(nombreProducto, precioOferta);
-            });
-        });
-    
+    document.querySelector('.agregar').addEventListener('click', () => {
+        const productElement = event.target.closest('.product');
+        const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
+        const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
+        agregarProducto(nombreProducto, precioOferta);
+    })
+
 });
 
 function agregarProducto(nombre, precio) {
