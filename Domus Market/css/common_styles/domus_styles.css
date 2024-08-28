@@ -489,9 +489,10 @@ article {
     font-weight: bold;
 }
 
-/* .article_title_1:hover {
-    scale: 1.075;
-} */
+.space {
+    background-color: white;
+    border: 1px solid white;
+}
 
 /* RESPONSIVIDAD */
 
