@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
-    <link rel="stylesheet" href="css/contactanos.css">
+    <link rel="stylesheet" href="css/registrate.css">
+    <link rel="stylesheet" href="css/nuevaDireccion.css">
     <title> | Domus Market</title>
 </head>
 <body class="body_section">
@@ -137,44 +138,37 @@
 
     <!-- contenido propio -->
     <section class="body_page">
-        
-        <div class="container contenedor_contactanos mt-5 pt-5">
-            <fieldset class="formulario shadow-drop-center p-4 rounded" id="fields">
-                <legend class="legend_contacto">Contáctanos</legend>
-                <p>Si tienes alguna duda, comentario o sugerencia puedes contactarnos y nos comunicaremos contigo lo antes posible.</p>
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3">
-                            <label for="nombre" class="form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="apellido" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="telefono" class="form-label">Número de celular:</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Comentarios:</label>
-                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
-                    </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="terminos" name="terminos">
-                        <label class="form-check-label" for="terminos">He leído y acepto la política de privacidad</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100" id="enviar_contacto">Enviar</button>
-                </form>
-            </fieldset>
-        </div>
+        <form>
+            <div id="form_logo">
+                <img src="img/elementos/iconDomus.png" alt="logo" id="logo_form">
+            </div>
+            <h1>Nueva dirección</h1>
+            <div id="form_content">
+                <input id="nombreDireccion" type="text" placeholder="Nombre de la direccion" required>
+                <select class="cbo_ubi">
+                    <option value="" disabled selected>Departamento</option>
+                    <option value="Masculino">Tumbes</option>
+                    <option value="Femenino">Lambayeque</option>
+                </select>
+                <select class="cbo_ubi">
+                    <option value="" disabled selected>Provincia</option>
+                    <option value="Masculino">Tumbes</option>
+                    <option value="Femenino">Lambayeque</option>
+                </select>
+                <select class="cbo_ubi">
+                    <option value="" disabled selected>Distrito</option>
+                    <option value="Masculino">Tumbes</option>
+                    <option value="Femenino">Lambayeque</option>
+                </select>
+                <input type="calle" placeholder="ej. Mexico" required>
+                <input type="numero" placeholder="ej. 1255" required>
+                <input type="tipo_lugar" placeholder="Interior / Dptmeto">
+                <input type="indicaciones" placeholder="Referencia ej. segundo piso, tocar timbre">
+            </div>
+
+            <input type="submit" value="Registrar Dirección">
+
+        </form>
     </section>
     <!-- -------- -->
      
@@ -234,12 +228,12 @@
         &copy; 2024 Copyright: Grupo 02 <br>
         Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
     </div>
-    
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
     <script src="js/common_script/gsap.min.js"></script>
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
     <script src="js/scriptIndexAnimExclusividad.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 </html>

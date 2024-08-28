@@ -1,0 +1,27 @@
+#fondo-exclusividad{
+    background-image: url("../img/exclusividad/fondo-exclusividad.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-repeat: no-repeat;
+}
+#logo-exclusividad{
+    background-color: rgb(9, 9, 75);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 60%;
+    height: 60%;
+}
+#title-exclusividad{
+    font-weight: 800;
+}
