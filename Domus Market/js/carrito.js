@@ -3,21 +3,25 @@ let descuentoAplicado = false;
 document.addEventListener('DOMContentLoaded', () => {
     actualizarCarrito();
     console.log("DOM CARGADO CORRECTAMENTE");
-    document.querySelector('.agregar').addEventListener('click', (event) => {
-        console.log("CLICK EN AGREGAR");
-        const productElement = event.target.closest('.product');
-        if(productElement){
-            const nombreProducto = productElement.querySelector('.product_name').innerText;
-            const img= productElement.querySelector('.product_pic').src;
-            const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
-            agregarProducto(nombreProducto, precioOferta,img);
-            console.log(productElement)
-        }
-        else{
-            console.log("No product element");
-        }
-    });
 
+    const agregarDivs = document.querySelectorAll('.agregar');
+
+    agregarDivs.forEach(div => {
+        div.addEventListener('click', (event) => {
+            console.log("CLICK EN AGREGAR");
+            const productElement = event.target.closest('.product');
+            if (productElement) {
+                const nombreProducto = productElement.querySelector('.product_name').innerText;
+                const img = productElement.querySelector('.product_pic').src;
+                const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
+                
+                agregarProducto(nombreProducto, precioOferta, img);
+                console.log(productElement);
+            } else {
+                console.log("No se encontró el elemento del producto.");
+            }
+        });
+    });
 });
 
 
