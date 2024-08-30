@@ -1,26 +1,38 @@
-/* --------------------------------------------------------------------------------------------------------------- --------------- */
-/* --------------------------------------------PARA AGREGAR AL CARRO---------------------------------------------------- --------------- */
 let descuentoAplicado = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     actualizarCarrito();
+    console.log("DOM CARGADO CORRECTAMENTE");
 
-    document.querySelector('.agregar').addEventListener('click', () => {
-        const productElement = event.target.closest('.product');
-        const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
-        const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
-        agregarProducto(nombreProducto, precioOferta);
-    })
+    const agregarDivs = document.querySelectorAll('.agregar');
 
+    agregarDivs.forEach(div => {
+        div.addEventListener('click', (event) => {
+            console.log("CLICK EN AGREGAR");
+            const productElement = event.target.closest('.product');
+            if (productElement) {
+                const nombreProducto = productElement.querySelector('.product_name').innerText;
+                const img = productElement.querySelector('.product_pic').src;
+                const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
+                
+                agregarProducto(nombreProducto, precioOferta, img);
+                console.log(productElement);
+            } else {
+                console.log("No se encontró el elemento del producto.");
+            }
+        });
+    });
 });
 
-function agregarProducto(nombre, precio) {
+
+function agregarProducto(nombre, precio,img) {
     let carrito = obtenerCarrito();
     if (carrito[nombre]) {
         carrito[nombre].cantidad += 1;
     } else {
         carrito[nombre] = {
             precio: precio,
+            img:img,
             cantidad: 1
         };
     }
@@ -76,7 +88,7 @@ function actualizarCarrito() {
         const productoHTML = `
             <div class="row align-items-center mb-3">
                 <div class="col-5 d-flex align-items-center">
-                    <img src="img/productos/samsung.png"
+                    <img src="${producto.img}"
                         class="img-fluid rounded-start img-carrito" alt="Imagen del Producto">
                     <div class="ms-2">
                         <p class="nombreProducto mb-1">${nombre}</p>
@@ -136,5 +148,20 @@ function aplicarDescuento() {
         } else {
             alert('Cupón no es válido o el carrito está vacío.');
         }
+    }
+}
+function validarCarro(){
+    const carrito = obtenerCarrito();
+    let disponible = false;
+    for (let nombre in carrito) {
+        if (carrito[nombre].cantidad > 0) {
+            disponible = true;
+            break;
+        }
+    }
+    if (disponible) {
+        window.location.href = "resumenDePedido.html";
+    } else {
+        alert('Agregue productos a su carrito');
     }
 }
