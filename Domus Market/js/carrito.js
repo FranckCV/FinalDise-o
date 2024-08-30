@@ -150,3 +150,18 @@ function aplicarDescuento() {
         }
     }
 }
+function validarCarro(){
+    const carrito = obtenerCarrito();
+    let disponible = false;
+    for (let nombre in carrito) {
+        if (carrito[nombre].cantidad > 0) {
+            disponible = true;
+            break;
+        }
+    }
+    if (disponible) {
+        window.location.href = "resumenDePedido.html";
+    } else {
+        alert('Agregue productos a su carrito');
+    }
+}
