@@ -1,0 +1,45 @@
+.title_page{
+    padding: 15px 0px 0px 100px;
+}
+table{
+    text-align: center;
+}
+.product_pic{
+    height: 10%;
+    width: 10%;
+}
+th,td {
+    text-align: center;
+    vertical-align: middle; /* Centra verticalmente */
+    border: 0.5px solid #e8e3e3;
+  }
+.producto{
+    text-align: left;
+    padding-left: 35px !important;
+}
+.card-custom {
+    background-color: #1e1e8b;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-custom p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.card-custom .float-end {
+    font-weight: bold;
+}
+.card-text-total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
