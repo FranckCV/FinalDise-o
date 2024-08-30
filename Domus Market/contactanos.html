@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
+    <link rel="stylesheet" href="css/registrate.css">
     <link rel="stylesheet" href="css/contactanos.css">
     <title> | Domus Market</title>
 </head>
@@ -137,44 +138,30 @@
 
     <!-- contenido propio -->
     <section class="body_page">
-        
-        <div class="container contenedor_contactanos mt-5 pt-5">
-            <fieldset class="formulario shadow-drop-center p-4 rounded" id="fields">
-                <legend class="legend_contacto">Contáctanos</legend>
-                <p>Si tienes alguna duda, comentario o sugerencia puedes contactarnos y nos comunicaremos contigo lo antes posible.</p>
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3">
-                            <label for="nombre" class="form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="apellido" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="telefono" class="form-label">Número de celular:</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Comentarios:</label>
-                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
-                    </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="terminos" name="terminos">
-                        <label class="form-check-label" for="terminos">He leído y acepto la política de privacidad</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100" id="enviar_contacto">Enviar</button>
-                </form>
-            </fieldset>
-        </div>
+        <form>
+            <div id="form_logo">
+                <img src="img/elementos/iconDomus.png" alt="logo" id="logo_form">
+            </div>
+            <h1>Envíanos tus comentarios</h1>
+            <div class="comentarios_span"><span>Trataremos de comunicarnos contigo lo antes posible</span></div>
+            <div id="form_content">
+                <input type="text" placeholder="Nombres" required>
+                <input type="text" placeholder="Apellidos" required>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número de celular" pattern="9[0-9]{8}" required>
+                <select class="cbo_motivo">
+                    <option value="" disabled selected>Motivo</option>
+                    <option value="Masculino">Queja</option>
+                    <option value="Femenino">Mejora</option>
+                    <option value="Femenino">Sugerencia</option>
+                </select>
+            </div>
+
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Enviar comentarios">
+
+        </form>
     </section>
     <!-- -------- -->
      
@@ -234,12 +221,12 @@
         &copy; 2024 Copyright: Grupo 02 <br>
         Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
     </div>
-    
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
     <script src="js/common_script/gsap.min.js"></script>
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
     <script src="js/scriptIndexAnimExclusividad.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 </html>
