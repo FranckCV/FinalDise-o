@@ -161,7 +161,6 @@ function validarCarro() {
     }
     if (disponible) {
         window.location.href = "resumenDePedido.html";
-        agrearResumen();
     } else {
         alert('Agregue productos a su carrito');
     }
