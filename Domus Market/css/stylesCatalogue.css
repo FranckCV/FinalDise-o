@@ -18,7 +18,7 @@
     padding-inline: var(--space-catalogue);
     gap: calc(var(--space-catalogue) - 0.5rem);
     display: grid;
-    grid-template-columns: 25vw 65vw;
+    grid-template-columns: 25vw 68vw;
     justify-content: center;
 }
 

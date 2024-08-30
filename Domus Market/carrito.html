@@ -58,8 +58,8 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
-        <div class="row mx-3">
+    <main class="cart_container container-fluid">
+        <div class="row">
 
             <div class="col d-flex align-items-center mb-3 pb-1">
                 <div class="cart-icon me-3 w-25">
@@ -67,7 +67,6 @@
                 </div>
                 <h1 class="titu-carrito mb-0">Mi Carrito (<span id="unidades">x</span> unidades)</h1>
             </div>
-
 
             <div class="container-arriba col mt-4 ms-5">
                 <div class="step-progress">
@@ -89,10 +88,11 @@
             <div class="col mt-3 d-flex justify-content-end mb-5">
                 <button id="seguir" onclick="window.location.href='catalogo.html'"> <i class="fa-solid fa-arrow-left"></i> Seguir Comprando</button>
             </div>
-        </div>
-        <div class="container-fluid row mx-3">
 
-            <div class="col-7 mt-1">
+        </div>
+
+        <div class="container-fluid row mx-3">
+            <div class="col-7 col-12 mt-1">
 
                 <div class="header-resumen row d-flex align-items-center justify-content-end">
                     <div class="header-item col-5 ps-5">Producto</div>
@@ -101,7 +101,9 @@
                     <div class="header-item col-3 ps-5">Total</div>
                 </div>
 
-                <div id="carrito-contenido"></div>
+                <div id="carrito-contenido">
+
+                </div>
 
                 <!-- <div class="row align-items-center mb-3">
                     <div class="col-5 d-flex align-items-center">
@@ -131,11 +133,12 @@
                 </div> -->
 
             </div>
+
             <div class="d-flex col-1 justify-content-center" style="height: 400px;">
                 <div class="vr"></div>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-3 col-12 d-flex">
                 <div class="cart-summary">
                     <div class="discount-code ">
                         <label for="coupon">¿Tienes algún cupón de descuento?</label>
@@ -157,13 +160,12 @@
                 </div>
             </div>
         </div>
-        </div>
 
         <hr class="">
+
         <div class="container my-5">
             <h2 class="mb-4">¿Algo más? Agrégalo ahora</h2>
             <article class="article_products article_product_popular">
-
                 <div class="slider_product">
                     <i class="btn_slider_product fas fa-angle-left"></i>
                     <div class="list_product">
