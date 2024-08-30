@@ -13,7 +13,7 @@ function agregarResumen() {
     
     if (tabla) { 
         tabla.innerHTML = ''; 
-
+        let contadorProductos=1;
         let total = 0;
         let unidades = 0;
 
@@ -22,10 +22,10 @@ function agregarResumen() {
             const subtotal = producto.precio * producto.cantidad;
             total += subtotal;
             unidades += producto.cantidad;
-
+            
             const tablaHTML = `
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">${contadorProductos++}</th>
                     <td class="producto">
                         <img class="product_pic" src="${producto.img}" alt="">
                         <span>${nombre}</span>
