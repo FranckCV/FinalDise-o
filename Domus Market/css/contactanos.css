@@ -1,39 +1,22 @@
-.pt-5{
-    padding-top: 0 !important;
-}
-.mt-5{
-    margin-top: 0 !important;
-}
-#fields {
-    border: 0.5px solid #b4adad;
-    padding: 15px; 
-    border-radius: 5px; 
-    margin: 20px;
-}
-.form-check-label{
-    font-weight: bold;
-    color:#5f5757;
-}
-.form-check-input{
-    border: #5f5757 0.5px solid;
+.cbo_motivo{
+    width: 93%;
 }
 
-.body_page{
-    background-color: #060639;
+#email{
+    width: 45.20%;
 }
 
-.contenedor_contactanos{
-    background-color: #3b3b6b;
+textarea {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    margin-top: 1rem;
 }
 
-.formulario{
-    background-color: #fff;
-}
-
-.btn-primary{
-    background-color: #3b3b6b;
-}
-
-.btn-primary:hover{
-    background-color: #192a56;
+.comentarios_span{
+    display: flex;
+    justify-content: start;
+    align-items: start;
 }
