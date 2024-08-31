@@ -1,68 +1,100 @@
+//Variable global para saber si se ha aplicado un descuento o no 
 let descuentoAplicado = false;
+/*Empezamos un listener para asegurarnos que el documento esté cargado, por eso dice 'DOMContentLoaded', una vez
+haya sido cargado, usamos una función flecha*/
+/*Empezamos actualizando el carrito, en caso ya se hayan agregado elementos al carro desde otra página, va a carga
+su imagen, su nombre, su precio, la cantidad agregada y el subtotal */
+/*Cada vez que se obtiene un valor de una etiqueta html y sabes que no va a cambiar, la declaras como const
+Vamos a seleccionar todos los elementos que tengan la clase 'product_option_add', y por cada div que encuentre que ejecuta
+el evento de escucha, donde identifique que se hizo click, eso se guarda como un evento */
 
 document.addEventListener('DOMContentLoaded', () => {
-    actualizarCarrito(); 
+    actualizarCarrito();
     const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
-        div.addEventListener('click', (event) => {
-            console.log("CLICK EN AGREGAR");
-            const productElement = event.target.closest('.product');
-            if (productElement) {
+        div.addEventListener('click', (event) => { //'click' es el evento que se dispara cuando se hace click en el elemento
+            console.log("CLICK EN AGREGAR");//Los consoles que veas fue pq salían errores y no sabía dónde estaba fallando, xd
+            const productElement = event.target.closest('.product');//aquí busca la etiqueta más cerca que contenga la clase product
+            if (productElement) { //si es que sí se encuentra, se extrae el nombre de producto, la imagen, y el precio
                 const nombreProducto = productElement.querySelector('.product_name').innerText;
                 const img = productElement.querySelector('.product_pic').src;
+                //la etiqueta de precio va a variar según lo que se encuentre
+                const priceOferta = productElement.querySelector('.price_for_sale .product_price_number');
+                const priceOnline = productElement.querySelector('.price_online .product_price_number');
 
-                const priceForSaleElement = productElement.querySelector('.price_for_sale .product_price_number');
-                const priceOnlineElement = productElement.querySelector('.price_online .product_price_number');
+                let precio = 0; //lo declaramos como let porque va a variar
 
-                let precio = 0;
-
-                if (priceForSaleElement) {
-                    precio = parseFloat(priceForSaleElement.innerText.replace('S/. ', '').replace(',', ''));
-                } else if (priceOnlineElement) {
-                    precio = parseFloat(priceOnlineElement.innerText.replace('S/. ', '').replace(',', ''));
+                if (priceOferta) {//Si encuentra una etiqueta de precio oferta ejecuta la línea de código, sino usa
+                    // la etiqueta de precio online
+                    //Replace se usa para eliminar la parte del texto que indica la moneda ("S/. ") y dejar solo los números.
+                    //El otro replace se usa para eliminar la coma que separa los miles, si es que existe
+                    precio = parseFloat(priceOferta.innerText.replace('S/. ', '').replace(',', ''));
+                } else if (priceOnline) {
+                    precio = parseFloat(priceOnline.innerText.replace('S/. ', '').replace(',', ''));
                 }
 
-                agregarProducto(nombreProducto, precio, img);
-                actualizarCarrito();
-                actualizarCantidadCarrito();
-                console.log(productElement);
+                agregarProducto(nombreProducto, precio, img); //Llama a la función agregar producto
+                actualizarCarrito(); //llama a la función actualizar carre
+                actualizarCantidadCarrito(); //Actualiza la cantidad de productos agregados que sale en el header
+                console.log(productElement); //por si acaso haya errores
             } else {
-                console.log("No se encontró el elemento del producto.");
+                console.log("No se encontró el elemento del producto."); //por si acaso haya errores x2 
             }
         });
     });
 });
 
 
-function agregarProducto(nombre, precio, img) {
-    let carrito = obtenerCarrito();
-    if (carrito[nombre]) {
+function agregarProducto(nombre, precio, img) {//pasa como parametros el nombre, el precio y la imagen
+    let carrito = obtenerCarrito(); //Llama a la función que obtiene el carrito de compras
+    //Esa función te devuelve un objeto con todos los elementos del carrito, se usa como clave el nombre del producto 
+    if (carrito[nombre]) { //Si el producto ya existe en el carrito, aumenta la cantidad
         carrito[nombre].cantidad += 1;
     } else {
-        carrito[nombre] = {
+        carrito[nombre] = { //Si el producto no existe, crea un objeto y los inicializa
             precio: precio,
             img: img,
             cantidad: 1
         };
     }
-    guardarCarrito(carrito);
-    actualizarCarrito();
+    guardarCarrito(carrito); //Se llama a la función guardar en el carrito
+    actualizarCarrito(); //Se actualiza el carre
 }
-function obtenerCarrito() {
-    return JSON.parse(localStorage.getItem('carrito')) || {};
+function obtenerCarrito() { //Estas son funciones localStorage para obtener los items del carro y para guardarlo
+    return JSON.parse(localStorage.getItem('carrito')) || {}; //Busca en el localStorage el carrito, si no lo encuentra, lo crea como un objeto vacío
 }
 
 function guardarCarrito(carrito) {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito)); //Guarda el carrito en el localStorage
+    //Carrito es un objeto de objetos, se guarda algo así
+    /*
+    {
+  "nombreProducto1": {
+    "precio": 20,
+    "img": "imagen1.png",
+    "cantidad": 1
+  },
+  "nombreProducto2": {
+    "precio": 30,
+    "img": "imagen2.png",
+    "cantidad": 1
+  }
 }
+     */
+}
+
 
 /**********************************************LÓGICA PROPIA DEL CARRO******************************************************/
 function aumentar(button) {
-    const productElement = button.closest('.row');
-    const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
-    let carrito = obtenerCarrito();
+    const productElement = button.closest('.row'); //Todos los divs que contienen la info del producto empiezan con row, entonces
+    //busca la etiqueta más cerca que contenga la clase row de ese botón
+    const nombreProducto = productElement.querySelector('.nombreProducto').innerText; //obtiene el nombre de ese producto
+    const descuentoElement = document.getElementById('descuento'); 
+    let carrito = obtenerCarrito(); //llamamos al carrito para modificar su cantidad
     carrito[nombreProducto].cantidad += 1;
+    descuentoElement.querySelector('span').innerText = `S/.00.00`;
+    descuentoAplicado = false; 
     guardarCarrito(carrito);
     actualizarCarrito();
 }
@@ -70,24 +102,21 @@ function aumentar(button) {
 function disminuir(button) {
     const productElement = button.closest('.row');
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
-    const descuentoElement = document.getElementById('descuento');
+    //obtenemos la etiqueta de descuento porque si va a eliminar productos, entonces su descuento ya no es válido
+    const descuentoElement = document.getElementById('descuento'); 
     let carrito = obtenerCarrito();
-    
+
     if (carrito[nombreProducto]) {
         carrito[nombreProducto].cantidad -= 1;
-        if (carrito[nombreProducto].cantidad < 1) {
-            delete carrito[nombreProducto]; 
+        descuentoElement.querySelector('span').innerText = `S/.00.00`;
+        descuentoAplicado = false; 
+        if (carrito[nombreProducto].cantidad < 1) { //Si la cantidad agregada de ese elemento es 0
+            delete carrito[nombreProducto];
         }
         guardarCarrito(carrito);
         actualizarCarrito();
-        actualizarCantidadCarrito();  
-    }
-
-    if (Object.keys(carrito).length === 0) { 
-        descuentoElement.querySelector('span').innerText = `S/.00.00`;
-        descuentoAplicado = false;
-    }
-}
+        actualizarCantidadCarrito();
+    }}
 
 
 function actualizarCarrito() {
