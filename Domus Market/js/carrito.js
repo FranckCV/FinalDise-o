@@ -2,9 +2,7 @@ let descuentoAplicado = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     actualizarCarrito();
-    console.log("DOM CARGADO CORRECTAMENTE");
-
-    const agregarDivs = document.querySelectorAll('.agregar');
+    const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
         div.addEventListener('click', (event) => {
@@ -13,9 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (productElement) {
                 const nombreProducto = productElement.querySelector('.product_name').innerText;
                 const img = productElement.querySelector('.product_pic').src;
-                const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
 
-                agregarProducto(nombreProducto, precioOferta, img);
+                const priceForSaleElement = productElement.querySelector('.price_for_sale .product_price_number');
+                const priceOnlineElement = productElement.querySelector('.price_online .product_price_number');
+
+                let precio = 0;
+
+                if (priceForSaleElement) {
+                    precio = parseFloat(priceForSaleElement.innerText.replace('S/. ', '').replace(',', ''));
+                } else if (priceOnlineElement) {
+                    precio = parseFloat(priceOnlineElement.innerText.replace('S/. ', '').replace(',', ''));
+                }
+
+                agregarProducto(nombreProducto, precio, img);
                 console.log(productElement);
             } else {
                 console.log("No se encontró el elemento del producto.");
@@ -39,7 +47,15 @@ function agregarProducto(nombre, precio, img) {
     guardarCarrito(carrito);
     actualizarCarrito();
 }
+function obtenerCarrito() {
+    return JSON.parse(localStorage.getItem('carrito')) || {};
+}
 
+function guardarCarrito(carrito) {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+/**********************************************LÓGICA PROPIA DEL CARRO******************************************************/
 function aumentar(button) {
     const productElement = button.closest('.row');
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
@@ -62,14 +78,6 @@ function disminuir(button) {
     }
     guardarCarrito(carrito);
     actualizarCarrito();
-}
-
-function obtenerCarrito() {
-    return JSON.parse(localStorage.getItem('carrito')) || {};
-}
-
-function guardarCarrito(carrito) {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 function actualizarCarrito() {
