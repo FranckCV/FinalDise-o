@@ -43,3 +43,34 @@ th,td {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.confirmar,.cancelar{
+    width: 49%;
+}
+.confirmar{
+    transition: transform 0.6s ease;
+}
+.confirmar:hover{
+    background-color: #286105 ;
+    border: none;
+    animation-name: zoomPerfil;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+}
+.cancelar{
+    transition: transform 0.6s ease;
+}
+.cancelar:hover{
+    background-color: #8a0e0e ;
+    border: none;
+    animation-name: zoomPerfil;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+}
+@keyframes zoomPerfil{
+    0% ,100%{
+        scale: 1;
+    }
+    50% {
+        scale:1.05;
+    }
+}
