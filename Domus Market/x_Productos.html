@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | Domus Market</title>
+    <link rel="shortcut icon" href="img/elementos/iconDomus.png">
     <link rel="stylesheet" href="css/common_styles/bootstrap.min.css">
     <link rel="stylesheet" href="css/common_styles/all.min.css">
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
@@ -11,13 +13,7 @@
     <link rel="stylesheet" href="css/stylesProductCard.css">
     <link rel="stylesheet" href="css/stylesCatalogue.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="img/elementos/iconDomus.png">
-    <title> | Domus Market</title>
-    <!-- <style>        
-        .body_page {
-            scale: 0.8;
-        }
-    </style> -->
+    
 </head>
 <body class="body_section">
     <header>
@@ -31,9 +27,11 @@
         <a class="header_item header_option" id="header_carrito" href="carrito.html">
             <div class="d-flex flex-row">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span id="carrito_cant"></span>
+                <div class="burbuja_carrito_cant">
+                    <span id="carrito_cant"></span>
+                </div>
             </div>
-            <p>Mi Carrito</p>            
+            <p>Mi Carrito</p>
         </a>
         <a class="header_item header_option" id="header_perfil" href="iniciar_sesion.html">
             <i class="fa-solid fa-user"></i>
@@ -143,6 +141,7 @@
             <span>Exclusividad Domus</span>                
         </a>     
     </aside>
+
     <section class="body_page">
         <article id="product_new" class="article_products">
             <div class="wrap_product">
@@ -1386,7 +1385,8 @@
 
             </div>
         </article>
-    </section>    
+    </section>
+
     <footer>
         <div id="footer_pictures">
             <a href="index.html">
@@ -1399,23 +1399,23 @@
                 <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>           
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
             </div>
-        </div>              
+        </div>
         <div id="footer_contactanos" class="footer_column">
             <h2>Contáctanos</h2>
             <p>
                 <i class="fa-solid fa-envelope"></i>
                 servicioalcliente@domus.pe
-            </p>            
+            </p>
             <p href="">
                 <i class="fa-solid fa-phone-volume"></i>
                 074 606240
             </p>
             <p href="">
                 <i class="fa-solid fa-clock"></i>
-                Lun-Vie: <br> 
-                    8:00 am - 05:00 pm
+                Lun-Vie: <br>
+                8:00 am - 05:00 pm
             </p>
             <p>
                 <i class="fa-solid fa-message"></i>
@@ -1436,19 +1436,25 @@
             <h2>Sobre nosotros</h2>
             <a href="nosotros.html">Conócenos</a>
             <p>Puntos de Venta</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0777467455528!2d-79.86560812524452!3d-6.760374293236254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceeeffd190ddd%3A0xce387ae6229aa09e!2sUSAT!5e0!3m2!1ses-419!2spe!4v1724621773294!5m2!1ses-419!2spe" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>        
-    </footer>    
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0777467455528!2d-79.86560812524452!3d-6.760374293236254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceeeffd190ddd%3A0xce387ae6229aa09e!2sUSAT!5e0!3m2!1ses-419!2spe!4v1724621773294!5m2!1ses-419!2spe"
+                width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
     <div class="footer_end">
         &copy; 2024 Copyright: Grupo 02 <br>
-        Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez Davila, Junior
+        Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez
+        Davila, Junior
     </div>
+    
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
     <script src="js/common_script/gsap.min.js"></script>
     <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
-    <script src="js/scriptListProduct.js"></script>
-    <script src="js/agregarCarrito.js"></script>
+    <script src="js/common_script/mo.umd.min.js"></script>
+    <script src="js/common_script/agregarCarrito.js"></script>
+    <script src="js/common_script/estadoCarro.js"></script>
 </body>
 </html>
