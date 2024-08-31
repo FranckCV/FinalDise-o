@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
     <link rel="stylesheet" href="css/stylesProductCard.css">
     <link rel="stylesheet" href="css/stylesGalleryImages.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="css/carrito.css">
     <title>Carrito de compras</title>
 </head>
@@ -141,555 +141,540 @@
         </a>     
     </aside>
 
-    <main class="cart_container container-fluid">
-        <div class="head_info_cart row">
+    <main>
+        <article class="cart_container">
+            <div class="head_info_cart">
 
-            <div class="col d-flex align-items-center mb-3 pb-1">
-                <div class="cart-icon me-3 w-25">
-                    <!-- <img src="" alt="Carrito de Compras" class="w-100"> -->
-                </div>
-                
-                <h1 class="titu-carrito mb-0">Mi Carrito (<span id="unidades">x</span> unidades)</h1>
-            </div>
+                <div class="head_cart_title ">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    
+                    <h1>
+                        Mi Carrito
+                    </h1>
 
-            <div class="container-arriba col mt-4 ms-5">
-                <div class="step-progress">
-                    <div class="step active">
-                        <div class="circle"></div>
-                        <div class="label">Carrito</div>
-                    </div>
-                    <div class="step">
-                        <div class="circle"></div>
-                        <div class="label">Entrega</div>
-                    </div>
-                    <div class="step">
-                        <div class="circle"></div>
-                        <div class="label">Pago</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mt-3 d-flex justify-content-end mb-5">
-                <button id="seguir" onclick="window.location.href='catalogo.html'"> 
-                    <i class="fa-solid fa-arrow-left"></i> 
-                    Seguir Comprando
-                </button>
-            </div>
-
-        </div>
-
-        <div class="container-fluid row mx-3">
-            <div class="col-7 mt-1">
-
-                <div class="header-resumen row d-flex align-items-center justify-content-end">
-                    <div class="header-item col-5 ps-5">Producto</div>
-                    <div class="header-item col-2">Precio</div>
-                    <div class="header-item col-2 ps-5">Cantidad</div>
-                    <div class="header-item col-3 ps-5">Total</div>
+                    <span>
+                        (
+                            <span id="unidades">
+                                x
+                            </span>
+                        unidades)
+                    </span>
+                    
                 </div>
 
-                <div id="carrito-contenido">                    
-                </div>
-
-                <!-- <div class="row align-items-center mb-3">
-                    <div class="col-5 d-flex align-items-center">
-                        <img class="img-product" src="img/productos/samsung.png"
-                            class="img-fluid rounded-start img-carrito" alt="Imagen del Producto">
-                        <div class="ms-2">
-                            <p class="nombreProducto mb-1">Samsung Galaxy A24 128GB 4GB RAM Negro</p>
-                            <p class="vendido-por">Vendido por: <strong>Domus</strong></p>
+                <div class="head_cart_progress">
+                    <div class="step-progress">
+                        <div class="step active">
+                            <div class="circle"></div>
+                            <div class="label">Carrito</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle"></div>
+                            <div class="label">Entrega</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle"></div>
+                            <div class="label">Pago</div>
                         </div>
                     </div>
-                    <div class="col-2 d-flex align-items-center">
-                        <p class="precioProducto">S/ 1 000.00</p>
-                    </div>
-                    <div class="col-3">
-                        <div class="col card-footer d-flex align-items-center">
-                            <button type="button" class="btn btn-outline-primary btn-responsive btn-round mx-3" onclick="disminuir(this)"><span
-                                    class="signo">-</span></button>
-                            <label class="cant">1</label>
-                            <button type="button" class="btn btn-outline-primary btn-responsive btn-round mx-3" onclick="aumentar(this)"><span
-                                    class="signo">+</span></button>
-                        </div>
+                </div>
 
-                    </div>
-                    <div class="col-2 d-flex align-items-center">
-                        <p class="total">S/ 1 000</p>
-                    </div>
-                </div> -->
+                <div class="head_cart_continue">
+                    <button id="seguir" onclick="window.location.href='catalogo.html'"> 
+                        <i class="fa-solid fa-arrow-left"></i> 
+                        Seguir Comprando
+                    </button>
+                </div>
 
             </div>
 
-            <div class="d-flex col-1 justify-content-center" style="height: 400px;">
-                <div class="vr"></div>
-            </div>
+            <div class="content_cart container-fluid row mx-3">
+                <div class="col-7 mt-1">
 
-            <div class="col-3 d-flex">
-                <div class="cart-summary">
-                    <div class="discount-code ">
-                        <label for="coupon">¿Tienes algún cupón de descuento?</label>
-                        <div class="d-flex">
-                            <input type="text" id="coupon" value="DOMUSESMICASA50">
-                            <button id="aplicar" onclick="aplicarDescuento()">Aplicar</button>
+                    <div class="header-resumen row d-flex align-items-center justify-content-end">
+                        <div class="header-item col-5 ps-5">Producto</div>
+                        <div class="header-item col-2">Precio</div>
+                        <div class="header-item col-2 ps-5">Cantidad</div>
+                        <div class="header-item col-3 ps-5">Total</div>
+                    </div>
+
+                    <div id="carrito-contenido">                    
+                    </div>
+
+                </div>
+
+                <div class="d-flex col-1 justify-content-center" style="height: 400px;">
+                    <div class="vr"></div>
+                </div>
+
+                <div class="col-3 d-flex">
+                    <div class="cart-summary">
+                        <div class="discount-code ">
+                            <label for="coupon">¿Tienes algún cupón de descuento?</label>
+                            <div class="d-flex">
+                                <input type="text" id="coupon" value="DOMUSESMICASA50">
+                                <button id="aplicar" onclick="aplicarDescuento()">Aplicar</button>
+                            </div>
+                            <p>Si no ves el descuento, lo verás al momento de realizar el pago, recuerda que los cupones son
+                                de uso único, no son reutilizables.</p>
                         </div>
-                        <p>Si no ves el descuento, lo verás al momento de realizar el pago, recuerda que los cupones son
-                            de uso único, no son reutilizables.</p>
-                    </div>
-                    <div class="resumen">
-                        <p id="subtotal">Subtotal: <span></span></p>
-                        <p id="descuento">Descuento: <span>s/. 00.00</span></p>
-                        <p id="total">Total: <span></span></p>
-                    </div>
-                    <div class="actions">
-                        <a class="checkout" onclick="validarCarro()">Continuar</a>
+                        
+                        <div class="resumen">
+                            <p id="subtotal">Subtotal: <span></span></p>
+                            <p id="descuento">Descuento: <span>s/. 00.00</span></p>
+                            <p id="total">Total: <span></span></p>
+                        </div>
+
+                        <div class="actions">
+                            <a class="checkout" onclick="validarCarro()">Continuar</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </article>
 
         <hr class="">
-
-        <div class="container my-5">
-            <h2 class="mb-4">¿Algo más? Agrégalo ahora</h2>
-            <article class="article_products article_product_popular">
-                <div class="slider_product">
-                    <i class="btn_slider_product fas fa-angle-left"></i>
-                    <div class="list_product">
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Samsung Galaxy S24 Ultra 6.8 12GB RAM 512GB - Negro Titanio + CARGADOR 45w.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Samsung Galaxy S24 Ultra 6.8" 12GB RAM 512GB - ...
+        
+        <article class="article_products article_product_popular">
+            <h1 class="title_cart_products">¿Algo más? Agrégalo ahora</h1>
+            <div class="slider_product">
+                <i class="btn_slider_product fas fa-angle-left"></i>
+                <div class="list_product">
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Samsung Galaxy S24 Ultra 6.8 12GB RAM 512GB - Negro Titanio + CARGADOR 45w.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Samsung Galaxy S24 Ultra 6.8" 12GB RAM 512GB - ...
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
                                 </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 6,999
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 5,329
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
+                                <p class="product_price_number">
+                                    S/. 6,999
+                                    <sup>.00</sup>
+                                </p>
                             </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 5,329
+                                    <sup>.00</sup>
+                                </p>
                             </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
                         </div>
-                        <div class="product">
-                            <a class="product_info" href="producto1.html">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Celular Samsung Galaxy A24 128GB 4GB RAM Negro/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Samsung Galaxy A24 Negro
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 1,600
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 898
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Lenovo HE05 + Reloj Pulsera Digital de REGALO.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Lenovo HE05 + Reloj Pulsera Digital de REGALO
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 123
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 133
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 1000
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Hogar/Batería Krea 7 Piezas Antiadherente.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Batería Krea 7 Piezas Antiadherente
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 301
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 199
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Laptop Lenovo IdeaPad Gaming3 15IAH7 i5-12450H 8GB RAM 512GB SSD RTX3060.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Laptop Lenovo IdeaPad Gaming3 15IAH7 i5-...
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 3,529
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 3,299
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 3,199
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Ropa y Calzado/Casaca Diger Denim Stretch Hombre Pionier.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Casaca Diger Denim Stretch Hombre Pionier
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 3,529
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 279
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Alimentos/Whisky Johnnie Walker Blue Label Botella 750ml.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Whisky Johnnie Walker Blue Label Botella 750ml
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 3,529
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 1,449
-                                        <sup>.90</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 2,500
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 1,478
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Smartphone SAMSUNG Galaxy A15 6.5 8GB 256GB 50MP + 5MP + 2MP Blue Black.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Smartphone SAMSUNG Galaxy A15 6.5 8GB Blue Black
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 799
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 699
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 649
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic"
-                                    src="img/productos/Tecnologia/Celular Apple Iphone 13 128GB Negro.png"
-                                    alt="Photo_Product">
-                                <p class="product_name">
-                                    Celular Apple Iphone 13 128GB Negro
-                                </p>
-                                <div class="product_price price_regular">
-                                    <p class="product_price_title">
-                                        Regular
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 4,699
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_online">
-                                    <p class="product_price_title">
-                                        Online
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 2,499
-                                        <sup>.00</sup>
-                                    </p>
-                                </div>
-                                <div class="product_price price_for_sale">
-                                    <p class="product_price_title">
-                                        Oferta
-                                    </p>
-                                    <p class="product_price_number">
-                                        S/. 129
-                                        <sup>.99</sup>
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="product_option product_option_fav">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="product_option product_option_add agregar">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </div>
-                    <i class="btn_slider_product fas fa-angle-right"></i>
+                    <div class="product">
+                        <a class="product_info" href="producto1.html">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Celular Samsung Galaxy A24 128GB 4GB RAM Negro/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Samsung Galaxy A24 Negro
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 1,600
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 898
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Lenovo HE05 + Reloj Pulsera Digital de REGALO.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Lenovo HE05 + Reloj Pulsera Digital de REGALO
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 123
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 133
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 1000
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Hogar/Batería Krea 7 Piezas Antiadherente.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Batería Krea 7 Piezas Antiadherente
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 301
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 199
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Laptop Lenovo IdeaPad Gaming3 15IAH7 i5-12450H 8GB RAM 512GB SSD RTX3060.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Laptop Lenovo IdeaPad Gaming3 15IAH7 i5-...
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 3,529
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 3,299
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 3,199
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Ropa y Calzado/Casaca Diger Denim Stretch Hombre Pionier.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Casaca Diger Denim Stretch Hombre Pionier
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 3,529
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 279
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Alimentos/Whisky Johnnie Walker Blue Label Botella 750ml.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Whisky Johnnie Walker Blue Label Botella 750ml
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 3,529
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 1,449
+                                    <sup>.90</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 2,500
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 1,478
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Smartphone SAMSUNG Galaxy A15 6.5 8GB 256GB 50MP + 5MP + 2MP Blue Black.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Smartphone SAMSUNG Galaxy A15 6.5 8GB Blue Black
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 799
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 699
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 649
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a class="product_info" href="#">
+                            <img class="product_pic"
+                                src="img/productos/Tecnologia/Celular Apple Iphone 13 128GB Negro.png"
+                                alt="Photo_Product">
+                            <p class="product_name">
+                                Celular Apple Iphone 13 128GB Negro
+                            </p>
+                            <div class="product_price price_regular">
+                                <p class="product_price_title">
+                                    Regular
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 4,699
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_online">
+                                <p class="product_price_title">
+                                    Online
+                                </p>
+                                <p class="product_price_number">
+                                    S/. 2,499
+                                    <sup>.00</sup>
+                                </p>
+                            </div>
+                            <div class="product_price price_for_sale">
+                                <p class="product_price_title">
+                                    Oferta
+                                </p>
+                                <p class="product_price_number oferta">
+                                    S/. 129
+                                    <sup>.99</sup>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="product_option product_option_fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="product_option product_option_add agregar">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
                 </div>
-            </article>
-        </div>
+                <i class="btn_slider_product fas fa-angle-right"></i>
+            </div>
+        </article>      
 
     </main>
 

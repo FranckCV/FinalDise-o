@@ -239,6 +239,7 @@
   font-size: var(--font-product-buttons);
   color: var(--color-button-product);
   background-color: white;
+  cursor: pointer;
 }
 
 .product_option:hover {
