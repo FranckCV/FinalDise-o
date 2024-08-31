@@ -494,6 +494,30 @@ article {
     border: 1px solid white;
 }
 
+
+/* Para burbuja */
+.burbuja_carrito_cant {
+    position: relative;
+    top: -1rem;
+    right: 0.8rem;
+    background-color: rgba(210, 25, 25, 0.9);
+    color: white;
+    border-radius: 100%;
+    /* padding: 5px 10px; */
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--size-bubble-cart);
+    width: var(--size-bubble-cart);
+    
+}
+
+.burbuja_carrito_cant span {
+    font-weight: bold;
+}
+
+
 /* RESPONSIVIDAD */
 
 @media (min-width:600px) and (max-width:1000px){

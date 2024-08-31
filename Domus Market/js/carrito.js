@@ -105,10 +105,10 @@ function actualizarCarrito() {
 
         const productoHTML = `
             <div class="row align-items-center mb-3">
-                <div class="col-5 d-flex align-items-center">
+                <div class="product_item_info col-5 d-flex align-items-center">
                     <img src="${producto.img}"
-                        class="img-fluid rounded-start img-carrito" alt="Imagen del Producto">
-                    <div class="ms-2">
+                        class="product_item_pic img-fluid rounded-start img-carrito" alt="Imagen del Producto">
+                    <div class="product_item_name ms-2">
                         <p class="nombreProducto mb-1">${nombre}</p>
                         <p class="vendido-por">Vendido por: <strong>Domus</strong></p>
                     </div>
@@ -193,5 +193,5 @@ function actualizarCantidadCarrito() {
         totalCantidad += carrito[producto].cantidad;
     }
 
-    contadorCarrito.innerText = `(${totalCantidad})`;
+    contadorCarrito.innerText = `${totalCantidad}`;
 }
