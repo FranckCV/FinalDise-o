@@ -136,7 +136,6 @@ function aplicarDescuento() {
     const carrito = obtenerCarrito();
     let disponible = false;
 
-    // Verificar si hay al menos un producto con cantidad mayor a 0
     for (let nombre in carrito) {
         if (carrito[nombre].cantidad > 0) {
             disponible = true;

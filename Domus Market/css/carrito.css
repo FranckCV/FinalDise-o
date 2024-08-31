@@ -1,5 +1,13 @@
 /* ------------------- CARRITO --------------- */
 
+.cart_container {
+    margin: 1rem;
+    padding: 0;
+}
+
+/* .head_info_cart {
+
+} */
 
 .header_carrito {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -228,6 +236,18 @@
     font-size: 16px;
     width: 55%; /* Asegura que el botón ocupe todo el ancho disponible */
 }
+
 .product_option{
     cursor: pointer;
 }
+
+
+
+@media (max-width:599px){
+    /* a */
+}
+
+@media (min-width:600px) and (max-width:1000px){
+    /* a */
+}
+
