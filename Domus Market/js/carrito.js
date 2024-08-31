@@ -1,7 +1,7 @@
 let descuentoAplicado = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-    actualizarCarrito();
+    actualizarCantidadCarrito(); 
     const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 agregarProducto(nombreProducto, precio, img);
+                actualizarCarrito();
+                actualizarCantidadCarrito();
                 console.log(productElement);
             } else {
                 console.log("No se encontró el elemento del producto.");
@@ -70,15 +72,23 @@ function disminuir(button) {
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
     const descuentoElement = document.getElementById('descuento');
     let carrito = obtenerCarrito();
-    carrito[nombreProducto].cantidad -= 1;
-    if (carrito[nombreProducto].cantidad < 1) {
-        delete carrito[nombreProducto];
+    
+    if (carrito[nombreProducto]) {
+        carrito[nombreProducto].cantidad -= 1;
+        if (carrito[nombreProducto].cantidad < 1) {
+            delete carrito[nombreProducto]; 
+        }
+        guardarCarrito(carrito);
+        actualizarCarrito();
+        actualizarCantidadCarrito();  
+    }
+
+    if (Object.keys(carrito).length === 0) { 
         descuentoElement.querySelector('span').innerText = `S/.00.00`;
         descuentoAplicado = false;
     }
-    guardarCarrito(carrito);
-    actualizarCarrito();
 }
+
 
 function actualizarCarrito() {
     const carrito = obtenerCarrito();
@@ -173,3 +183,15 @@ function validarCarro() {
     }
 }
 
+/***************************************PARA EL CONTADOR DE PRODUCTOS*****************************************************/
+function actualizarCantidadCarrito() {
+    const carrito = obtenerCarrito();
+    const contadorCarrito = document.getElementById('carrito_cant');
+    let totalCantidad = 0;
+
+    for (let producto in carrito) {
+        totalCantidad += carrito[producto].cantidad;
+    }
+
+    contadorCarrito.innerText = `(${totalCantidad})`;
+}
