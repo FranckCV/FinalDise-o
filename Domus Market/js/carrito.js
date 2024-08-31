@@ -10,6 +10,7 @@ el evento de escucha, donde identifique que se hizo click, eso se guarda como un
 
 document.addEventListener('DOMContentLoaded', () => {
     actualizarCarrito();
+    actualizarCantidadCarrito();
     const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
