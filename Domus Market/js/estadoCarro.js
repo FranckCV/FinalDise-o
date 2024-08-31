@@ -17,6 +17,7 @@ function actualizarCantidadCarrito() {
     }
 
     contadorCarrito.innerText = `(${totalCantidad})`;
+    contadorCarrito.classList.add('animate-bounce');
 }
 
 document.addEventListener('DOMContentLoaded', actualizarCantidadCarrito);
