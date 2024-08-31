@@ -1,9 +1,7 @@
 let descuentoAplicado = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-    actualizarCarrito();
-    console.log("DOM CARGADO CORRECTAMENTE");
-
+    actualizarCarrito(); 
     const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
@@ -13,9 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (productElement) {
                 const nombreProducto = productElement.querySelector('.product_name').innerText;
                 const img = productElement.querySelector('.product_pic').src;
-                const precioOferta = parseFloat(productElement.querySelector('.oferta').innerText.replace('S/. ', '').replace(',', ''));
 
-                agregarProducto(nombreProducto, precioOferta, img);
+                const priceForSaleElement = productElement.querySelector('.price_for_sale .product_price_number');
+                const priceOnlineElement = productElement.querySelector('.price_online .product_price_number');
+
+                let precio = 0;
+
+                if (priceForSaleElement) {
+                    precio = parseFloat(priceForSaleElement.innerText.replace('S/. ', '').replace(',', ''));
+                } else if (priceOnlineElement) {
+                    precio = parseFloat(priceOnlineElement.innerText.replace('S/. ', '').replace(',', ''));
+                }
+
+                agregarProducto(nombreProducto, precio, img);
+                actualizarCarrito();
+                actualizarCantidadCarrito();
                 console.log(productElement);
             } else {
                 console.log("No se encontró el elemento del producto.");
@@ -39,7 +49,15 @@ function agregarProducto(nombre, precio, img) {
     guardarCarrito(carrito);
     actualizarCarrito();
 }
+function obtenerCarrito() {
+    return JSON.parse(localStorage.getItem('carrito')) || {};
+}
 
+function guardarCarrito(carrito) {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+/**********************************************LÓGICA PROPIA DEL CARRO******************************************************/
 function aumentar(button) {
     const productElement = button.closest('.row');
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
@@ -54,23 +72,23 @@ function disminuir(button) {
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
     const descuentoElement = document.getElementById('descuento');
     let carrito = obtenerCarrito();
-    carrito[nombreProducto].cantidad -= 1;
-    if (carrito[nombreProducto].cantidad < 1) {
-        delete carrito[nombreProducto];
+    
+    if (carrito[nombreProducto]) {
+        carrito[nombreProducto].cantidad -= 1;
+        if (carrito[nombreProducto].cantidad < 1) {
+            delete carrito[nombreProducto]; 
+        }
+        guardarCarrito(carrito);
+        actualizarCarrito();
+        actualizarCantidadCarrito();  
+    }
+
+    if (Object.keys(carrito).length === 0) { 
         descuentoElement.querySelector('span').innerText = `S/.00.00`;
         descuentoAplicado = false;
     }
-    guardarCarrito(carrito);
-    actualizarCarrito();
 }
 
-function obtenerCarrito() {
-    return JSON.parse(localStorage.getItem('carrito')) || {};
-}
-
-function guardarCarrito(carrito) {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
 
 function actualizarCarrito() {
     const carrito = obtenerCarrito();
@@ -128,7 +146,6 @@ function aplicarDescuento() {
     const carrito = obtenerCarrito();
     let disponible = false;
 
-    // Verificar si hay al menos un producto con cantidad mayor a 0
     for (let nombre in carrito) {
         if (carrito[nombre].cantidad > 0) {
             disponible = true;
@@ -166,3 +183,15 @@ function validarCarro() {
     }
 }
 
+/***************************************PARA EL CONTADOR DE PRODUCTOS*****************************************************/
+function actualizarCantidadCarrito() {
+    const carrito = obtenerCarrito();
+    const contadorCarrito = document.getElementById('carrito_cant');
+    let totalCantidad = 0;
+
+    for (let producto in carrito) {
+        totalCantidad += carrito[producto].cantidad;
+    }
+
+    contadorCarrito.innerText = `(${totalCantidad})`;
+}
