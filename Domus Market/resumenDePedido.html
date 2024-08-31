@@ -206,10 +206,35 @@
             </div>
 
             <div class="d-flex justify-content-between">
-                <button class="btn btn-primary me-2 cancelar" type="button">Cancelar compra</button>
-                <button class="btn btn-primary confirmar" type="button">Confirmar compra</button>
+                <button class="btn btn-primary me-2 cancelar" type="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Cancelar compra</button>
+                <button class="btn btn-primary confirmar square" type="button" onclick="confirmarCompra(this)">Confirmar
+                    compra</button>
+                <span class="circle-expand"></span>
+                <div class="modal-thank">
+                    <div class="text hvr-wobble-horizontal">¡Gracias por su compra!</div>
+                </div>
             </div>
-
+            <!-- modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Ventana de confirmación</h1>
+                        </div>
+                        <div class="modal-body">
+                            <p>Estás seguro de que quieres cancelar tu compra?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver al
+                                pedido</button>
+                            <button type="button" class="btn btn-primary" onclick="cancelarCompra()">Confirmar
+                                cancelación</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -275,10 +300,9 @@
         Davila, Junior
     </div>
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
-    <script src="js/common_script/gsap.min.js"></script>
-    <script src="js/common_script/ScrollTrigger.min.js"></script>
     <script src="js/common_script/jquery-3.7.1.min.js"></script>
     <script src="js/common_script/domus_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
 
     <script src="js/resumenPedido.js"></script>
     <script src="js/estadoCarro.js"></script>
