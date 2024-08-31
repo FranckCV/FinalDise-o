@@ -97,6 +97,7 @@ function aumentar(button) {
     descuentoAplicado = false; 
     guardarCarrito(carrito);
     actualizarCarrito();
+    actualizarCantidadCarrito();
 }
 
 function disminuir(button) {
