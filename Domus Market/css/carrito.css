@@ -1,8 +1,13 @@
 /* ------------------- CARRITO --------------- */
 
 .cart_container {
-    margin-block: 1rem;
+    margin: 1rem;
+    padding: 0;
 }
+
+/* .head_info_cart {
+
+} */
 
 .header_carrito {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarCarrito();
     console.log("DOM CARGADO CORRECTAMENTE");
 
-    const agregarDivs = document.querySelectorAll('.agregar');
+    const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
         div.addEventListener('click', (event) => {
