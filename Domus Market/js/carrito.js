@@ -1,7 +1,7 @@
 let descuentoAplicado = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-    actualizarCantidadCarrito(); 
+    actualizarCarrito(); 
     const agregarDivs = document.querySelectorAll('.product_option_add');
 
     agregarDivs.forEach(div => {
