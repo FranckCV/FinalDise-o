@@ -8,7 +8,8 @@
 .cart_container {
     margin: 0;
     padding: 1.5rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1.2rem;
 }
 
@@ -16,6 +17,7 @@
 
 .head_info_cart {
     display: grid;
+    width: 100%;
     padding-block: 1rem;
     gap: 1rem;
     grid-template-columns: repeat(3,auto);
@@ -128,10 +130,42 @@
     background-color: var(--color-cart);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    /* width: ; */
 }
+
+/* Contenido */
+
+/* .content_cart {
+    
+} */
+
+
+.cart_list_head {
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: var(--color-cart); 
+    color: white;
+    padding: 10px; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+}
+
+.header-item {
+    text-align: center; 
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
 
 
 @media (max-width:599px){    
@@ -172,22 +206,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 10;
-}
-
-.header-resumen {
-    display: flex;
-    justify-content: flex-end; /* Alinea los items a la derecha */
-    align-items: center;
-    background-color: var(--color-cart); /* Color de fondo para la cabecera */
-    color: white; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 20px; /* Espacio debajo de la cabecera */
-}
-
-.header-item {
-    text-align: center; 
-    font-weight: bold;
 }
 
 .img-carrito{
@@ -311,8 +329,6 @@
     font-size: 16px;
     width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
 }
-
-
 
 
 
