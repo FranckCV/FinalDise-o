@@ -88,7 +88,7 @@ function guardarCarrito(carrito) {
 
 /**********************************************LÓGICA PROPIA DEL CARRO******************************************************/
 function aumentar(button) {
-    const productElement = button.closest('.row'); //Todos los divs que contienen la info del producto empiezan con row, entonces
+    const productElement = button.closest('.product_item'); //Todos los divs que contienen la info del producto empiezan con row, entonces
     //busca la etiqueta más cerca que contenga la clase row de ese botón
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText; //obtiene el nombre de ese producto
     const descuentoElement = document.getElementById('descuento'); 
@@ -102,7 +102,7 @@ function aumentar(button) {
 }
 
 function disminuir(button) {
-    const productElement = button.closest('.row');
+    const productElement = button.closest('.product_item');
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText;
     //obtenemos la etiqueta de descuento porque si va a eliminar productos, entonces su descuento ya no es válido
     const descuentoElement = document.getElementById('descuento'); 
@@ -135,27 +135,28 @@ function actualizarCarrito() {
         unidades += producto.cantidad;
 
         const productoHTML = `
-            <div class="row align-items-center mb-3">
-                <div class="product_item_info col-5 d-flex align-items-center">
-                    <img src="${producto.img}"
-                        class="product_item_pic img-fluid rounded-start img-carrito" alt="Imagen del Producto">
-                    <div class="product_item_name ms-2">
-                        <p class="nombreProducto mb-1">${nombre}</p>
+            <div class="product_item">
+                <div class="product_item_info">
+                    <img src="${producto.img}" class="product_item_pic" alt="Imagen del Producto">
+                    
+                    <div class="product_item_name">
+                        <p class="nombreProducto">${nombre}</p>
                         <p class="vendido-por">Vendido por: <strong>Domus</strong></p>
                     </div>
                 </div>
-                <div class="col-2 d-flex align-items-center">
+
+                <div class="product_item_price_unit">
                     <p class="precioProducto">S/ ${producto.precio.toFixed(2)}</p>
                 </div>
-                <div class="col-3">
-                    <div class="col card-footer d-flex align-items-center">
-                        <button type="button" class="btn btn-outline-primary btn-responsive btn-round mx-3" onclick="disminuir(this)"><span class="signo">-</span></button>
-                        <label class="cant">${producto.cantidad}</label>
-                        <button type="button" class="btn btn-outline-primary btn-responsive btn-round mx-3" onclick="aumentar(this)"><span class="signo">+</span></button>
-                    </div>
+
+                <div class="product_item_count">
+                    <button type="button" class="btn btn-outline-primary btn-responsive btn-round mx-3" onclick="disminuir(this)"><span class="signo">-</span></button>
+                    <label class="cant">${producto.cantidad}</label>
+                    <button type="button" class="btn btn-outline-primary btn-responsive btn-round mx-3" onclick="aumentar(this)"><span class="signo">+</span></button>
                 </div>
-                <div class="col-2 d-flex align-items-center">
-                    <p class="total">S/ ${totalProducto.toFixed(2)}</p>
+
+                <div class="product_item_price_total">
+                    <p class="total"> S/ ${totalProducto.toFixed(2)}</p>
                 </div>
             </div>
         `;
