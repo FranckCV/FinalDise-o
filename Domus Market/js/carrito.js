@@ -225,4 +225,8 @@ function actualizarCantidadCarrito() {
     }
 
     contadorCarrito.innerText = `${totalCantidad}`;
+    contadorCarrito.classList.add('animate-bounce');
+    setTimeout(() => {
+        contadorCarrito.classList.remove('animate-bounce');
+    }, 500);
 }
