@@ -477,6 +477,8 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -488,7 +490,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
 }
 
