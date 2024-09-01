@@ -115,7 +115,7 @@
 
 
 /* ------ TARJETAS DE PRODUCTOS -------- */
-
+.product1, 
 .product {
   scroll-snap-align: start;
   border-radius: var(--border-product);
