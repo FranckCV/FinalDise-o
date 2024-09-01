@@ -64,3 +64,46 @@
     padding-top: 0.4rem;
     font-size: 1.6rem;
 }
+
+@media (max-width: 992px) {
+    .orders {
+        flex: 0 0 46.5%; /* Ocupa el 48% del ancho del contenedor para que quepan dos elementos en una fila */
+        margin-bottom: 1rem;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .body_page{
+        position: relative;
+        right: -0.4rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .orders {
+        flex: 0 0 100%; /* Ocupa el 100% del ancho del contenedor para que solo haya un elemento por fila */
+        margin-bottom: 1rem;
+        margin-left: 0; /* Asegura que no haya margen en los laterales */
+        margin-right: 0;
+    }
+
+    .contendor_perfil{
+        margin: 0%;
+        margin-right: 0%;
+        padding: 0%;
+    }
+
+    .body_page{
+        display: flex;
+        position: relative;
+        right: 0.2rem;
+    }
+
+    .cantidad_carrito{
+        display: flex;
+        margin: 0% !important;
+    }
+   
+}
