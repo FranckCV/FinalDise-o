@@ -74,6 +74,11 @@
         flex-wrap: wrap;
     }
 
+    .body_page{
+        position: relative;
+        right: -0.4rem;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -83,4 +88,22 @@
         margin-left: 0; /* Asegura que no haya margen en los laterales */
         margin-right: 0;
     }
+
+    .contendor_perfil{
+        margin: 0%;
+        margin-right: 0%;
+        padding: 0%;
+    }
+
+    .body_page{
+        display: flex;
+        position: relative;
+        right: 0.2rem;
+    }
+
+    .cantidad_carrito{
+        display: flex;
+        margin: 0% !important;
+    }
+   
 }
