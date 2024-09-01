@@ -93,9 +93,14 @@ function aumentar(button) {
     const nombreProducto = productElement.querySelector('.nombreProducto').innerText; //obtiene el nombre de ese producto
     const descuentoElement = document.getElementById('descuento'); 
     let carrito = obtenerCarrito(); //llamamos al carrito para modificar su cantidad
-    carrito[nombreProducto].cantidad += 1;
-    descuentoElement.querySelector('span').innerText = `S/.00.00`;
-    descuentoAplicado = false; 
+    if(carrito[nombreProducto].cantidad<10) {
+        carrito[nombreProducto].cantidad += 1;
+        descuentoElement.querySelector('span').innerText = `S/.00.00`;
+        descuentoAplicado = false;    
+    }
+    else{
+        alert("No puedes agregar más de 10 productos");
+    }
     guardarCarrito(carrito);
     actualizarCarrito();
     actualizarCantidadCarrito();
