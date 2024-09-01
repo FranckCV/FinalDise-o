@@ -50,7 +50,7 @@ gsap.fromTo(".domus_img",{
 if (window.innerWidth > 1000 ) {        
     gsap.utils.toArray('.domus_text').forEach(domus_text=>{
         gsap.fromTo(domus_text,{
-            x: 500,
+            x: -500,
             opacity: 0,
             scale: 0.5,
             scrollTrigger: {
@@ -75,7 +75,7 @@ if (window.innerWidth > 1000 ) {
 
     gsap.utils.toArray('.domus_text2').forEach(domus_text2=>{
         gsap.fromTo(domus_text2,{
-            x: -1000,
+            x: -500,
             opacity: 0,
             scale: 0.5,
             scrollTrigger: {

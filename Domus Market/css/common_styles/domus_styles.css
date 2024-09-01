@@ -3,8 +3,11 @@
     --height-header2: 10vh;
     --height-nav: 10vh;
     --height-main-header: calc( var(--height-header1) + var(--height-header2) + var(--height-nav));
-    --size-bubble-cart: 1.8rem;
     
+    --size-bubble-cart: 5vw;
+    --size-bubble-cart-tab: 3.5vw;
+    --size-bubble-cart-pc: 2.1vw;
+
     --border-article: 50px;
     --border-title: 70px;
     --border-item: 25px;
@@ -498,20 +501,18 @@ article {
 
 /* Para burbuja */
 .burbuja_carrito_cant {
-    position: relative;
-    top: -1rem;
-    right: 0.8rem;
+    position: absolute;
+    top: -2vw;
+    right: 7vw;
     background-color: rgba(210, 25, 25, 0.9);
     color: white;
     border-radius: 100%;
-     /* padding: 5px 10px;  */
-    font-size: 12px;
+    font-size: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: var(--size-bubble-cart);
-    width: var(--size-bubble-cart);
-    
+    width: var(--size-bubble-cart);    
 }
 
 .burbuja_carrito_cant span {
@@ -536,6 +537,7 @@ article {
 #carrito_cant.animate-bounce {
     animation: bounce-in 0.5s ease-out;
 }
+
 
 /* RESPONSIVIDAD */
 
@@ -613,6 +615,15 @@ article {
         grid-template-columns: repeat(2,auto);
         grid-template-rows: repeat(2,auto);
     }
+
+    .burbuja_carrito_cant {        
+        top: -1.3vw;
+        right: 5.5vw;
+        height: var(--size-bubble-cart-tab);
+        width: var(--size-bubble-cart-tab); 
+    }
+
+
 }
 
 @media (min-width:1001px){
@@ -695,6 +706,12 @@ article {
         grid-template-rows: auto;
     }       
     
+    .burbuja_carrito_cant {        
+        top: -0.7vw;
+        right: 5.5vw;
+        height: var(--size-bubble-cart-pc);
+        width: var(--size-bubble-cart-pc); 
+    }
 }
 
 
