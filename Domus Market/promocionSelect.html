@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> | Domus Market</title>
+    <title>Promociones - Domus Market</title>
     <link rel="shortcut icon" href="img/elementos/iconDomus.png">
     <link rel="stylesheet" href="css/common_styles/bootstrap.min.css">
     <link rel="stylesheet" href="css/common_styles/all.min.css">
     <link rel="stylesheet" href="css/common_styles/fontawesome.min.css">
     <link rel="stylesheet" href="css/common_styles/fonts.css">
     <link rel="stylesheet" href="css/common_styles/domus_styles.css">
-    <link rel="stylesheet" href="css/anuncios.css">
-    <link rel="stylesheet" href="css/novedades.css">
+    <link rel="stylesheet" href="css/promociones.css">
 </head>
-<body class="body_section">
+
+<body>
     <header>
-        <a class="header_item" id="index_logo" href="index.html">            
-            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
-        </a>        
+        <a class="header_item" id="index_logo" href="index.html">
+            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">
+        </a>
         <div class="header_item" id="search">
             <input type="text">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -25,18 +26,21 @@
         <a class="header_item header_option" id="header_carrito" href="carrito.html">
             <div class="d-flex flex-row">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <div class="burbuja_carrito_cant"><span id="carrito_cant"></span></div>
+                <div class="burbuja_carrito_cant">
+                    <span id="carrito_cant"></span>
+                </div>
             </div>
             <p>Mi Carrito</p>
         </a>
         <a class="header_item header_option" id="header_perfil" href="iniciar_sesion.html">
             <i class="fa-solid fa-user"></i>
-            <p>Mi Perfil</p>            
+            <p>Mi Perfil</p>
         </a>
         <nav>
             <div id="menu_button" class="nav_element active_menu">
                 <i class="fa-solid fa-bars"></i>
                 <p>Menú</p>
+
             </div>
             <a class="nav_element" href="catalogo.html">
                 <i class="fa-solid fa-clipboard-list"></i>
@@ -54,7 +58,7 @@
                 <i class="fa-solid fa-star"></i>
                 <!-- <img class="img-fluid" src="img/elementos/iconDomus.png"></img> -->
                 <p>Exclusividad Domus</p>
-            </a>   
+            </a>
         </nav>
     </header>
     <aside id="menu_content" class="menu_items desplegar">
@@ -92,7 +96,7 @@
                 <i class="fa-solid fa-microchip"></i>
                 Tecnología
             </a>
-        </div>        
+        </div>
         <div class="menu_element">
             <i class="fa-solid fa-tag"></i>
             <span>Marcas Asociadas</span>
@@ -128,35 +132,126 @@
                 Lenovo
             </a>
             <a href="marcas.html">
-                <i class="fa-solid fa-plus"></i> 
-                Ver más... 
+                <i class="fa-solid fa-plus"></i>
+                Ver más...
             </a>
-        </div>  
-        <a href="exclusividad.html" class="menu_element menu_exclusividad">                
+        </div>
+        <a href="exclusividad.html" class="menu_element menu_exclusividad">
             <i class="fa-solid fa-star"></i>
-            <span>Exclusividad Domus</span>                
-        </a>     
+            <span>Exclusividad Domus</span>
+        </a>
     </aside>
 
-    <main id="anunciosM">
-        <section id="promotion-section">
-            <a href="promociones.html" class="promo-link">Ver todas las promociones</a>
-            <div class="promotion">
-                <div class="promo-content">
-                    <img src="img/promociones/lenovo-laptop.png" alt="Laptop Lenovo" class="promo-img">
-                    <div class="promo-text">
-                        <h2>HASTA</h2>
-                        <h1>30% DSCTO</h1>
-                        <p>En laptops</p>
+    <main>
+        <div class="grid-container">
+            <a href="promocionSelect.html?promo=audifonos-sony">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/audifonos.jpg" alt="Audífonos Sony">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Hasta</div>
+                        <h2>30% DSCTO</h2>
+                        <p>En audífonos Sony</p>
                     </div>
                 </div>
-            </div>
-            <div class="terms">
-                <h3><i class="fa-solid fa-file-contract"></i> TÉRMINOS Y CONDICIONES</h3>
-                <p>*Promoción válida del 01.06.2024 al 20.06.2024 y/o hasta agotar stock. Solo aplica en productos seleccionados de la marca Lenovo. Válido en todas las tiendas físicas Lenovo a nivel nacional. No aplica con otros descuentos. Válido para cliente final y promotoras. No aplica en productos ya rebajados. Descuento aplica al mismo día de su compra. Descuento no acumulable. El descuento se aplica a todas las laptops. Se permiten cambios siempre y cuando se presente el comprobante de pago y el producto esté en buen estado y con sus etiquetas originales. En caso de el producto no se presente físicamente, no se podrá hacer ningún tipo de cambio. Los términos y condiciones pueden estar sujetos a cambios sin previo aviso. Stock mínimo 20 unidades en general. Imágenes referenciales. LENOVO RUC 20511063184</p>
-            </div>
-        </section>
+            </a>
+            
+            <a href="promocionSelect.html?promo=medias-nike">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/mediasNike.png" alt="Medias Nike">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Promoción</div>
+                        <h2>3X2</h2>
+                        <p>En medias deportivas Nike</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="promocionSelect.html?promo=smartwatch-apple">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/smartwatch.png" alt="Smart watch Apple">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Desde</div>
+                        <h2>S/.899</h2>
+                        <p>En smartwatchs de Apple</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="promocionSelect.html?promo=xiaomi-pad">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/xiaomiPad.png" alt="Xiaomi Pad 6">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Promoción</div>
+                        <h2>S/. 1499.99</h2>
+                        <p>Xiaomi Pad 6</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="promocionSelect.html?promo=laptop-lenovo">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/LQP.webp" alt="Laptop Lenovo">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Hasta</div>
+                        <h2>25% DSCTO</h2>
+                        <p>En laptops Lenovo</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="promocionSelect.html?promo=extractor-oster">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/extractor.png" alt="Extractor Oster">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Desde</div>
+                        <h2>S/. 550</h2>
+                        <p>En extractores Oster</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="promocionSelect.html?promo=samsung-s24">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/samsumg.png" alt="Celular S24 Samsung">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Promoción</div>
+                        <h2>S/. 5000</h2>
+                        <p>Samsung S24 Ultra</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="promocionSelect.html?promo=vinos-tabernero">
+                <div class="promo-card">
+                    <div class="promo-image-container">
+                        <img src="img/productos/VinoTa.png" alt="Vino Tabernero">
+                    </div>
+                    <div class="promo-details">
+                        <div class="promo-tag">Desde</div>
+                        <h2>S/. 20</h2>
+                        <p>En vinos Tabernero</p>
+                    </div>
+                </div>
+            </a>
+            
+
+        </div>
     </main>
+
 
     <footer>
         <div id="footer_pictures">
@@ -219,14 +314,11 @@
         Davila, Junior
     </div>
 
-    <script src="js/common_script/bootstrap.bundle.min.js"></script>
-    <script src="js/common_script/gsap.min.js"></script>
-    <script src="js/common_script/ScrollTrigger.min.js"></script>
-    <script src="js/common_script/jquery-3.7.1.min.js"></script>
-    <script src="js/common_script/domus_script.js"></script>
-    <script src="js/common_script/mo.umd.min.js"></script>
-    <script src="js/common_script/agregarCarrito.js"></script>
-    <script src="js/common_script/estadoCarro.js"></script>
-
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/promociones.js"></script>
 </body>
+
 </html>
