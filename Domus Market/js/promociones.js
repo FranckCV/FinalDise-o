@@ -14,56 +14,56 @@ document.addEventListener("DOMContentLoaded", function() {
     // Información de las promociones
     const promociones = {
         'audifonos-sony': {
-            img: 'img/productos/audifonos.jpg',
+            img: 'img/imgLeo/audifonos.jpg', // Ruta corregida
             desc: 'En audífonos Sony',
             price: '30% DSCTO',
             tag: 'Hasta',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Sony. No acumulable con otras ofertas.'
         },
         'medias-nike': {
-            img: 'img/productos/mediasNike.png',
+            img: 'img/imgLeo/mediasNike.png', // Ruta corregida
             desc: 'En medias deportivas Nike',
             price: '3X2',
             tag: 'Promoción',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Nike. No acumulable con otras ofertas.'
         },
         'smartwatch-apple': {
-            img: 'img/productos/smartwatch.png',
+            img: 'img/imgLeo/smartwatch.png', // Ruta corregida
             desc: 'En smartwatchs de Apple',
             price: 'S/.899',
             tag: 'Desde',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Apple. No acumulable con otras ofertas.'
         },
         'xiaomi-pad': {
-            img: 'img/productos/xiaomiPad.png',
+            img: 'img/imgLeo/xiaomiPad.png', // Ruta corregida
             desc: 'Xiaomi Pad 6',
             price: 'S/. 1499.99',
             tag: 'Promoción',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Xiaomi. No acumulable con otras ofertas.'
         },
         'laptop-lenovo': {
-            img: 'img/productos/LQP.webp',
+            img: 'img/imgLeo/LQP.webp', // Ruta corregida
             desc: 'En laptops Lenovo',
             price: '25% DSCTO',
             tag: 'Hasta',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Lenovo. No acumulable con otras ofertas.'
         },
         'extractor-oster': {
-            img: 'img/productos/extractor.png',
+            img: 'img/imgLeo/extractor.png', // Ruta corregida
             desc: 'En extractores Oster',
             price: 'S/. 550',
             tag: 'Desde',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Oster. No acumulable con otras ofertas.'
         },
         'samsung-s24': {
-            img: 'img/productos/samsumg.png',
+            img: 'img/imgLeo/samsumg.png', // Ruta corregida
             desc: 'Samsung S24 Ultra',
             price: 'S/. 5000',
             tag: 'Promoción',
             terms: 'Promoción válida del 01.06.2024 al 20.06.2024 para productos Samsung. No acumulable con otras ofertas.'
         },
         'vinos-tabernero': {
-            img: 'img/productos/VinoTa.png',
+            img: 'img/imgLeo/VinoTa.png', // Ruta corregida
             desc: 'En vinos Tabernero',
             price: 'S/. 20',
             tag: 'Desde',
