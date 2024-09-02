@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
 function obtenerCarrito() {
     return JSON.parse(localStorage.getItem('carrito')) || {};
 }
-
+function eliminarTodos() {
+    localStorage.clear();
+    actualizarDatos();
+}
 function agregarResumen() {
     const carrito = obtenerCarrito();
     const tabla = document.getElementById('tabla-contenido');
@@ -76,4 +79,6 @@ function confirmarCompra(button) {
     setTimeout(function() {
         window.location.href = 'index.html';
     }, 4500);
+    
+    eliminarTodos();
 }
