@@ -498,10 +498,9 @@ article {
     border: 1px solid white;
 }
 
-
 /* Para burbuja */
 .burbuja_carrito_cant {
-    position: absolute;
+    position: fixed;
     top: -2vw;
     right: 7vw;
     background-color: rgba(210, 25, 25, 0.9);

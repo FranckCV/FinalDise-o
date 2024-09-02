@@ -123,8 +123,8 @@ function disminuir(button) {
         guardarCarrito(carrito);
         actualizarCarrito();
         actualizarCantidadCarrito();
-    }}
-
+    }
+}
 
 function actualizarCarrito() {
     const carrito = obtenerCarrito();
@@ -204,6 +204,7 @@ function aplicarDescuento() {
         }
     }
 }
+
 function validarCarro() {
     const carrito = obtenerCarrito();
     let disponible = false;

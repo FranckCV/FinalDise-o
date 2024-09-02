@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {    
     agregarResumen();
 });
 
@@ -50,10 +50,17 @@ function agregarResumen() {
         console.error('No se encontró un elemento con el ID "tabla-contenido".');
     }
 }
+
 function cancelarCompra(button) {
     window.location.href = 'carrito.html';
 }
+
+
+
 function confirmarCompra(button) {
+
+    // gsap.globalTimeline.clear();
+
     let $square = $('.square'),
         $span = $('.circle-expand'),
         $modal = $('.modal-thank')
