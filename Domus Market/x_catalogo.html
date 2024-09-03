@@ -141,10 +141,10 @@
     </aside>
 
     <section class="body_page">
-        <article class="article_catalogue catalogue_brand">            
-            <div class="catalogue_content">
+        <article id="general_catalogue" class="article_catalogue">            
+            <div class="catalogue_product">
 
-                <div class="ctlg_filters">
+                <div class="catalogue_filters">
                     <div class="ctlg_filters_head"> 
                         <i class="fa-solid fa-filter"></i>
                         <span>
@@ -338,21 +338,23 @@
                     </div>
                 </div>
 
-                <div class="catalogue_products">
-                    <div class="brands_filters">
-                        <div class="select_filter">
-                            <label for="order">Ordenar por:</label>
-                            <select id="brands_order" name="order">                                    
-                                <option value="">Más Populares</option>
-                                <option value="">Más Recientes</option>
-                                <option value="">Mejores Descuentos</option>
-                                <option value="">Mejores Calificaciones</option>
-                                <option value="">Desde el Menor Precio</option>
-                                <option value="">Desde el Mayor Precio</option>
-                                <option value="">A - Z</option>
-                                <option value="">Z - A</option>
+                <div class="catalogue_content">
+                    <div class="ctlg_order">
+
+                        <div class="ctlg_select">
+                            <p>Ordenar por:</p>
+                            <select id="ctlg_products_order" name="order">                                    
+                                <option value="1">Más Populares</option>
+                                <option value="2">Más Recientes</option>
+                                <option value="3">Mejores Descuentos</option>
+                                <option value="4">Mejores Calificaciones</option>
+                                <option value="5">Desde el Menor Precio</option>
+                                <option value="6">Desde el Mayor Precio</option>
+                                <option value="7">A - Z</option>
+                                <option value="8">Z - A</option>
                             </select>
                         </div>
+
                         <div class="ctlg_pagination">
                             <i class="fa-solid fa-caret-left"></i>
                             <p>1</p>
@@ -366,18 +368,18 @@
                         </div>
                     </div>
 
-                    <div class="wrap_product">
+                    <div class="gallery_product">
                         
                         <div class="product1"
                             data-category="1" 
                             data-subcategory="1"
-                            data-link = "product1.html"
+                            data-link = "producto1.html"
                             data-picture="img/productos/Tecnologia/Celular Samsung Galaxy A24 128GB 4GB RAM Negro/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
                             data-name="Samsung Galaxy A24 Negro"
-                            data-price-regular="1600.99"
+                            data-price-regular="1600.95"
                             data-price-online="889.99"
-                            data-price-forsale="12"  >
-
+                            data-price-forsale="" 
+                            >
                             <a class="product_info" href="#">                                                                
                             </a>
                             <div class="product_option product_option_fav">
@@ -387,9 +389,6 @@
                                 <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
-
-
-
                         <div class="product">
                             <a class="product_info" href="#">
                                 <img class="product_pic" src="img/productos/Hogar/Refrigeradora Samsung Side by Side RS52B3000M9 PE 490L Gris Metal.png" alt="Photo_Product">
@@ -779,6 +778,9 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="return_up_button">
+                <i class="fa-solid fa-chevron-up"></i>
             </div>
         </article>
     </section>

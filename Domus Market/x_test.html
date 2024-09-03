@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .truncate-text {
+            width: 100%; /* Asegura que el contenedor tome el ancho completo disponible */
+            white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+            overflow: hidden; /* Oculta el desbordamiento del texto */
+            text-overflow: ellipsis; /* Añade los tres puntos suspensivos */
+        }
+
+        @media (max-width: 600px) {
+            .truncate-text {
+                width: 80%; /* Ajusta el ancho según sea necesario */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="truncate-text">
+        Este es un texto muy largo que se truncará cuando la pantalla sea demasiado pequeña para mostrarlo completo.
+    </div>
+</body>
+</html>

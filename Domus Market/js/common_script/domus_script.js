@@ -1,16 +1,16 @@
 // ANIMACION ITEMS DEL BODY
 
-if (!window.location.pathname.includes('resumenDePedido.html')) {
-    const body_items = document.querySelector('.body_page').children;
-    gsap.from(body_items,{
-        opacity: 0,
-        y: -100,
-        duration: 0.2,
-        stagger:{
-            amount: 0.5
-        }
-    });
-}
+// if (!window.location.pathname.includes('resumenDePedido.html')) {
+//     const body_items = document.querySelector('.body_page').children;
+//     gsap.from(body_items,{
+//         opacity: 0,
+//         y: -100,
+//         duration: 0.2,
+//         stagger:{
+//             amount: 0.5
+//         }
+//     });
+// }
 
 
 // ANIMACION ITEMS DEL HEADER

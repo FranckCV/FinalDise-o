@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const productInfo = product.querySelector('.product_info');
         
-        productInfo.setAttribute('href') = productLink;
+        productInfo.href = productLink;
 
         productInfo.innerHTML = 
         `<img class="product_pic" src="${productPicture}" alt="${productName}">
@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 S/. ${numberOnline}
                 <sup>.${decimalOnline}</sup>
             </p>
-        </div>
-        
+        </div>        
         ` + addForSaleProductCardInfo();
+
 
         function addForSaleProductCardInfo() {
             const htmlForSale =
@@ -63,8 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 return "";
             }
-
         };
+
+
+
+
             
     });
 });

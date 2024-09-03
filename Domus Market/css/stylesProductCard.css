@@ -177,6 +177,10 @@
   margin: 0;
   grid-area: prod_card_name;
   font-size: 90%;
+  width: 100%;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product_price {

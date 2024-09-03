@@ -72,4 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
             applyFilters();
         });
     });
+
+    const buttonUpPage = document.querySelectorAll('.return_up_button');
+    buttonUpPage.forEach(button => {
+        button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
 });
