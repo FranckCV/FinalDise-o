@@ -146,6 +146,9 @@ h2,h3{
     .profile-details{
         display: block;
     }
+    .contenedor_perfil{
+        margin:10px;
+    }
 }
 @media screen and ( max-width: 500px) {
     .iconos i{
