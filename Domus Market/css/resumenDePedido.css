@@ -10,7 +10,7 @@ table{
 }
 th,td {
     text-align: center;
-    vertical-align: middle; /* Centra verticalmente */
+    vertical-align: middle;
     border: 0.5px solid #e8e3e3;
   }
 .producto{
