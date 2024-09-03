@@ -1,14 +1,17 @@
-gsap.registerPlugin(ScrollTrigger);
+// ANIMACION ITEMS DEL BODY
 
-const body_items = document.querySelector('.body_page');
-gsap.from(body_items,{
-    opacity: 0,
-    y: -100,
-    duration: 0.2,
-    stagger:{
-        amount: 0.5
-    }    
-});
+if (!window.location.pathname.includes('resumenDePedido.html')) {
+    const body_items = document.querySelector('.body_page').children;
+    gsap.from(body_items,{
+        opacity: 0,
+        y: -100,
+        duration: 0.2,
+        stagger:{
+            amount: 0.5
+        }
+    });
+}
+
 
 // ANIMACION ITEMS DEL HEADER
 
@@ -45,10 +48,10 @@ const $openClose = document.querySelector("#menu_button"),
     $menuElements = document.querySelectorAll(".menu_element"),
     $submenus = document.querySelectorAll(".submenu_content");
 
-$openClose.addEventListener("click", () => {
-    $aside.classList.toggle("desplegar");
-    adjustPadding();
-});
+    $openClose.addEventListener("click", () => {
+        $aside.classList.toggle("desplegar");
+        adjustPadding();
+    });
 
 $menuElements.forEach((menuElement, index) => {
     menuElement.addEventListener("click", () => {        
