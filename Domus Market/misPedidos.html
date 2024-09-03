@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="css/misPedidos_v2.css">
     <title> | Domus Market</title>
 </head>
+
 <body class="body_section">
     <header>
-        <a class="header_item" id="index_logo" href="index.html">            
-            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">            
-        </a>        
+        <a class="header_item" id="index_logo" href="index.html">
+            <img class="img-fluid" id="logo_header" src="img/elementos/logoDomus.png" alt="Logo">
+        </a>
         <div class="header_item" id="search">
             <input type="text">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -34,7 +35,7 @@
         </a>
         <a class="header_item header_option" id="header_perfil" href="iniciar_sesion.html">
             <i class="fa-solid fa-user"></i>
-            <p>Mi Perfil</p>            
+            <p>Mi Perfil</p>
         </a>
         <nav>
             <div id="menu_button" class="nav_element active_menu">
@@ -57,7 +58,7 @@
                 <i class="fa-solid fa-star"></i>
                 <!-- <img class="img-fluid" src="img/elementos/iconDomus.png"></img> -->
                 <p>Exclusividad Domus</p>
-            </a>   
+            </a>
         </nav>
     </header>
     <aside id="menu_content" class="menu_items desplegar">
@@ -95,7 +96,7 @@
                 <i class="fa-solid fa-microchip"></i>
                 Tecnología
             </a>
-        </div>        
+        </div>
         <div class="menu_element">
             <i class="fa-solid fa-tag"></i>
             <span>Marcas Asociadas</span>
@@ -131,16 +132,16 @@
                 Lenovo
             </a>
             <a href="marcas.html">
-                <i class="fa-solid fa-plus"></i> 
-                Ver más... 
+                <i class="fa-solid fa-plus"></i>
+                Ver más...
             </a>
-        </div>  
-        <a href="exclusividad.html" class="menu_element menu_exclusividad">                
+        </div>
+        <a href="exclusividad.html" class="menu_element menu_exclusividad">
             <i class="fa-solid fa-star"></i>
-            <span>Exclusividad Domus</span>                
-        </a>     
+            <span>Exclusividad Domus</span>
+        </a>
     </aside>
-    
+
     <!-- contenido propio -->
     <section class="body_page">
 
@@ -156,25 +157,25 @@
                         <p>Mi perfil</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="misDirecciones.html" class="opcion_perfil">
                         <img src="img/iconos/ubicacion.png" class="img_perfil" alt="">
                         <p>Direcciones</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="misTarjetas.html" class="opcion_perfil">
                         <img src="img/iconos/tarjeta-de-credito.png" alt="" class="img_perfil">
                         <p>Tarjeta de crédito</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="misPedidos.html" class="opcion_perfil">
                         <img src="img/iconos/entrega-de-pedidos.png" alt="" class="img_perfil">
                         <p>Mis pedidos</p>
                         <img src="img/iconos/flecha.png" alt="" class="flecha">
                     </a>
-    
+
                     <a href="ListaDeseos.html" class="opcion_perfil">
                         <img src="img/iconos/me-gusta.png" alt="" class="img_perfil">
                         <p>Lista de deseos</p>
@@ -187,7 +188,7 @@
                     </div>
                 </div>
             </aside>
-    
+
             <main class="main_perfil">
                 <div class="header_perfil">
                     <h1>Mis Pedidos</h1>
@@ -201,7 +202,7 @@
                         </div>
 
                         <div>
-                            <a href="misDirecciones.html"> 
+                            <a href="misDirecciones.html">
                                 <i class="fa-solid fa-location-dot"></i>
                             </a>
                         </div>
@@ -237,72 +238,75 @@
                 <hr>
                 <!-- contenido propio -->
                 <div class="profile-details">
-                    <main class="main_perfil">
 
-                    <div class="tabs mt-2 mx-2">
-                        <div class="tab active">En curso</div>
-                        <div class="tab">Entregados</div>
-                        <div class="tab">Cancelados</div>
-                    </div>
-                    <div class="order-filter">
-                        <span class="cantidad_carrito d-flex ms-5">X pedidos en curso</span>
-                        <select class="filtro-pedidos form-select w-25" aria-label="Default select example">
-                            <option selected>Últimos 30 días</option>
-                            <option value="1">Últimos 3 meses</option>
-                            <option value="2">Último año</option>
-                            <option value="3">Todo</option>
-                        </select>
-                    </div>
-                    <div class="row px-3 pt-2">
-                        <div class="orders col">
-                            <div class="order-card col mt-2 mx-2">
-                                <div class="titulo_orden">
-                                    <div class="order-header col mx-3">Nro. Pedido</div>
-                                    <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3" style="color: #000;"></i></div>
-                                </div>
-                                <div class="order-body">Producto 1, Producto 2...</div>
-                            </div>
+                        <div class="tabs mt-2 mx-2">
+                            <div class="tab active">En curso</div>
+                            <div class="tab">Entregados</div>
+                            <div class="tab">Cancelados</div>
                         </div>
-        
-                        <div class="orders col">
-                            <div class="order-card col mt-2 mx-2">
-                                <div class="titulo_orden">
-                                    <div class="order-header col mx-3">Nro. Pedido</div>
-                                    <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3" style="color: #000;"></i></div>
-                                </div>
-                                <div class="order-body">Producto 1, Producto 2...</div>
-                            </div>
+                        <div class="order-filter">
+                            <span class="cantidad_carrito d-flex ms-5">X pedidos en curso</span>
+                            <select class="filtro-pedidos form-select w-25" aria-label="Default select example">
+                                <option selected>Últimos 30 días</option>
+                                <option value="1">Últimos 3 meses</option>
+                                <option value="2">Último año</option>
+                                <option value="3">Todo</option>
+                            </select>
                         </div>
-        
-                        <div class="orders col">
-                            <div class="order-card col mt-2 mx-2">
-                                <div class="titulo_orden">
-                                    <div class="order-header col mx-3">Nro. Pedido</div>
-                                    <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3" style="color: #000;"></i></div>
+                        <div class="row px-3 pt-2">
+                            <div class="orders col">
+                                <div class="order-card col mt-2 mx-2">
+                                    <div class="titulo_orden">
+                                        <div class="order-header col mx-3">Nro. Pedido</div>
+                                        <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3"
+                                                style="color: #000;"></i></div>
+                                    </div>
+                                    <div class="order-body">Producto 1, Producto 2...</div>
                                 </div>
-                                <div class="order-body">Producto 1, Producto 2...</div>
                             </div>
-                        </div>
 
-                        <div class="orders col">
-                            <div class="order-card col mt-2 mx-2">
-                                <div class="titulo_orden">
-                                    <div class="order-header col mx-3">Nro. Pedido</div>
-                                    <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3" style="color: #000;"></i></div>
+                            <div class="orders col">
+                                <div class="order-card col mt-2 mx-2">
+                                    <div class="titulo_orden">
+                                        <div class="order-header col mx-3">Nro. Pedido</div>
+                                        <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3"
+                                                style="color: #000;"></i></div>
+                                    </div>
+                                    <div class="order-body">Producto 1, Producto 2...</div>
                                 </div>
-                                <div class="order-body">Producto 1, Producto 2...</div>
                             </div>
+
+                            <div class="orders col">
+                                <div class="order-card col mt-2 mx-2">
+                                    <div class="titulo_orden">
+                                        <div class="order-header col mx-3">Nro. Pedido</div>
+                                        <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3"
+                                                style="color: #000;"></i></div>
+                                    </div>
+                                    <div class="order-body">Producto 1, Producto 2...</div>
+                                </div>
+                            </div>
+
+                            <div class="orders col">
+                                <div class="order-card col mt-2 mx-2">
+                                    <div class="titulo_orden">
+                                        <div class="order-header col mx-3">Nro. Pedido</div>
+                                        <div class=""><i class="fa-solid fa-ellipsis-vertical ps-2 pe-3"
+                                                style="color: #000;"></i></div>
+                                    </div>
+                                    <div class="order-body">Producto 1, Producto 2...</div>
+                                </div>
+                            </div>
+
                         </div>
-        
-                    </div>
-                    </main>
+                    
                 </div>
             </main>
         </div>
 
     </section>
     <!-- -------- -->
-     
+
     <footer>
         <div id="footer_pictures">
             <a href="index.html">
@@ -363,7 +367,7 @@
         Cortez Villaseca, Franco | Gil Alarcon, Gabriel | Guzman Salazar, Leonardo | Paucar Mejia, Fabiana | Perez
         Davila, Junior
     </div>
-    
+
     <script src="js/common_script/bootstrap.bundle.min.js"></script>
     <script src="js/common_script/gsap.min.js"></script>
     <script src="js/common_script/ScrollTrigger.min.js"></script>
@@ -375,4 +379,5 @@
 
 
 </body>
+
 </html>
