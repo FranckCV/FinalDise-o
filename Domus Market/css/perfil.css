@@ -84,6 +84,7 @@
 @media screen and ( max-width: 865px) {
     .contenedor_perfil{
         display: block;
+        margin:10px;
     }
     .aside_perfil{
         display: none;
@@ -104,10 +105,16 @@
         animation-duration: 0.6s;
         animation-iteration-count: infinite;
     }
+    .boletin{
+        padding: 5px 5px 20px 5px;
+    }
 }
-@media screen and ( max-width: 640px) {
+@media screen and ( max-width: 725px) {
     .profile-details{
         display: block;
+    }
+    .boletin{
+        padding: 5px 5px 20px 5px;
     }
 }
 @media screen and ( max-width: 500px) {
