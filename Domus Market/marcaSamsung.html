@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/stylesCatalogue.css">
     <link rel="stylesheet" href="css/stylesGalleryImages.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesBrands.css">
 </head>
 <body class="body_section">
     <header>
@@ -225,8 +226,9 @@
                 </div>
                 <i class="btn_slider_subcategory fas fa-angle-right"></i>
             </div> 
-            <div class="catalogue_content">
-                <div class="ctlg_filters">
+            <div class="catalogue_product">
+
+                <div class="catalogue_filters">
                     <div class="ctlg_filters_head"> 
                         <i class="fa-solid fa-filter"></i>
                         <span>
@@ -238,41 +240,49 @@
                             <b>183</b>
                         </span>
                     </div>
+
                     <div class="ctlg_filters_content">
+
                         <div class="ctlg_filters_element">
                             <i class="fa-solid fa-list"></i>
                             <p>CATEGORIAS</p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
-                        <div class="ctlg_filters_subcontent">
+                        <div class="ctlg_filters_subcontent ctlg_filters_subcontent_hidden">
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-drumstick-bite"></i>
                                 Alimentos
+                                <input type="checkbox" name="" id="">
                             </div>
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-person-running"></i>
                                 Deporte
+                                <input type="checkbox" name="" id="">
                             </div>
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-house-chimney"></i>
                                 Hogar
+                                <input type="checkbox" name="" id="">
                             </div>
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-book"></i>
                                 Libreria y Oficina
+                                <input type="checkbox" name="" id="">
                             </div>
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-paw"></i>
                                 Mascotas
+                                <input type="checkbox" name="" id="filt">
                             </div>
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-shirt"></i>
                                 Ropa y Calzado
+                                <input type="checkbox" name="" id="">
                             </div>
                             <div class="ctlg_filters_subelement">
                                 <i class="fa-solid fa-microchip"></i>
                                 Tecnología
-                                <!-- <input type="checkbox" name="" id=""> -->
+                                <input type="checkbox" name="" id="">
                             </div>
                         </div>
                         
@@ -281,40 +291,53 @@
                             <p>SUBCATEGORIAS</p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
-                                                
+                        <div class="ctlg_filters_subcontent ctlg_filters_subcontent_hidden">
+                            
+                        </div>
+
                         <div class="ctlg_filters_element">
                             <i class="fa-solid fa-dollar-sign"></i>
                             <p>GAMA DE PRECIOS</p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
-                        
+                        <div class="ctlg_filters_subcontent ctlg_filters_subcontent_hidden">
+                            
+                        </div>
+
                         <div class="ctlg_filters_element">
                             <i class="fa-solid fa-star"></i>
                             <p>CALIFICACION</p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
-                        
-                    </div>                    
+                        <div class="ctlg_filters_subcontent ctlg_filters_subcontent_hidden">
+                            
+                        </div>
+
+                    </div>
+                    
                     <div class="ctlg_filters_clean">
                         Limpiar Filtros
                     </div>
                 </div>
-                <div class="catalogue_products">
-                    <div class="brands_filters">
-                        <div class="select_filter">
-                            <label for="order">Ordenar por:</label>
-                            <select id="brands_order" name="order">                                    
-                                <option value="">Más Populares</option>
-                                <option value="">Más Recientes</option>
-                                <option value="">Mejores Descuentos</option>
-                                <option value="">Mejores Calificaciones</option>
-                                <option value="">Desde el Menor Precio</option>
-                                <option value="">Desde el Mayor Precio</option>
-                                <option value="">A - Z</option>
-                                <option value="">Z - A</option>
+
+                <div class="catalogue_content">
+                    <div class="ctlg_order">
+
+                        <div class="ctlg_select">
+                            <p>Ordenar por:</p>
+                            <select id="ctlg_products_order" name="order">                                    
+                                <option value="1">Más Populares</option>
+                                <option value="2">Más Recientes</option>
+                                <option value="3">Mejores Descuentos</option>
+                                <option value="4">Mejores Calificaciones</option>
+                                <option value="5">Desde el Menor Precio</option>
+                                <option value="6">Desde el Mayor Precio</option>
+                                <option value="7">A - Z</option>
+                                <option value="8">Z - A</option>
                             </select>
                         </div>
-                        <div class="pagination_brands">
+
+                        <div class="ctlg_pagination">
                             <i class="fa-solid fa-caret-left"></i>
                             <p>1</p>
                             <p>2</p>
@@ -326,18 +349,21 @@
                             <i class="fa-solid fa-caret-right"></i>
                         </div>
                     </div>
-                    <div class="wrap_product">
+
+                    <div class="gallery_product">
                         
                         <div class="product">
-                            <a class="product_info" href="#">
-                                <img class="product_pic" src="img/productos/Tecnologia/Celular Samsung Galaxy A24 128GB 4GB RAM Negro/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png" alt="Photo_Product">
+                            <a class="product_info" href="producto1.html">
+                                <img class="product_pic"
+                                    src="img/productos/Tecnologia/Celular Samsung Galaxy A24 128GB 4GB RAM Negro/Celular Samsung Galaxy A24 128GB 4GB RAM Negro.png"
+                                    alt="Photo_Product">
                                 <p class="product_name">
                                     Samsung Galaxy A24 Negro
-                                </p>                                    
+                                </p>
                                 <div class="product_price price_regular">
                                     <p class="product_price_title">
                                         Regular
-                                    </p>                    
+                                    </p>
                                     <p class="product_price_number">
                                         S/. 1,600
                                         <sup>.00</sup>
@@ -346,21 +372,22 @@
                                 <div class="product_price price_online">
                                     <p class="product_price_title">
                                         Online
-                                    </p>                    
+                                    </p>
                                     <p class="product_price_number">
                                         S/. 898
                                         <sup>.00</sup>
                                     </p>
                                 </div>
-                                
+
                             </a>
-                            <div class="product_option product_option_fav">
+                            <div class="product_option product_option_fav button" id="heart">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="product_option product_option_add">
                                 <i class="fa-solid fa-plus"></i>
                             </div>
-                        </div>
+                        </div> 
+            
                         <div class="product">
                             <a class="product_info" href="#">
                                 <img class="product_pic" src="img/productos/Hogar/Refrigeradora Samsung Side by Side RS52B3000M9 PE 490L Gris Metal.png" alt="Photo_Product">
@@ -733,7 +760,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pagination_brands">
+
+                    <div class="ctlg_pagination">
                         <i class="fa-solid fa-caret-left"></i>
                         <p>1</p>
                         <p>2</p>
@@ -748,6 +776,7 @@
                         <i class="fa-solid fa-caret-right"></i>
                     </div>
                 </div>
+
             </div>
         </article> 
     </section>

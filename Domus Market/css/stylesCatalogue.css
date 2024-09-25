@@ -1,6 +1,6 @@
 :root {    
     --color-catalogue-background2: #003e68;
-    --color-catalogue-background: #00152d;
+    --color-catalogue-background: #002550;
     --color-catalogue: #236bd7;
     --color-filter: #003d98;
     --color-catalogue-square: #298dff;
@@ -270,6 +270,7 @@
 
 .ctlg_pagination i {
     background-color: #000000;
+    font-size: 120%;
 }
 
 .ctlg_pagination i:hover {

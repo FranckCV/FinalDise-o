@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const categories = {
+        1: 'Alimentos' ,
+        2: 'Deporte' ,
+        3: 'Hogar' ,
+        4: 'Libreria y Oficina' ,
+        5: 'Mascotas' ,
+        6: 'Ropa y Calzado' ,
+        7: 'Tecnología' 
+    }
+
+    const subcategories = {
+        1: 'Celulares' ,
+        2: 'Televisores' ,
+        3: 'Electrodomesticos' ,
+        4: 'Audio' 
+    }
+
+    const brands = {
+        1: 'Samsung' ,
+        2: 'Oster' ,
+        3: 'Gloria'
+    }
+
     // Selecciona todos los elementos de filtros
     const filterElements = document.querySelectorAll('.ctlg_filters_element');
 
@@ -7,27 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Selecciona el subcontenido relacionado a este filtro
         const subContent = element.nextElementSibling;
 
-        // Añade un evento de click al filtro principal
         element.addEventListener('click', () => {
-            // Verifica si el subcontenido está visible o no
             const isVisible = !subContent.classList.contains('ctlg_filters_subcontent_hidden');
 
-            // Oculta todos los subcontenidos
             document.querySelectorAll('.ctlg_filters_subcontent').forEach(sub => {
                 sub.classList.add('ctlg_filters_subcontent_hidden');
             });
 
-            // Alterna la visibilidad del subcontenido actual
             if (!isVisible) {
                 subContent.classList.remove('ctlg_filters_subcontent_hidden');
             }
-
-            // const icon = filter.classList.contains('fa-solid fa-plus');
-            // if (icon) {
-            //     icon.classList.toggle('fa-solid fa-minus');
-            // } else {
-            //     icon.classList.toggle('fa-minus');
-            // }
 
         });
     });
@@ -38,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoryElements = document.querySelectorAll('.ctlg_filters_subelement input[type="checkbox"]:checked');
 
         categoryElements.forEach(checkbox => {
-            selectedCategories.push(checkbox.parentElement.textContent.trim());
+            selectedCategories.push(checkbox.value.trim());
         });
 
         const products = document.querySelectorAll('.product'); // Assumes products have a class "product"
@@ -82,5 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+
+
+
+
+
 
 });
