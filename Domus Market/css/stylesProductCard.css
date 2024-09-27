@@ -177,12 +177,12 @@
   margin: 0;
   grid-area: prod_card_name;
   font-size: 90%;
-  /* width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 3.9em; 
-  line-height: 1.9em; */
 }
 
 .product_price {

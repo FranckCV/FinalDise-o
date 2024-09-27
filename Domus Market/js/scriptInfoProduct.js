@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.product').forEach(product => {
+    document.querySelectorAll('.product1').forEach(product => {
         const productLink = product.getAttribute('data-link');
         const productPicture = product.getAttribute('data-picture');
         const productName = product.getAttribute('data-name');
